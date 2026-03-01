@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "RA6M5 debug",
+            "cwd": "${workspaceFolder}",
+            "executable": "D:/Renesas_project/renesascup_smartmedicine/build/Debug/renesascup_smartmedicine.elf",//编译文件地址
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "pyocd",
+            "targetId": "R7FA6M5BF",//芯片型号
+            
+            "serverpath": "pyocd.exe",//pyocd路径，如果系统环境变量配置了pyocd，可以不写
+            "armToolchainPath": "D:/buildtools/arm-gnu-toolchain-15.2.rel1-mingw-w64-i686-arm-none-eabi/bin",//arm gcc tools路径
+            
+            "serverArgs": [
+                "--pack", "D:/Keil5/ARM/PACK/Renesas/RA_DFP/6.1.0",//芯片包路径
+                "-O", "reset_type=sw"
+            ],
+           
+            "overrideGDBServerStartedRegex": "Listening on port",
+            "showDevDebugOutput": "parsed"
+        }
+    ]
+}
