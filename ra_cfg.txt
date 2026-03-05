@@ -251,8 +251,8 @@ FSP Configuration
       P610 F3 - - - - Disabled - - "AGT4: AGTO4; BUS_ASYNCH0: CS0; CAN1: CRX1; GPT5: GTIOC5B; OSPI0: OMCS0; SCI7: CTS7" - None - - 
       P611 E2 - - - - Disabled - - "AGT3: AGTO3; CAC0: CACREF; CGC0: CLKOUT; SCI7: CTSRTS7" - None - - 
       P612 E1 - - - - Disabled - - "AGT2: AGTO2; BUS_ASYNCH0: D08; SCI7: SCK7" - None - - 
-      P613 F4 - - - - Disabled - - "AGT1: AGTO1; BUS_ASYNCH0: D09; SCI7: SDA7; SCI7: TXD7" - None - - 
-      P614 F2 - - - - Disabled - - "AGT0: AGTO0; BUS_ASYNCH0: D10; SCI7: RXD7; SCI7: SCL7" - None - - 
+      P613 F4 SCI7_TXD7 - Low - "Peripheral mode" CMOS None "AGT1: AGTO1; BUS_ASYNCH0: D09; SCI7: SDA7; SCI7: TXD7" - IO - - 
+      P614 F2 SCI7_RXD7 - Low - "Peripheral mode" CMOS None "AGT0: AGTO0; BUS_ASYNCH0: D10; SCI7: RXD7; SCI7: SCL7" - IO - - 
       P615 F1 - - - - Disabled - - "ICU0: IRQ07; USB_FS0: USB_VBUSEN" - None - - 
       P700 N15 - - - - Disabled - - "AGT4: AGTO4; ETHERC_MII0: ET0_ETXD1; ETHERC_RMII0: RMII_TXD0; GPT5: GTIOC5A; SPI0: MISOA" - None - - 
       P701 M14 - - - - Disabled - - "AGT3: AGTO3; ETHERC_MII0: ET0_ETXD0; ETHERC_RMII0: REF50CK; GPT5: GTIOC5B; SPI0: MOSIA" - None - - 
@@ -465,6 +465,14 @@ FSP Configuration
     Reception: Acceptance Filtering: Channel 0 Rule Count: 32
     Reception: Acceptance Filtering: Channel 1 Rule Count: 0
     
+  Module "UART (r_sci_uart)"
+    Parameter Checking: Default (BSP)
+    FIFO Support: Disable
+    DTC Support: Disable
+    Flow Control Support: Disable
+    RS-485 Support: Disable
+    IrDA Support: Disabled
+    
   FreeRTOS
     General: Custom FreeRTOSConfig.h: 
     General: Use Preemption: Enabled
@@ -574,4 +582,42 @@ FSP Configuration
       Channel Error Interrupts: 
       Interrupts: Channel Interrupt Priority Level: Priority 11
       Filter List Array: my_can_filter
+      
+  Thread "GUI_Thread"
+    Symbol: GUI_Thread
+    Name: GUI_Thread
+    Stack size (bytes): 1024
+    Priority: 1
+    Thread Context: NULL
+    Memory Allocation: Static
+    Allocate Secure Context: Enable
+    
+    Instance "g_uart7 UART (r_sci_uart)"
+      General: Name: g_uart7
+      General: Channel: 7
+      General: Data Bits: 8bits
+      General: Parity: None
+      General: Stop Bits: 1bit
+      Baud: Baud Rate: 115200
+      Baud: Baud Rate Modulation: Disabled
+      Baud: Max Error (%): 5
+      Flow Control: CTS/RTS Selection: Hardware RTS
+      Flow Control: Software RTS Port: Disabled
+      Flow Control: Software RTS Pin: Disabled
+      Extra: Clock Source: Internal Clock
+      Extra: Start bit detection: Falling Edge
+      Extra: Noise Filter: Disable
+      Extra: Receive FIFO Trigger Level: Max
+      Extra: IrDA: Enable: Disabled
+      Extra: IrDA: RXD Polarity Switching: Normal
+      Extra: IrDA: TXD Polarity Switching: Normal
+      Extra: RS-485: DE Pin: Disable
+      Extra: RS-485: DE Pin Polarity: Active High
+      Extra: RS-485: DE Port Number: Disabled
+      Extra: RS-485: DE Pin Number: Disabled
+      Interrupts: Callback: uart7_callback
+      Interrupts: Receive Interrupt Priority: Priority 12
+      Interrupts: Transmit Data Empty Interrupt Priority: Priority 12
+      Interrupts: Transmit End Interrupt Priority: Priority 12
+      Interrupts: Error Interrupt Priority: Priority 12
       

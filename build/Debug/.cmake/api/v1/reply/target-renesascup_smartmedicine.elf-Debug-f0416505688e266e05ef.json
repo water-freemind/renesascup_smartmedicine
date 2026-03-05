@@ -53,6 +53,12 @@
 				"parent" : 2
 			},
 			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 75,
+				"parent" : 0
+			},
+			{
 				"command" : 3,
 				"file" : 0,
 				"line" : 68,
@@ -91,7 +97,7 @@
 			{
 				"command" : 8,
 				"file" : 1,
-				"line" : 58,
+				"line" : 59,
 				"parent" : 0
 			}
 		]
@@ -105,186 +111,190 @@
 					"fragment" : "-g"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 8,
 					"fragment" : "-g"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 8,
 					"fragment" : "-O2"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "--param=min-pagesize=0"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-Wno-format-truncation"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-Wno-stringop-overflow"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-mfloat-abi=hard"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-mcpu=cortex-m33"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-mfpu=fpv5-sp-d16"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-Wunused"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-Wuninitialized"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-Wall"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-Wextra"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-Wmissing-declarations"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-Wconversion"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-Wpointer-arith"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-Wshadow"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-Wlogical-op"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-Waggregate-return"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-Wfloat-equal"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-fmessage-length=0"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-fsigned-char"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-ffunction-sections"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-fdata-sections"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-mthumb"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-std=c99"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-MMD"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"fragment" : "-MP"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 9,
+					"backtrace" : 10,
 					"define" : "_RA_CORE=CM33"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 10,
 					"define" : "_RA_ORDINAL=1"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 10,
 					"define" : "_RENESAS_RA_"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "D:/Renesas_project/renesascup_smartmedicine/ra/arm/CMSIS_6/CMSIS/Core/Include"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "D:/Renesas_project/renesascup_smartmedicine/ra/aws/FreeRTOS/FreeRTOS/Source/include"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "D:/Renesas_project/renesascup_smartmedicine/ra/fsp/inc"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "D:/Renesas_project/renesascup_smartmedicine/ra/fsp/inc/api"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "D:/Renesas_project/renesascup_smartmedicine/ra/fsp/inc/instances"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "D:/Renesas_project/renesascup_smartmedicine/ra/fsp/src/rm_freertos_port"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "D:/Renesas_project/renesascup_smartmedicine/ra_cfg/aws"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "D:/Renesas_project/renesascup_smartmedicine/ra_cfg/fsp_cfg"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "D:/Renesas_project/renesascup_smartmedicine/ra_cfg/fsp_cfg/bsp"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "D:/Renesas_project/renesascup_smartmedicine/ra_gen"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "D:/Renesas_project/renesascup_smartmedicine/src"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "D:/Renesas_project/renesascup_smartmedicine"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "D:/Renesas_project/renesascup_smartmedicine/build/Debug"
 				},
 				{
-					"backtrace" : 11,
+					"backtrace" : 12,
 					"path" : "D:/Renesas_project/renesascup_smartmedicine/src/drive"
+				},
+				{
+					"backtrace" : 12,
+					"path" : "D:/Renesas_project/renesascup_smartmedicine/src/app"
 				}
 			],
 			"language" : "C",
@@ -326,14 +336,19 @@
 				33,
 				34,
 				35,
-				36
+				36,
+				37,
+				38,
+				39,
+				40,
+				41
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 6,
+			"backtrace" : 7,
 			"id" : "generate_content_renesascup_smartmedicine::@6890427a1f51a3e7e1df"
 		}
 	],
@@ -482,11 +497,16 @@
 			},
 			{
 				"backtrace" : 5,
+				"fragment" : "--specs=nosys.specs",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 6,
 				"fragment" : "-LD:\\Renesas_project\\renesascup_smartmedicine",
 				"role" : "libraryPath"
 			},
 			{
-				"backtrace" : 5,
+				"backtrace" : 6,
 				"fragment" : "-LD:\\Renesas_project\\renesascup_smartmedicine\\script",
 				"role" : "libraryPath"
 			}
@@ -542,7 +562,12 @@
 				33,
 				34,
 				35,
-				36
+				36,
+				37,
+				38,
+				39,
+				40,
+				41
 			]
 		}
 	],
@@ -707,7 +732,19 @@
 		{
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
+			"path" : "ra/fsp/src/r_sci_uart/r_sci_uart.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
 			"path" : "ra/fsp/src/rm_freertos_port/port.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "ra_gen/GUI_Thread.c",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -749,7 +786,19 @@
 		{
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
+			"path" : "src/GUI_Thread_entry.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
 			"path" : "src/Motor_thread_entry.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/app/uart_app.c",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -762,6 +811,12 @@
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
 			"path" : "src/drive/led_drv.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/drive/uart_drv.c",
 			"sourceGroupIndex" : 0
 		},
 		{

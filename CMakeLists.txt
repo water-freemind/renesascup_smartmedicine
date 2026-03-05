@@ -54,7 +54,25 @@ include(${CMAKE_CURRENT_LIST_DIR}/cmake/GeneratedCfg.cmake)
 # If required user can amend RASC generated flags here, e.g. list(REMOVE_ITEM RASC_CMAKE_C_FLAGS "-Wall")
 
 include(${CMAKE_CURRENT_LIST_DIR}/cmake/GeneratedSrc.cmake)
-#添加驱动文件路径
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src/drive)
 
-file(GLOB_RECURSE DRIVE_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/src/drive/*.c")
+# 添加头文件路径
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/drive
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/app
+)
+
+# 收集所有源文件
+file(GLOB_RECURSE DRIVE_SOURCES
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/drive/*.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/app/*.c"
+)
+
+# 把源文件添加到主目标
+target_sources(${PROJECT_NAME}.elf PRIVATE
+    ${DRIVE_SOURCES}
+)
+# 确保链接选项包含 nano.specs 和 nosys.specs，以支持 newlib-nano 和无系统调用的环境 ,移植printf等函数需要这两个选项
+target_link_options(${PROJECT_NAME}.elf PRIVATE
+    --specs=nano.specs
+    --specs=nosys.specs
+)

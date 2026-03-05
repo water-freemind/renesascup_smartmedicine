@@ -11,6 +11,8 @@
 #define ZDT_CMD_ENABLE    0xF3  // 使能/脱机
 #define ZDT_CMD_ZERO      0x93  // 设置当前位置为零点
 #define ZDT_CMD_POS_MOVE  0xFD  // 梯形加减速位置模式
+#define ZDT_CMD_SYSTEM    0xFE  // 系统控制 (如复位)
+#define ZDT_SUB_STOP      0x98  // 紧急停止
 
 /* --- 驱动函数声明 --- */
 
@@ -27,6 +29,7 @@ void ZDT_SetZero(uint8_t id);
 // pos: 目标脉冲数 (相对或绝对，看电机具体配置，通常上电归零后可视为绝对)
 // speed: 速度 (RPM 或 PPS，视细分而定)
 // acc: 加速度 (0-255)
-void ZDT_MovePosition(uint8_t id, int32_t pos, uint16_t speed, uint8_t acc);
-
+void ZDT_MovePosition(uint8_t id, int32_t pos, uint16_t speed, uint8_t acc, bool sync);
+void ZDT_SyncTrigger(void);
+void ZDT_Stop(uint8_t id);// 紧急停止
 #endif

@@ -53,6 +53,10 @@ void Motor_thread_entry(void * pvParameters)
 
     /* TODO: add your own code here */
     ZDT_Driver_Init();// 初始化 CAN 驱动
+    //使能三个步进电机
+    ZDT_Enable(ZDT_ID_X, true);
+    ZDT_Enable(ZDT_ID_Y, true);
+    ZDT_Enable(ZDT_ID_Z, true);
     while(1)
     {
         vTaskDelay(1);
