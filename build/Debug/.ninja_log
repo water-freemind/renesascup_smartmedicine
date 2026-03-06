@@ -105,3 +105,5 @@
 703	1816	7944862759183641	CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/GUI/spi_display_drv.c.obj	bb78de16cc187120
 724	1817	7944862759396205	CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj	2a481ff53a10a17f
 1817	9399	7944862770316241	renesascup_smartmedicine.elf	42dedfdd53776613
+26	269	7944872488257214	CMakeFiles/renesascup_smartmedicine.elf.dir/src/GUI_Thread_entry.c.obj	c129bb3659a09f00
+270	8863	7944872490701823	renesascup_smartmedicine.elf	42dedfdd53776613

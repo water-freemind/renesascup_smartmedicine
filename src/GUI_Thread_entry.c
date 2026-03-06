@@ -24,7 +24,7 @@ void GUI_Thread_entry(void * pvParameters)
         //读取触摸状态
         is_pressed = app_touchpad_read(&x, &y);
 
-        app_spi_display_test();
+        //app_spi_display_test();
         //如果按下，打印坐标
         if (is_pressed)
         {
