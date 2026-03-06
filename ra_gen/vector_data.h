@@ -6,7 +6,7 @@
         #endif
                 /* Number of interrupts allocated */
         #ifndef VECTOR_DATA_IRQ_COUNT
-        #define VECTOR_DATA_IRQ_COUNT    (17)
+        #define VECTOR_DATA_IRQ_COUNT    (18)
         #endif
         /* ISR prototypes */
         void canfd_error_isr(void);
@@ -25,6 +25,7 @@
         void spi_tei_isr(void);
         void spi_eri_isr(void);
         void dmac_int_isr(void);
+        void gpt_counter_overflow_isr(void);
 
         /* Vector table allocations */
         #define VECTOR_NUMBER_CAN0_CHERR ((IRQn_Type) 0) /* CAN0 CHERR (Channel  error) */
@@ -61,8 +62,10 @@
         #define SPI1_ERI_IRQn          ((IRQn_Type) 15) /* SPI1 ERI (Error) */
         #define VECTOR_NUMBER_DMAC1_INT ((IRQn_Type) 16) /* DMAC1 INT (DMAC1 transfer end) */
         #define DMAC1_INT_IRQn          ((IRQn_Type) 16) /* DMAC1 INT (DMAC1 transfer end) */
+        #define VECTOR_NUMBER_GPT0_COUNTER_OVERFLOW ((IRQn_Type) 17) /* GPT0 COUNTER OVERFLOW (Overflow) */
+        #define GPT0_COUNTER_OVERFLOW_IRQn          ((IRQn_Type) 17) /* GPT0 COUNTER OVERFLOW (Overflow) */
         /* The number of entries required for the ICU vector table. */
-        #define BSP_ICU_VECTOR_NUM_ENTRIES (17)
+        #define BSP_ICU_VECTOR_NUM_ENTRIES (18)
 
         #ifdef __cplusplus
         }

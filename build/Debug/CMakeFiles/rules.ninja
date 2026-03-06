@@ -25,8 +25,10 @@ rule C_COMPILER__renesascup_smartmedicine.2eelf_unscanned_Debug
 # Rule for linking C executable.
 
 rule C_EXECUTABLE_LINKER__renesascup_smartmedicine.2eelf_Debug
-  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~2\ARMGNU~1\13C7F1~1.2RE\bin\AR19DD~1.EXE $FLAGS $LINK_FLAGS $in -o $TARGET_FILE $LINK_PATH $LINK_LIBRARIES && $POST_BUILD"
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\PROGRA~2\ARMGNU~1\13C7F1~1.2RE\bin\AR19DD~1.EXE $FLAGS $LINK_FLAGS @$RSP_FILE -o $TARGET_FILE && $POST_BUILD"
   description = Linking C executable $TARGET_FILE
+  rspfile = $RSP_FILE
+  rspfile_content = $in $LINK_PATH $LINK_LIBRARIES
   restat = $RESTAT
 
 

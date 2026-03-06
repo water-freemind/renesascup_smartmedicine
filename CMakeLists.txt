@@ -60,12 +60,15 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/src/drive
 	${CMAKE_CURRENT_SOURCE_DIR}/src/drive/GUI
     ${CMAKE_CURRENT_SOURCE_DIR}/src/app
+	${CMAKE_CURRENT_SOURCE_DIR}/src/Middlewares/LVGL
+	${CMAKE_CURRENT_SOURCE_DIR}/src/Middlewares/LVGL/demos
 )
 
 # 收集所有源文件
 file(GLOB_RECURSE DRIVE_SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/src/drive/*.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/app/*.c"
+	"${CMAKE_CURRENT_SOURCE_DIR}/src/Middlewares/LVGL/*.c"
 )
 
 # 把源文件添加到主目标
@@ -76,4 +79,15 @@ target_sources(${PROJECT_NAME}.elf PRIVATE
 target_link_options(${PROJECT_NAME}.elf PRIVATE
     --specs=nano.specs
     --specs=nosys.specs
+)
+
+# --- 屏蔽 LVGL 产生的海量警告 ---
+target_compile_options(${PROJECT_NAME}.elf PRIVATE
+    -Wno-conversion           # 忽略隐式类型转换警告
+    -Wno-aggregate-return     # 忽略返回结构体或联合体的警告
+    -Wno-type-limits          # 忽略类型限制比较警告
+    -Wno-unused-parameter     # 忽略未使用的函数参数警告
+    -Wno-unused-function      # 忽略未使用的静态函数警告
+    -Wno-sign-compare         # (可选) 忽略有符号和无符号数比较警告
+    -Wno-discarded-qualifiers # (可选) 忽略丢弃限定符(const)警告
 )

@@ -1,4 +1,4 @@
-#Fri Mar 06 15:38:53 CST 2026
+#Fri Mar 06 23:41:28 CST 2026
 com.renesas.cdt.ddsc.content/com.renesas.cdt.ddsc.content.defaultlinkerscript=script/fsp.ld
 com.renesas.cdt.ddsc.contentgen.options/options/suppresswarningspaths=ra/arm,ra/aws
 com.renesas.cdt.ddsc.packs.componentfiles/AWS\#\#Heaps\#\#FreeRTOS\#\#heap_4\#\#\#\#11.1.0+fsp.6.3.0/all=271572837,ra/aws/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_4.c
@@ -25,6 +25,8 @@ com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_ca
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_canfd\#\#\#\#6.3.0/libraries=
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_dmac\#\#\#\#6.3.0/all=429738396,ra/fsp/inc/api/r_transfer_api.h|3646703680,ra/fsp/inc/instances/r_dmac.h|1867044677,ra/fsp/src/r_dmac/r_dmac.c
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_dmac\#\#\#\#6.3.0/libraries=
+com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_gpt\#\#\#\#6.3.0/all=3457345722,ra/fsp/inc/api/r_timer_api.h|2961850557,ra/fsp/inc/instances/r_gpt.h|3201379685,ra/fsp/src/r_gpt/r_gpt.c
+com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_gpt\#\#\#\#6.3.0/libraries=
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_iic_master\#\#\#\#6.3.0/all=1589066529,ra/fsp/inc/api/r_elc_api.h|429738396,ra/fsp/inc/api/r_transfer_api.h|979139595,ra/fsp/inc/api/r_i2c_master_api.h|2048414029,ra/fsp/inc/instances/r_iic_master.h|4191706256,ra/fsp/src/r_iic_master/r_iic_master.c
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_iic_master\#\#\#\#6.3.0/libraries=
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#HAL\ Drivers\#\#all\#\#r_ioport\#\#\#\#6.3.0/all=1692739955,ra/fsp/inc/api/r_ioport_api.h|2533231413,ra/fsp/inc/instances/r_ioport.h|2765953787,ra/fsp/src/r_ioport/r_ioport.c
@@ -38,7 +40,7 @@ com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#Middleware\#\#all\#\#rm_fre
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#Projects\#\#all\#\#common\#\#\#\#6.3.0/all=
 com.renesas.cdt.ddsc.packs.componentfiles/Renesas\#\#Projects\#\#all\#\#common\#\#\#\#6.3.0/libraries=
 com.renesas.cdt.ddsc.project.standalone.projectgenerationoptions/isCpp=false
-com.renesas.cdt.ddsc.settingseditor/com.renesas.cdt.ddsc.settingseditor.active_page=PinConfiguration
+com.renesas.cdt.ddsc.settingseditor/com.renesas.cdt.ddsc.settingseditor.active_page=SWPConfigurator
 com.renesas.cdt.ddsc.threads.configurator/collapse/module.driver.i2c_on_iic_master.385268699=false
 com.renesas.cdt.ddsc.threads.configurator/collapse/module.driver.spi_on_spi.530652347=false
 com.renesas.cdt.ddsc.threads.configurator/collapse/module.driver.uart_on_sci_uart.1707836327=false

@@ -1,4 +1,4 @@
-#include "app_i2c_touchpad_test.h"
+#include "app.h"
 #include "i2c_touchpad_drv.h"
 #include <stdio.h>
 

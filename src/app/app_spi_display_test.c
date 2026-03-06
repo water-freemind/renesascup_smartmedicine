@@ -1,7 +1,6 @@
 /***********************************************************************************************************************
  * Includes
  **********************************************************************************************************************/
-#include "GUI_Thread.h"
 #include "uart_drv.h"
 #include "spi_display_drv.h"
 #include <stdio.h>
@@ -45,15 +44,15 @@ void app_spi_display_test(void)
     {
         spi_display_show_color((uint16_t)LCD_COLOR_RED);
         printf ("Full screen display in red\r\n");
-        R_BSP_SoftwareDelay(500, BSP_DELAY_UNITS_MILLISECONDS); //延时500ms
+        vTaskDelay(500); //延时500ms
 
         spi_display_show_color((uint16_t)LCD_COLOR_GREEN);
         printf ("Full screen display in green\r\n");
-        R_BSP_SoftwareDelay(500, BSP_DELAY_UNITS_MILLISECONDS); //延时500ms
+        vTaskDelay(500); //延时500ms
 
         spi_display_show_color((uint16_t)LCD_COLOR_BLUE);
         printf ("Full screen display in blue\r\n");
-        R_BSP_SoftwareDelay(500, BSP_DELAY_UNITS_MILLISECONDS); //延时500ms
+        vTaskDelay(500); //延时500ms
     }
 
 }
