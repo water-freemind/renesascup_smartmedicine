@@ -163,12 +163,12 @@ FSP Configuration
       P010 M8 - - - - Disabled - - "ADC0: AN010; ICU0: IRQ14" - None - - 
       P014 R7 - - - - Disabled - - "ADC0: AN012; DAC0: DA0" - None - - 
       P015 P7 - - - - Disabled - - "ADC0: AN013; DAC1: DA1; ICU0: IRQ13" - None - - 
-      P100 P1 - - - - Disabled - - "AGT0: AGTIO0; BUS_ASYNCH0: D00; GPT_POEG0: GTETRGA; GPT5: GTIOC5B; ICU0: IRQ02; OSPI0: OMSCLK; QSPI0: QSPCLK; SCI0: RXD0; SCI0: SCL0; SCI1: SCK1; SPI1: MISOB" - None - - 
-      P101 N2 - - - - Disabled - - "AGT0: AGTEE0; BUS_ASYNCH0: D01; GPT_POEG1: GTETRGB; GPT5: GTIOC5A; ICU0: IRQ01; OSPI0: OMSIO7; QSPI0: QIO1; SCI0: SDA0; SCI0: TXD0; SCI1: CTSRTS1; SPI1: MOSIB" - None - - 
-      P102 M3 - - - - Disabled - - "ADC0: ADTRG0; AGT0: AGTO0; BUS_ASYNCH0: D02; CAN0: CRX0; GPT_OPS0: GTOWLO; GPT2: GTIOC2B; OSPI0: OMSIO1; QSPI0: QIO0; SCI0: SCK0; SPI1: RSPCKB" - None - - 
-      P103 N1 - - - - Disabled - - "AGT2: AGTIO2; BUS_ASYNCH0: D03; CAN0: CTX0; GPT_OPS0: GTOWUP; GPT2: GTIOC2A; OSPI0: OMSIO6; QSPI0: QIO3; SCI0: CTSRTS0; SPI1: SSLB0" - None - - 
-      P104 M2 - - - - Disabled - - "AGT2: AGTEE2; BUS_ASYNCH0: D04; GPT_POEG1: GTETRGB; GPT1: GTIOC1B; ICU0: IRQ01; OSPI0: OMDQS; QSPI0: QIO2; SCI8: RXD8; SCI8: SCL8; SPI1: SSLB1" - None - - 
-      P105 L3 - - - - Disabled - - "AGT2: AGTO2; BUS_ASYNCH0: D05; GPT_POEG0: GTETRGA; GPT1: GTIOC1A; ICU0: IRQ00; OSPI0: OMSIO5; SCI8: SDA8; SCI8: TXD8; SPI1: SSLB2" - None - - 
+      P100 P1 SPI1_MISOB - Low None "Peripheral mode" CMOS None "AGT0: AGTIO0; BUS_ASYNCH0: D00; GPT_POEG0: GTETRGA; GPT5: GTIOC5B; ICU0: IRQ02; OSPI0: OMSCLK; QSPI0: QSPCLK; SCI0: RXD0; SCI0: SCL0; SCI1: SCK1; SPI1: MISOB" - IO - - 
+      P101 N2 SPI1_MOSIB - Low None "Peripheral mode" CMOS None "AGT0: AGTEE0; BUS_ASYNCH0: D01; GPT_POEG1: GTETRGB; GPT5: GTIOC5A; ICU0: IRQ01; OSPI0: OMSIO7; QSPI0: QIO1; SCI0: SDA0; SCI0: TXD0; SCI1: CTSRTS1; SPI1: MOSIB" - IO - - 
+      P102 M3 SPI1_RSPCKB - Low - "Peripheral mode" CMOS None "ADC0: ADTRG0; AGT0: AGTO0; BUS_ASYNCH0: D02; CAN0: CRX0; GPT_OPS0: GTOWLO; GPT2: GTIOC2B; OSPI0: OMSIO1; QSPI0: QIO0; SCI0: SCK0; SPI1: RSPCKB" - IO - - 
+      P103 N1 SPI1_SSLB0 - Low - "Peripheral mode" CMOS None "AGT2: AGTIO2; BUS_ASYNCH0: D03; CAN0: CTX0; GPT_OPS0: GTOWUP; GPT2: GTIOC2A; OSPI0: OMSIO6; QSPI0: QIO3; SCI0: CTSRTS0; SPI1: SSLB0" - IO - - 
+      P104 M2 GPIO - "High Speed High " None "Output mode (Initial High)" CMOS - "AGT2: AGTEE2; BUS_ASYNCH0: D04; GPT_POEG1: GTETRGB; GPT1: GTIOC1B; ICU0: IRQ01; OSPI0: OMDQS; QSPI0: QIO2; SCI8: RXD8; SCI8: SCL8; SPI1: SSLB1" - IO - - 
+      P105 L3 GPIO - "High Speed High " None "Output mode (Initial High)" CMOS - "AGT2: AGTO2; BUS_ASYNCH0: D05; GPT_POEG0: GTETRGA; GPT1: GTIOC1A; ICU0: IRQ00; OSPI0: OMSIO5; SCI8: SDA8; SCI8: TXD8; SPI1: SSLB2" - IO - - 
       P106 M1 - - - - Disabled - - "AGT0: AGTOB0; BUS_ASYNCH0: D06; GPT8: GTIOC8B; OSPI0: OMSIO0; SCI8: SCK8; SPI1: SSLB3" - None - - 
       P107 L2 - - - - Disabled - - "AGT0: AGTOA0; BUS_ASYNCH0: D07; GPT8: GTIOC8A; OSPI0: OMSIO3; SCI8: CTSRTS8" - None - - 
       P108 C3 DEBUG0_SWDIO - Low - "Peripheral mode" CMOS None "AGT3: AGTOA3; DEBUG0: SWDIO; DEBUG0: TMS; GPT_OPS0: GTOULO; GPT0: GTIOC0B; SCI9: CTSRTS9; SPI0: SSLA0" - IO - - 
@@ -246,7 +246,7 @@ FSP Configuration
       P605 J2 - - - - Disabled - - "AGT4: AGTO4; BUS_ASYNCH0: D11; GPT8: GTIOC8A; SCI8: CTS8" - None - - 
       P606 J1 - - - - Disabled - - "RTC0: RTCOUT; SCI8: CTSRTS8" - None - - 
       P607 J4 - - - - Disabled - - "SCI8: RXD8; SCI8: SCL8" - None - - 
-      P608 D2 - - - - Disabled - - "BUS_ASYNCH0: A00; GPT4: GTIOC4B" - None - - 
+      P608 D2 GPIO - High - "Output mode (Initial High)" CMOS - "BUS_ASYNCH0: A00; GPT4: GTIOC4B" - IO - - 
       P609 D1 - - - - Disabled - - "AGT5: AGTO5; BUS_ASYNCH0: CS1; CAN1: CTX1; GPT5: GTIOC5A; OSPI0: OMECS" - None - - 
       P610 F3 - - - - Disabled - - "AGT4: AGTO4; BUS_ASYNCH0: CS0; CAN1: CRX1; GPT5: GTIOC5B; OSPI0: OMCS0; SCI7: CTS7" - None - - 
       P611 E2 - - - - Disabled - - "AGT3: AGTO3; CAC0: CACREF; CGC0: CLKOUT; SCI7: CTSRTS7" - None - - 
@@ -478,6 +478,14 @@ FSP Configuration
     DTC on Transmission and Reception: Disabled
     10-bit slave addressing: Disabled
     
+  Module "SPI (r_spi)"
+    Parameter Checking: Default (BSP)
+    Enable Support for using a transfer API: Enabled
+    Enable Transmitting from RXI Interrupt: Disabled
+    
+  Module "Transfer (r_dmac)"
+    Parameter Checking: Default (BSP)
+    
   FreeRTOS
     General: Custom FreeRTOSConfig.h: 
     General: Use Preemption: Enabled
@@ -641,3 +649,46 @@ FSP Configuration
       Callback: i2c_master2_callback
       Interrupt Priority Level: Priority 12
       
+    Instance "g_spi1 SPI (r_spi)"
+      Name: g_spi1
+      Channel: 1
+      Receive Interrupt Priority: Priority 12
+      Transmit Buffer Empty Interrupt Priority: Disabled
+      Transfer Complete Interrupt Priority: Priority 10
+      Error Interrupt Priority: Priority 10
+      Operating Mode: Master
+      Clock Phase: Data sampling on odd edge, data variation on even edge
+      Clock Polarity: Low when idle
+      Mode Fault Error: Disable
+      Bit Order: MSB First
+      Callback: spi1_callback
+      SPI Mode: Clock Synchronous Operation
+      SPI burst transfer without delay between frames: Disable
+      Full or Transmit Only Mode: Full Duplex
+      Slave Select Polarity: Active Low
+      Select SSL(Slave Select): SSL1
+      MOSI Idle State: MOSI Idle Value Fixing Disable
+      Parity Mode: Disabled
+      Byte Swapping: Disable
+      Bitrate: 50000000
+      Clock Delay: 1 Clock
+      SSL Negation Delay: 1 Clock
+      Next Access Delay: 1 Clock
+      
+      Instance "g_transfer1 Transfer (r_dmac) SPI1 TXI (Transmit buffer empty)"
+        Name: g_transfer1
+        Channel: 1
+        Mode: Normal
+        Transfer Size: 2 Bytes
+        Destination Address Mode: Fixed
+        Source Address Mode: Incremented
+        Repeat Area (Unused in Normal Mode): Source
+        Number of Transfers: 0
+        Number of Blocks (Valid only in Repeat,Block or Repeat-Block Mode): 0
+        Activation Source: SPI1 TXI (Transmit buffer empty)
+        Callback: g_spi1_tx_transfer_callback
+        Transfer End Interrupt Priority: Priority 2
+        Interrupt Frequency: Interrupt after all transfers have completed
+        Offset value (Valid only when address mode is Offset addition): 1
+        Source Buffer Size: 1
+        

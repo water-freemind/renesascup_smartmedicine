@@ -135,8 +135,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-6jam5h"
-      binary: "D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-6jam5h"
+      source: "D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-k9c7rw"
+      binary: "D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-k9c7rw"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -145,10 +145,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-6jam5h'
+        Change Dir: 'D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-k9c7rw'
         
-        Run Build Command(s): D:/cmake/bin/ninja.exe -v cmTC_ae4a6
-        [1/2] C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR19DD~1.EXE   -v -o CMakeFiles/cmTC_ae4a6.dir/CMakeCCompilerABI.c.obj -c C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): D:/cmake/bin/ninja.exe -v cmTC_1476b
+        [1/2] C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR19DD~1.EXE   -v -o CMakeFiles/cmTC_1476b.dir/CMakeCCompilerABI.c.obj -c C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR19DD~1.EXE
         Target: arm-none-eabi
@@ -156,8 +156,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ae4a6.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_ae4a6.dir/'
-         C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1.exe -quiet -v -iprefix C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ae4a6.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\ccMgy9ve.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1476b.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1476b.dir/'
+         C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1.exe -quiet -v -iprefix C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1476b.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\ccRwPkUq.s
         GNU C17 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) version 13.2.1 20231009 (arm-none-eabi)
         	compiled by GNU C version 9.3-win32 20200320, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -174,13 +174,13 @@ events:
          C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: cb09303cfa46f5ecbf59d9467eac8678
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ae4a6.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_ae4a6.dir/'
-         C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_ae4a6.dir/CMakeCCompilerABI.c.obj C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\ccMgy9ve.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1476b.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1476b.dir/'
+         C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_1476b.dir/CMakeCCompilerABI.c.obj C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\ccRwPkUq.s
         GNU assembler version 2.41.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 2.41.0.20231009
         COMPILER_PATH=C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/arm-none-eabi/13.2.1/;C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/;C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/;C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/;C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/;C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ae4a6.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_ae4a6.dir/CMakeCCompilerABI.c.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\Zhanglongsheng\\.renesas\\platform\\cmake\\3.31.8\\cmake-3.31.8-windows-x86_64\\bin\\cmake.exe -E rm -f libcmTC_ae4a6.a && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\ARM-NO~2.EXE qc libcmTC_ae4a6.a  CMakeFiles/cmTC_ae4a6.dir/CMakeCCompilerABI.c.obj && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR17F9~1.EXE libcmTC_ae4a6.a && cd ."
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1476b.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1476b.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\Zhanglongsheng\\.renesas\\platform\\cmake\\3.31.8\\cmake-3.31.8-windows-x86_64\\bin\\cmake.exe -E rm -f libcmTC_1476b.a && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\ARM-NO~2.EXE qc libcmTC_1476b.a  CMakeFiles/cmTC_1476b.dir/CMakeCCompilerABI.c.obj && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR17F9~1.EXE libcmTC_1476b.a && cd ."
         
       exitCode: 0
   -
@@ -213,10 +213,10 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-6jam5h']
+        ignore line: [Change Dir: 'D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-k9c7rw']
         ignore line: []
-        ignore line: [Run Build Command(s): D:/cmake/bin/ninja.exe -v cmTC_ae4a6]
-        ignore line: [[1/2] C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR19DD~1.EXE   -v -o CMakeFiles/cmTC_ae4a6.dir/CMakeCCompilerABI.c.obj -c C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): D:/cmake/bin/ninja.exe -v cmTC_1476b]
+        ignore line: [[1/2] C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR19DD~1.EXE   -v -o CMakeFiles/cmTC_1476b.dir/CMakeCCompilerABI.c.obj -c C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR19DD~1.EXE]
         ignore line: [Target: arm-none-eabi]
@@ -224,8 +224,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ae4a6.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_ae4a6.dir/']
-        ignore line: [ C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1.exe -quiet -v -iprefix C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ae4a6.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\ccMgy9ve.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1476b.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1476b.dir/']
+        ignore line: [ C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1.exe -quiet -v -iprefix C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1476b.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\ccRwPkUq.s]
         ignore line: [GNU C17 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) version 13.2.1 20231009 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 9.3-win32 20200320  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -242,8 +242,8 @@ events:
         ignore line: [ C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: cb09303cfa46f5ecbf59d9467eac8678]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ae4a6.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_ae4a6.dir/']
-        ignore line: [ C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_ae4a6.dir/CMakeCCompilerABI.c.obj C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\ccMgy9ve.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1476b.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1476b.dir/']
+        ignore line: [ C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_1476b.dir/CMakeCCompilerABI.c.obj C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\ccRwPkUq.s]
         ignore line: [GNU assembler version 2.41.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 2.41.0.20231009]
         ignore line: [COMPILER_PATH=C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/arm-none-eabi/13.2.1/]
         ignore line: [C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/]
@@ -252,8 +252,8 @@ events:
         ignore line: [C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/]
         ignore line: [C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/]
         ignore line: [C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ae4a6.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_ae4a6.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\Zhanglongsheng\\.renesas\\platform\\cmake\\3.31.8\\cmake-3.31.8-windows-x86_64\\bin\\cmake.exe -E rm -f libcmTC_ae4a6.a && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\ARM-NO~2.EXE qc libcmTC_ae4a6.a  CMakeFiles/cmTC_ae4a6.dir/CMakeCCompilerABI.c.obj && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR17F9~1.EXE libcmTC_ae4a6.a && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_1476b.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1476b.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\Zhanglongsheng\\.renesas\\platform\\cmake\\3.31.8\\cmake-3.31.8-windows-x86_64\\bin\\cmake.exe -E rm -f libcmTC_1476b.a && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\ARM-NO~2.EXE qc libcmTC_1476b.a  CMakeFiles/cmTC_1476b.dir/CMakeCCompilerABI.c.obj && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR17F9~1.EXE libcmTC_1476b.a && cd ."]
         ignore line: []
         ignore line: []
         implicit libs: []
@@ -271,8 +271,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-l6vr0y"
-      binary: "D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-l6vr0y"
+      source: "D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-c7a3s9"
+      binary: "D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-c7a3s9"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -282,10 +282,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-l6vr0y'
+        Change Dir: 'D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-c7a3s9'
         
-        Run Build Command(s): D:/cmake/bin/ninja.exe -v cmTC_98e5d
-        [1/2] C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR10B2~1.EXE   -v -o CMakeFiles/cmTC_98e5d.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): D:/cmake/bin/ninja.exe -v cmTC_e8370
+        [1/2] C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR10B2~1.EXE   -v -o CMakeFiles/cmTC_e8370.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR10B2~1.EXE
         Target: arm-none-eabi
@@ -293,8 +293,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_98e5d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_98e5d.dir/'
-         C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1plus.exe -quiet -v -iprefix C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_98e5d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\ccuTLp8C.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8370.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_e8370.dir/'
+         C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1plus.exe -quiet -v -iprefix C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_e8370.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\cctQSmYP.s
         GNU C++17 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) version 13.2.1 20231009 (arm-none-eabi)
         	compiled by GNU C version 9.3-win32 20200320, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -317,13 +317,13 @@ events:
          C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: a40e8addbeb3630b34e653a108e6a4b8
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_98e5d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_98e5d.dir/'
-         C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_98e5d.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\ccuTLp8C.s
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8370.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_e8370.dir/'
+         C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_e8370.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\cctQSmYP.s
         GNU assembler version 2.41.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 2.41.0.20231009
         COMPILER_PATH=C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/arm-none-eabi/13.2.1/;C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/;C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/;C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/;C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/;C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_98e5d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_98e5d.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\Zhanglongsheng\\.renesas\\platform\\cmake\\3.31.8\\cmake-3.31.8-windows-x86_64\\bin\\cmake.exe -E rm -f libcmTC_98e5d.a && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\ARM-NO~2.EXE qc libcmTC_98e5d.a  CMakeFiles/cmTC_98e5d.dir/CMakeCXXCompilerABI.cpp.obj && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR17F9~1.EXE libcmTC_98e5d.a && cd ."
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8370.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_e8370.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\Zhanglongsheng\\.renesas\\platform\\cmake\\3.31.8\\cmake-3.31.8-windows-x86_64\\bin\\cmake.exe -E rm -f libcmTC_e8370.a && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\ARM-NO~2.EXE qc libcmTC_e8370.a  CMakeFiles/cmTC_e8370.dir/CMakeCXXCompilerABI.cpp.obj && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR17F9~1.EXE libcmTC_e8370.a && cd ."
         
       exitCode: 0
   -
@@ -362,10 +362,10 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: 'D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-l6vr0y']
+        ignore line: [Change Dir: 'D:/Renesas_project/renesascup_smartmedicine/build/Debug/CMakeFiles/CMakeScratch/TryCompile-c7a3s9']
         ignore line: []
-        ignore line: [Run Build Command(s): D:/cmake/bin/ninja.exe -v cmTC_98e5d]
-        ignore line: [[1/2] C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR10B2~1.EXE   -v -o CMakeFiles/cmTC_98e5d.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): D:/cmake/bin/ninja.exe -v cmTC_e8370]
+        ignore line: [[1/2] C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR10B2~1.EXE   -v -o CMakeFiles/cmTC_e8370.dir/CMakeCXXCompilerABI.cpp.obj -c C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR10B2~1.EXE]
         ignore line: [Target: arm-none-eabi]
@@ -373,8 +373,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_98e5d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_98e5d.dir/']
-        ignore line: [ C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1plus.exe -quiet -v -iprefix C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_98e5d.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\ccuTLp8C.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8370.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_e8370.dir/']
+        ignore line: [ C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1plus.exe -quiet -v -iprefix C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../arm-none-eabi -D__USES_INITFINI__ C:/Users/Zhanglongsheng/.renesas/platform/cmake/3.31.8/cmake-3.31.8-windows-x86_64/share/cmake-3.31/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_e8370.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -o C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\cctQSmYP.s]
         ignore line: [GNU C++17 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) version 13.2.1 20231009 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version 9.3-win32 20200320  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -397,8 +397,8 @@ events:
         ignore line: [ C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: a40e8addbeb3630b34e653a108e6a4b8]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_98e5d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_98e5d.dir/']
-        ignore line: [ C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_98e5d.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\ccuTLp8C.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8370.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_e8370.dir/']
+        ignore line: [ C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_e8370.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\ZHANGL~1\\AppData\\Local\\Temp\\cctQSmYP.s]
         ignore line: [GNU assembler version 2.41.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 2.41.0.20231009]
         ignore line: [COMPILER_PATH=C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/arm-none-eabi/13.2.1/]
         ignore line: [C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../libexec/gcc/]
@@ -407,8 +407,8 @@ events:
         ignore line: [C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/]
         ignore line: [C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/]
         ignore line: [C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_98e5d.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_98e5d.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\Zhanglongsheng\\.renesas\\platform\\cmake\\3.31.8\\cmake-3.31.8-windows-x86_64\\bin\\cmake.exe -E rm -f libcmTC_98e5d.a && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\ARM-NO~2.EXE qc libcmTC_98e5d.a  CMakeFiles/cmTC_98e5d.dir/CMakeCXXCompilerABI.cpp.obj && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR17F9~1.EXE libcmTC_98e5d.a && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e8370.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_e8370.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\Users\\Zhanglongsheng\\.renesas\\platform\\cmake\\3.31.8\\cmake-3.31.8-windows-x86_64\\bin\\cmake.exe -E rm -f libcmTC_e8370.a && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\ARM-NO~2.EXE qc libcmTC_e8370.a  CMakeFiles/cmTC_e8370.dir/CMakeCXXCompilerABI.cpp.obj && C:\\PROGRA~2\\ARMGNU~1\\13C7F1~1.2RE\\bin\\AR17F9~1.EXE libcmTC_e8370.a && cd ."]
         ignore line: []
         ignore line: []
         implicit libs: []

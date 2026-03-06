@@ -6,7 +6,7 @@
         #endif
                 /* Number of interrupts allocated */
         #ifndef VECTOR_DATA_IRQ_COUNT
-        #define VECTOR_DATA_IRQ_COUNT    (13)
+        #define VECTOR_DATA_IRQ_COUNT    (17)
         #endif
         /* ISR prototypes */
         void canfd_error_isr(void);
@@ -21,6 +21,10 @@
         void iic_master_txi_isr(void);
         void iic_master_tei_isr(void);
         void iic_master_eri_isr(void);
+        void spi_rxi_isr(void);
+        void spi_tei_isr(void);
+        void spi_eri_isr(void);
+        void dmac_int_isr(void);
 
         /* Vector table allocations */
         #define VECTOR_NUMBER_CAN0_CHERR ((IRQn_Type) 0) /* CAN0 CHERR (Channel  error) */
@@ -49,8 +53,16 @@
         #define IIC2_TEI_IRQn          ((IRQn_Type) 11) /* IIC2 TEI (Transmit end) */
         #define VECTOR_NUMBER_IIC2_ERI ((IRQn_Type) 12) /* IIC2 ERI (Transfer error) */
         #define IIC2_ERI_IRQn          ((IRQn_Type) 12) /* IIC2 ERI (Transfer error) */
+        #define VECTOR_NUMBER_SPI1_RXI ((IRQn_Type) 13) /* SPI1 RXI (Receive buffer full) */
+        #define SPI1_RXI_IRQn          ((IRQn_Type) 13) /* SPI1 RXI (Receive buffer full) */
+        #define VECTOR_NUMBER_SPI1_TEI ((IRQn_Type) 14) /* SPI1 TEI (Transmission complete event) */
+        #define SPI1_TEI_IRQn          ((IRQn_Type) 14) /* SPI1 TEI (Transmission complete event) */
+        #define VECTOR_NUMBER_SPI1_ERI ((IRQn_Type) 15) /* SPI1 ERI (Error) */
+        #define SPI1_ERI_IRQn          ((IRQn_Type) 15) /* SPI1 ERI (Error) */
+        #define VECTOR_NUMBER_DMAC1_INT ((IRQn_Type) 16) /* DMAC1 INT (DMAC1 transfer end) */
+        #define DMAC1_INT_IRQn          ((IRQn_Type) 16) /* DMAC1 INT (DMAC1 transfer end) */
         /* The number of entries required for the ICU vector table. */
-        #define BSP_ICU_VECTOR_NUM_ENTRIES (13)
+        #define BSP_ICU_VECTOR_NUM_ENTRIES (17)
 
         #ifdef __cplusplus
         }

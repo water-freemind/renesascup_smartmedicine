@@ -17,6 +17,10 @@
             [10] = iic_master_txi_isr, /* IIC2 TXI (Transmit data empty) */
             [11] = iic_master_tei_isr, /* IIC2 TEI (Transmit end) */
             [12] = iic_master_eri_isr, /* IIC2 ERI (Transfer error) */
+            [13] = spi_rxi_isr, /* SPI1 RXI (Receive buffer full) */
+            [14] = spi_tei_isr, /* SPI1 TEI (Transmission complete event) */
+            [15] = spi_eri_isr, /* SPI1 ERI (Error) */
+            [16] = dmac_int_isr, /* DMAC1 INT (DMAC1 transfer end) */
         };
         #if BSP_FEATURE_ICU_HAS_IELSR
         const bsp_interrupt_event_t g_interrupt_event_link_select[BSP_ICU_VECTOR_NUM_ENTRIES] =
@@ -34,6 +38,10 @@
             [10] = BSP_PRV_VECT_ENUM(EVENT_IIC2_TXI,GROUP2), /* IIC2 TXI (Transmit data empty) */
             [11] = BSP_PRV_VECT_ENUM(EVENT_IIC2_TEI,GROUP3), /* IIC2 TEI (Transmit end) */
             [12] = BSP_PRV_VECT_ENUM(EVENT_IIC2_ERI,GROUP4), /* IIC2 ERI (Transfer error) */
+            [13] = BSP_PRV_VECT_ENUM(EVENT_SPI1_RXI,GROUP5), /* SPI1 RXI (Receive buffer full) */
+            [14] = BSP_PRV_VECT_ENUM(EVENT_SPI1_TEI,GROUP6), /* SPI1 TEI (Transmission complete event) */
+            [15] = BSP_PRV_VECT_ENUM(EVENT_SPI1_ERI,GROUP7), /* SPI1 ERI (Error) */
+            [16] = BSP_PRV_VECT_ENUM(EVENT_DMAC1_INT,GROUP0), /* DMAC1 INT (DMAC1 transfer end) */
         };
         #endif
         #endif
