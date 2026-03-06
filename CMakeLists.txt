@@ -58,6 +58,7 @@ include(${CMAKE_CURRENT_LIST_DIR}/cmake/GeneratedSrc.cmake)
 # 添加头文件路径
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/src/drive
+	${CMAKE_CURRENT_SOURCE_DIR}/src/drive/GUI
     ${CMAKE_CURRENT_SOURCE_DIR}/src/app
 )
 

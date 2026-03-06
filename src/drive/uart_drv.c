@@ -1,7 +1,7 @@
 /***********************************************************************************************************************
  * Includes
  **********************************************************************************************************************/
-#include "bsp_pin_cfg.h"
+
 #include "uart_drv.h"
 #include <stdio.h>
 
@@ -21,7 +21,7 @@ static bool g_uart_initialized = false;
 extern const uart_instance_t g_uart7;
 
 /***********************************************************************************************************************
- * Functions
+ * Functions  
  **********************************************************************************************************************/
 
 /* 
@@ -70,7 +70,7 @@ void uart7_callback(uart_callback_args_t * p_args)
             /* 发送完成，释放信号量 */
             if (g_uart7_tx_sem != NULL)
             {
-                xSemaphoreGiveFromISR(g_uart7_tx_sem, &xHigherPriorityTaskWoken);
+                xSemaphoreGiveFromISR(g_uart7_tx_sem, &xHigherPriorityTaskWoken);//如果释放信号量导致更高优先级的任务变为了就绪态， 则*pxHigherPriorityTaskWoken = pdTRUE
             }
             break;
         }
@@ -94,7 +94,7 @@ void uart7_callback(uart_callback_args_t * p_args)
  **********************************************************************************************************************/
 
 /* 
- * 重写 _write 函数
+ * _write 函数
  * 这是 printf 底层调用的核心函数
  * 
  * fd: 文件描述符 (1=stdout, 2=stderr)
