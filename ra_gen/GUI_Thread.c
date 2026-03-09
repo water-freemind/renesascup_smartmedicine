@@ -5,9 +5,9 @@
 #if 1
                 static StaticTask_t GUI_Thread_memory;
                 #if defined(__ARMCC_VERSION)           /* AC6 compiler */
-                static uint8_t GUI_Thread_stack[16384] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
+                static uint8_t GUI_Thread_stack[8192] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
                 #else
-                static uint8_t GUI_Thread_stack[16384] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.GUI_Thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
+                static uint8_t GUI_Thread_stack[8192] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.GUI_Thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
                 #endif
                 #endif
                 TaskHandle_t GUI_Thread;
@@ -134,7 +134,7 @@ const timer_cfg_t g_timer0_cfg =
     .p_context           = (void *) &NULL,
 #endif
     .p_extend            = &g_timer0_extend,
-    .cycle_end_ipl       = (10),
+    .cycle_end_ipl       = (12),
 #if defined(VECTOR_NUMBER_GPT0_COUNTER_OVERFLOW)
     .cycle_end_irq       = VECTOR_NUMBER_GPT0_COUNTER_OVERFLOW,
 #else
@@ -157,7 +157,7 @@ transfer_info_t g_transfer1_info =
     .transfer_settings_word_b.irq            = TRANSFER_IRQ_END,
     .transfer_settings_word_b.chain_mode     = TRANSFER_CHAIN_MODE_DISABLED,
     .transfer_settings_word_b.src_addr_mode  = TRANSFER_ADDR_MODE_INCREMENTED,
-    .transfer_settings_word_b.size           = TRANSFER_SIZE_2_BYTE,
+    .transfer_settings_word_b.size           = TRANSFER_SIZE_1_BYTE,
     .transfer_settings_word_b.mode           = TRANSFER_MODE_NORMAL,
     .p_dest                                  = (void *) NULL,
     .p_src                                   = (void const *) NULL,
@@ -465,7 +465,7 @@ extern uint32_t g_fsp_common_thread_count;
                     #endif
                         GUI_Thread_func,
                         (const char *)"GUI_Thread",
-                        16384/4, // In words, not bytes
+                        8192/4, // In words, not bytes
                         (void *) &GUI_Thread_parameters, //pvParameters
                         1,
                         #if 1

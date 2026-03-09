@@ -604,7 +604,7 @@ FSP Configuration
   Thread "GUI_Thread"
     Symbol: GUI_Thread
     Name: GUI_Thread
-    Stack size (bytes): 16384
+    Stack size (bytes): 8192
     Priority: 1
     Thread Context: NULL
     Memory Allocation: Static
@@ -684,7 +684,7 @@ FSP Configuration
         Name: g_transfer1
         Channel: 1
         Mode: Normal
-        Transfer Size: 2 Bytes
+        Transfer Size: 1 Byte
         Destination Address Mode: Fixed
         Source Address Mode: Incremented
         Repeat Area (Unused in Normal Mode): Source
@@ -741,7 +741,7 @@ FSP Configuration
       Pin Polarity: GTIOCnA Polarity: Normal
       Pin Polarity: GTIOCnB Polarity: Normal
       Interrupts: Callback: periodic_timer0_cb
-      Interrupts: Overflow/Crest Interrupt Priority: Priority 10
+      Interrupts: Overflow/Crest Interrupt Priority: Priority 12
       Interrupts: Capture/Compare match A Interrupt Priority: Disabled
       Interrupts: Capture/Compare match B Interrupt Priority: Disabled
       Interrupts: Compare Match C Interrupt Priority: Disabled

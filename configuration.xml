@@ -386,7 +386,7 @@
       <property id="module.driver.transfer.name" value="g_transfer1"/>
       <property id="module.driver.transfer.channel" value="1"/>
       <property id="module.driver.transfer.mode" value="module.driver.transfer.mode.mode_normal"/>
-      <property id="module.driver.transfer.size" value="module.driver.transfer.size.size_2_byte"/>
+      <property id="module.driver.transfer.size" value="module.driver.transfer.size.size_1_byte"/>
       <property id="module.driver.transfer.dest_addr_mode" value="module.driver.transfer.dest_addr_mode.addr_mode_fixed"/>
       <property id="module.driver.transfer.src_addr_mode" value="module.driver.transfer.src_addr_mode.addr_mode_fixed"/>
       <property id="module.driver.transfer.repeat_area" value="module.driver.transfer.repeat_area.repeat_area_source"/>
@@ -443,7 +443,7 @@
       <property id="module.driver.timer.gtioca_polarity" value="module.driver.timer.gtioc_polarity.normal"/>
       <property id="module.driver.timer.gtiocb_polarity" value="module.driver.timer.gtioc_polarity.normal"/>
       <property id="module.driver.timer.p_callback" value="periodic_timer0_cb"/>
-      <property id="module.driver.timer.ipl" value="board.icu.common.irq.priority10"/>
+      <property id="module.driver.timer.ipl" value="board.icu.common.irq.priority12"/>
       <property id="module.driver.timer.capture_a_ipl" value="_disabled"/>
       <property id="module.driver.timer.capture_b_ipl" value="_disabled"/>
       <property id="module.driver.timer.compare_match_c_ipl" value="_disabled"/>
@@ -483,7 +483,7 @@
     <context id="rtos.awsfreertos.thread.291445536">
       <property id="_symbol" value="GUI_Thread"/>
       <property id="rtos.awsfreertos.thread.name" value="GUI_Thread"/>
-      <property id="rtos.awsfreertos.thread.stack" value="16384"/>
+      <property id="rtos.awsfreertos.thread.stack" value="8192"/>
       <property id="rtos.awsfreertos.thread.priority" value="1"/>
       <property id="rtos.awsfreertos.thread.context" value="NULL"/>
       <property id="rtos.awsfreertos.thread.allocation" value="rtos.awsfreertos.thread.allocation.static"/>

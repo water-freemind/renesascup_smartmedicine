@@ -42,17 +42,20 @@ void app_spi_display_test(void)
 
     while(1)
     {
-        spi_display_show_color((uint16_t)LCD_COLOR_RED);
-        printf ("Full screen display in red\r\n");
-        vTaskDelay(500); //延时500ms
+        // 发送红色
+        spi_display_show_color(LCD_COLOR_RED); 
+        printf ("Display Red\r\n");
+        vTaskDelay(500); 
 
-        spi_display_show_color((uint16_t)LCD_COLOR_GREEN);
-        printf ("Full screen display in green\r\n");
-        vTaskDelay(500); //延时500ms
+        // 发送绿色
+        spi_display_show_color(LCD_COLOR_GREEN);
+        printf ("Display Green\r\n");
+        vTaskDelay(500); 
 
-        spi_display_show_color((uint16_t)LCD_COLOR_BLUE);
-        printf ("Full screen display in blue\r\n");
-        vTaskDelay(500); //延时500ms
+        // 发送蓝色
+        spi_display_show_color(LCD_COLOR_BLUE);
+        printf ("Display Blue\r\n");
+        vTaskDelay(500); 
     }
 
 }
@@ -61,10 +64,12 @@ void app_spi_display_test(void)
 static void spi_display_show_color(uint16_t color_le)
 {
     uint8_t color_be[2];
-    color_be [0] = (uint8_t)((color_le & 0xff00) >> 8);
-    color_be [1] = (uint8_t)(color_le & 0xff);
+    
+    // 必须高字节在前，低字节在后！
+    color_be[0] = (uint8_t)((color_le >> 8) & 0xFF); // 存放高字节 (MSB) 
+    color_be[1] = (uint8_t)(color_le & 0xFF);        // 存放低字节 (LSB)
 
-    spi_display_set_window(0, 0, LCD_SCREEN_WIDTH, LCD_SCREEN_HEIGHT);
+    spi_display_set_window(0, 0, LCD_SCREEN_WIDTH-1, LCD_SCREEN_HEIGHT-1);
 
     for(uint16_t x = 0; x < LCD_SCREEN_WIDTH; x++)
         for(uint16_t y = 0; y < LCD_SCREEN_HEIGHT; y++)
