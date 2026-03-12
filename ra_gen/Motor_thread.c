@@ -87,8 +87,8 @@ canfd_global_cfg_t g_canfd_global_cfg =
 canfd_extended_cfg_t can0_extended_cfg =
 {
     .p_afl              = my_can_filter,
-    .txmb_txi_enable    = ( 0ULL),
-    .error_interrupts   = ( 0U),
+    .txmb_txi_enable    = ((1ULL << 0) | (1ULL << 1) | (1ULL << 2) | (1ULL << 3) | (1ULL << 4) | (1ULL << 5) | (1ULL << 6) | (1ULL << 7) |  0ULL),
+    .error_interrupts   = (R_CANFD_CFDC_CTR_EWIE_Msk | R_CANFD_CFDC_CTR_EPIE_Msk | R_CANFD_CFDC_CTR_BOEIE_Msk | R_CANFD_CFDC_CTR_BORIE_Msk |  0U),
 #if BSP_FEATURE_CANFD_FD_SUPPORT
     .p_data_timing      = &can0_data_timing_cfg,
 #else
@@ -106,7 +106,7 @@ const can_cfg_t can0_cfg =
     .p_callback             = can0_callback,
     .p_extend               = &can0_extended_cfg,
     .p_context              = NULL,
-    .ipl                    = (11),
+    .ipl                    = (10),
 #if defined(VECTOR_NUMBER_CAN0_COMFRX)
     .rx_irq             = VECTOR_NUMBER_CAN0_COMFRX,
 #else

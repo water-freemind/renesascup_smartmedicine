@@ -851,10 +851,7 @@
 				502,
 				503,
 				504,
-				505,
-				506,
-				507,
-				508
+				505
 			]
 		}
 	],
@@ -1544,10 +1541,7 @@
 				502,
 				503,
 				504,
-				505,
-				506,
-				507,
-				508
+				505
 			]
 		}
 	],
@@ -4532,25 +4526,7 @@
 		{
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
-			"path" : "src/app/app_i2c_touchpad_test.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 3,
-			"compileGroupIndex" : 0,
-			"path" : "src/app/app_lvgl_test.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 3,
-			"compileGroupIndex" : 0,
-			"path" : "src/app/app_spi_display_test.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 3,
-			"compileGroupIndex" : 0,
-			"path" : "src/app/uart_app.c",
+			"path" : "src/app/ZDT_app.c",
 			"sourceGroupIndex" : 0
 		},
 		{

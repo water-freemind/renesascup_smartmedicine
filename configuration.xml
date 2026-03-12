@@ -307,9 +307,9 @@
       <property id="module.driver.canfd.manual.data.sync_jump_width" value="1"/>
       <property id="module.driver.canfd.bitrate.manual.use_manual" value="module.driver.canfd.bitrate.manual.use_manual.disabled"/>
       <property id="module.driver.canfd.p_callback" value="can0_callback"/>
-      <property id="module.driver.canfd.txmb.int" value=""/>
-      <property id="module.driver.canfd.ch_err.int" value=""/>
-      <property id="module.driver.canfd.ipl" value="board.icu.common.irq.priority11"/>
+      <property id="module.driver.canfd.txmb.int" value="module.driver.canfd.txmb.int.0,module.driver.canfd.txmb.int.1,module.driver.canfd.txmb.int.2,module.driver.canfd.txmb.int.3,module.driver.canfd.txmb.int.4,module.driver.canfd.txmb.int.5,module.driver.canfd.txmb.int.6,module.driver.canfd.txmb.int.7"/>
+      <property id="module.driver.canfd.ch_err.int" value="module.driver.canfd.ch_err.int.err_warning,module.driver.canfd.ch_err.int.err_passive,module.driver.canfd.ch_err.int.bus_off_entry,module.driver.canfd.ch_err.int.bus_off_recovery"/>
+      <property id="module.driver.canfd.ipl" value="board.icu.common.irq.priority10"/>
       <property id="module.driver.canfd.afl_array" value="my_can_filter"/>
     </module>
     <module id="module.driver.uart_on_sci_uart.1707836327">

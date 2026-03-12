@@ -596,9 +596,9 @@ FSP Configuration
       Bitrate: Manual: Data: Sync Jump Width (Tq): 1
       Bitrate: Manual: Use manual settings: No
       Interrupts: Callback: can0_callback
-      Transmit Interrupts: 
-      Channel Error Interrupts: 
-      Interrupts: Channel Interrupt Priority Level: Priority 11
+      Transmit Interrupts: TXMB 0, TXMB 1, TXMB 2, TXMB 3, TXMB 4, TXMB 5, TXMB 6, TXMB 7
+      Channel Error Interrupts: Error Warning, Error Passive, Bus-Off Entry, Bus-Off Recovery
+      Interrupts: Channel Interrupt Priority Level: Priority 10
       Filter List Array: my_can_filter
       
   Thread "GUI_Thread"
