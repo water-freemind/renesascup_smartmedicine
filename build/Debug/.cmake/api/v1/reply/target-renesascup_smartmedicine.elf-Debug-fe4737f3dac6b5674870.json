@@ -851,7 +851,8 @@
 				502,
 				503,
 				504,
-				505
+				505,
+				506
 			]
 		}
 	],
@@ -1541,7 +1542,8 @@
 				502,
 				503,
 				504,
-				505
+				505,
+				506
 			]
 		}
 	],
@@ -4527,6 +4529,12 @@
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
 			"path" : "src/app/ZDT_app.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/app/app_i2c_touchpad.c",
 			"sourceGroupIndex" : 0
 		},
 		{

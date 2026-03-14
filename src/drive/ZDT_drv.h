@@ -35,5 +35,6 @@ void ZDT_SetZero(uint8_t id);
 
 void ZDT_MovePosition(uint8_t id, int32_t pos, uint16_t speed, uint8_t acc, bool sync);
 void ZDT_SyncTrigger(void);
+void ZDT_Gozero(uint8_t id, uint16_t speed, uint8_t acc, bool sync);
 void ZDT_Stop(uint8_t id);// 紧急停止
 #endif
