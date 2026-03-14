@@ -1,0 +1,87 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16.4"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "renesascup_smartmedicine",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_content_renesascup_smartmedicine::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_content_renesascup_smartmedicine-Debug-800041c70bde6df74e65.json",
+					"name" : "generate_content_renesascup_smartmedicine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "generate_sbd_renesascup_smartmedicine::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-generate_sbd_renesascup_smartmedicine-Debug-056ddc37c132d0cf36ee.json",
+					"name" : "generate_sbd_renesascup_smartmedicine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "open_rasc_renesascup_smartmedicine::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-open_rasc_renesascup_smartmedicine-Debug-a433f7821d5c7b5bb823.json",
+					"name" : "open_rasc_renesascup_smartmedicine",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "renesascup_smartmedicine.elf::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-renesascup_smartmedicine.elf-Debug-3a6087d432373f1f4345.json",
+					"name" : "renesascup_smartmedicine.elf",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Renesas_project/renesascup_smartmedicine/build/Debug",
+		"source" : "D:/Renesas_project/renesascup_smartmedicine"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
