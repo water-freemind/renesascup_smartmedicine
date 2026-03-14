@@ -1,7 +1,6 @@
 #include "Motor_thread.h"
 #include "ZDT_app.h"
-#include "app/ZDT_app.h"
-#include "app/app.h"
+#include "app.h"
 
 //canid 过滤器配置
 const canfd_afl_entry_t my_can_filter[1] = 
