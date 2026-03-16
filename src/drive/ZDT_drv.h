@@ -26,7 +26,7 @@
 // 初始化 CAN 模块
 fsp_err_t ZDT_Driver_Init(void);
 
-// 电机使能 (enable=true: 锁轴, enable=false: 松轴)
+
 void ZDT_Enable(uint8_t id, bool enable);
 
 // 将当前位置设为零点
@@ -35,6 +35,6 @@ void ZDT_SetZero(uint8_t id);
 
 void ZDT_MovePosition(uint8_t id, int32_t pos, uint16_t speed, uint8_t acc, bool sync);
 void ZDT_SyncTrigger(void);
-void ZDT_Gozero(uint8_t id, uint16_t speed, uint8_t acc, bool sync);
+void ZDT_Gozero(uint8_t id,bool sync);//回零运动
 void ZDT_Stop(uint8_t id);// 紧急停止
 #endif

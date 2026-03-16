@@ -1,6 +1,8 @@
 #include "Motor_thread.h"
 #include "ZDT_app.h"
+#include "ZDT_drv.h"
 #include "app.h"
+#include <stdbool.h>
 
 //canid 过滤器配置
 const canfd_afl_entry_t my_can_filter[1] = 
@@ -55,8 +57,8 @@ void Motor_thread_entry(void * pvParameters)
     /* TODO: add your own code here */
     ZDT_Driver_Init();// 初始化 CAN 驱动
     ZDT_Enable_ALL();// 使能所有电机
-    ZDT_Gozero_ALL(1000, 50);// 所有电机回零，速度 1000， 加速度 50
-
+    ZDT_Gozero(ZDT_ID_Z, false);
+    //ZDT_MovePosition(0x03, 16384, 300, 10, false);
     while(1)
     { 
         

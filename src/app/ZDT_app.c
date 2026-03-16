@@ -25,13 +25,13 @@ void ZDT_Gozero_ALL(uint16_t speed, uint8_t acc)
 {
 
     // Z 轴单独回零，立即执行 (sync: false)
-    ZDT_Gozero(ZDT_ID_Z, speed, acc, false);
+    ZDT_Gozero(ZDT_ID_Z,false);
 
     vTaskDelay(pdMS_TO_TICKS(3000)); 
 
     // X 和 Y 轴回零，开启同步标志 (sync: true)，等待 Trigger 指令
-    ZDT_Gozero(ZDT_ID_X, speed, acc, true);
-    ZDT_Gozero(ZDT_ID_Y, speed, acc, true);
+    ZDT_Gozero(ZDT_ID_X, true);
+    ZDT_Gozero(ZDT_ID_Y, true);
     
     ZDT_SyncTrigger();// 发送广播触发指令，X 和 Y 轴同时开始回零
     
