@@ -27,6 +27,6 @@
  * Exported global functions (to be accessed by other files)
  **********************************************************************************************************************/
 void ZDT_Enable_ALL(void);//使能所有电机
-void ZDT_Disable_ALL(void);//脱机所有电机
-void ZDT_Gozero_ALL(uint16_t speed, uint8_t acc);//所有电机回零，Z 轴先单独回零，X 和 Y 轴同步回零
+void ZDT_Gozero_ALL(void);//所有电机回零，Z 轴先单独回零，X 和 Y 轴同步回零
+void Move_XY_To_mm(float x_mm, float y_mm, uint16_t speed, uint8_t acc, bool sync);
 #endif /*APP_TEST_H*/

@@ -2,6 +2,7 @@
 #include "ZDT_app.h"
 #include "ZDT_drv.h"
 #include "app.h"
+#include "app/ZDT_app.h"
 #include <stdbool.h>
 
 //canid 过滤器配置
@@ -57,15 +58,14 @@ void Motor_thread_entry(void * pvParameters)
     /* TODO: add your own code here */
     ZDT_Driver_Init();// 初始化 CAN 驱动
     ZDT_Enable_ALL();// 使能所有电机
-    ZDT_Gozero(ZDT_ID_X, 1);
-    ZDT_Gozero(ZDT_ID_Y, 1);
-    ZDT_Gozero(ZDT_ID_Z, 1);
-    ZDT_Gozero(ZDT_ID_CATCH, 1);
+    ZDT_Gozero_ALL();
     while(1)
     { 
-        vTaskDelay(5000);
+        Move_XY_To_mm(300, 100, 200, 120, 1);
         ZDT_SyncTrigger();
-        ZDT_MovePosition(ZDT_ID_CATCH, -3200, 60, 1);
-        // vTaskDelay(5000);
+        vTaskDelay(6000);
+        Move_XY_To_mm(200, 200, 200, 120, 1);
+        ZDT_SyncTrigger();
+        vTaskDelay(6000);
     }
 }

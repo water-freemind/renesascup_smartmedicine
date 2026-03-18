@@ -34,7 +34,7 @@ void ZDT_Enable(uint32_t id, bool enable);
 void ZDT_SetZero(uint32_t id);
 
 
-void ZDT_MovePosition(uint32_t id, int32_t pos, uint16_t speed, bool sync);
+void ZDT_MovePosition(uint32_t id, int32_t pos, uint16_t speed, uint8_t acc, bool sync);
 void ZDT_SyncTrigger(void);
 void ZDT_Gozero(uint32_t id, bool sync);//回零运动
 void ZDT_Stop(uint32_t id);// 紧急停止
