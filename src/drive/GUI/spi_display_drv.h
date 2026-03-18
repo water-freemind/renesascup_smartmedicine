@@ -10,8 +10,8 @@
 /**********************************************************************************************************************
  * Macro definitions
  **********************************************************************************************************************/
-#define LCD_SCREEN_WIDTH        (320)
-#define LCD_SCREEN_HEIGHT       (480)
+#define LCD_SCREEN_WIDTH        (480)
+#define LCD_SCREEN_HEIGHT       (320)
 
 #define LCD_COLOR_RED           (0xF800)
 #define LCD_COLOR_GREEN         (0x07E0)

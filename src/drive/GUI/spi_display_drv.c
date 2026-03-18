@@ -131,7 +131,7 @@ static void spi_display_init(void)
     spi_send_data_cmd((uint8_t[]){0x96}, SPI_SEND_DATA, 1);
 
     spi_send_data_cmd((uint8_t[]){0x36}, SPI_SEND_CMD, 1);
-    spi_send_data_cmd((uint8_t[]){0x40}, SPI_SEND_DATA, 1); // 0x48 为 BGR 面板，如果改完后红蓝反了，就改成 0x40 (RGB)
+    spi_send_data_cmd((uint8_t[]){0xE0}, SPI_SEND_DATA, 1); // 0x48 是竖屏，0x60 是横屏
 
     spi_send_data_cmd((uint8_t[]){0x3a}, SPI_SEND_CMD, 1);
     spi_send_data_cmd((uint8_t[]){0x55}, SPI_SEND_DATA, 1); // 16-bit 像素格式

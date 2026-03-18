@@ -2,6 +2,7 @@
 #include "GUI_Thread.h"
 #include "semphr.h"
 #include <stdio.h>
+#include "SPI_Display_drv.h"
 
 /* --- 1. 硬件资源引用 --- */
 /* 确保这里的 g_i2c_master2 与 FSP Stack 名字一致 */
@@ -82,36 +83,34 @@ fsp_err_t touchpad_driver_init(void)
 /* --- 6. 外部接口：读取坐标 --- */
 fsp_err_t touchpad_driver_read(touch_data_t *p_data)
 {
-    uint8_t buf[6]; // 用于存放 Status, XH, XL, YH, YL ...
+    uint8_t buf[6];
     fsp_err_t err;
 
-    /* 
-     * 从 0x02 (TD_STATUS) 开始连续读取 5 个字节 
-     * Buffer map:
-     * [0]: TD_STATUS (触摸点数)
-     * [1]: P1_XH (高4位在低bit)
-     * [2]: P1_XL
-     * [3]: P1_YH (高4位在低bit)
-     * [4]: P1_YL
-     */
+    /* 读取触摸数据 */
     err = i2c_read_regs(FT_REG_TD_STATUS, buf, 5);
     if (FSP_SUCCESS != err) return err;
 
-    /* 解析数据 */
-    uint8_t touch_points = buf[0] & 0x0F; // 只有低4位有效
+    uint8_t touch_points = buf[0] & 0x0F;
 
     if (touch_points > 0 && touch_points <= 5)
     {
-        /* 有触摸 */
-        /* 参考 Datasheet Page 15: TOUCHn_XH[3:0] 是高位 */
-        p_data->x = ((uint16_t)(buf[1] & 0x0F) << 8) | buf[2];
-        p_data->y = ((uint16_t)(buf[3] & 0x0F) << 8) | buf[4];
-        p_data->status = 1; // Pressed
+        /* 1. 获取原始竖屏坐标 (X: 0~319, Y: 0~479) */
+        uint16_t raw_x = ((uint16_t)(buf[1] & 0x0F) << 8) | buf[2];
+        uint16_t raw_y = ((uint16_t)(buf[3] & 0x0F) << 8) | buf[4];
+
+        /* 2. 顺时针旋转 90 度的坐标系转换 
+         * 原理：
+         * 顺时针倒过来后，原来的 Y 轴变成了现在的 X 轴的反向 (480 - 1 - raw_y)
+         * 原来的 X 轴变成了现在的 Y 轴 (raw_x)
+         */
+        p_data->x = 480 - 1 - raw_y; // 新的 X 坐标 (0~479)
+        p_data->y = raw_x;           // 新的 Y 坐标 (0~319)
+
+        p_data->status = 1; // 标记为按下
     }
     else
     {
-        /* 无触摸 */
-        p_data->status = 0; // Released
+        p_data->status = 0; // 标记为松开
     }
 
     return FSP_SUCCESS;

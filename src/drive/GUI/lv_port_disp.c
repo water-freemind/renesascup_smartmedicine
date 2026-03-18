@@ -17,8 +17,8 @@
 /*********************
  *      DEFINES
  *********************/
-#define MY_DISP_HOR_RES    320
-#define MY_DISP_VER_RES    480
+#define MY_DISP_HOR_RES    480
+#define MY_DISP_VER_RES    320
 
 /**********************
  *      TYPEDEFS

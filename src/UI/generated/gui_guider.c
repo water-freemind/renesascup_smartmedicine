@@ -75,21 +75,23 @@ void ui_animation(void * var, int32_t duration, int32_t delay, int32_t start_val
 void init_scr_del_flag(lv_ui *ui)
 {
 
-    ui->screen_del = true;
+    ui->scrHome_del = true;
+    ui->scrCopy_del = true;
+    ui->scrCopy2_del = true;
+    ui->scrScan_del = true;
+    ui->scrPrintMenu_del = true;
+    ui->scrSetup_del = true;
 }
 
 void setup_ui(lv_ui *ui)
 {
     init_scr_del_flag(ui);
     init_keyboard(ui);
-    setup_scr_screen(ui);
-    lv_scr_load(ui->screen);
+    setup_scr_scrHome(ui);
+    lv_scr_load(ui->scrHome);
 }
 
 void init_keyboard(lv_ui *ui)
 {
-    ui->g_kb_top_layer = lv_keyboard_create(lv_layer_top());
-    lv_obj_add_event_cb(ui->g_kb_top_layer, kb_event_cb, LV_EVENT_ALL, NULL);
-    lv_obj_add_flag(ui->g_kb_top_layer, LV_OBJ_FLAG_HIDDEN);
-    lv_obj_set_style_text_font(ui->g_kb_top_layer, &lv_font_Abel_regular_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+
 }

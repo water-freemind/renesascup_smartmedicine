@@ -57,11 +57,15 @@ void Motor_thread_entry(void * pvParameters)
     /* TODO: add your own code here */
     ZDT_Driver_Init();// 初始化 CAN 驱动
     ZDT_Enable_ALL();// 使能所有电机
-    ZDT_Gozero(ZDT_ID_Z, false);
-    //ZDT_MovePosition(0x03, 16384, 300, 10, false);
+    ZDT_Gozero(ZDT_ID_X, 1);
+    ZDT_Gozero(ZDT_ID_Y, 1);
+    ZDT_Gozero(ZDT_ID_Z, 1);
+    ZDT_Gozero(ZDT_ID_CATCH, 1);
     while(1)
     { 
-        
-        vTaskDelay(1);
+        vTaskDelay(5000);
+        ZDT_SyncTrigger();
+        ZDT_MovePosition(ZDT_ID_CATCH, -3200, 60, 1);
+        // vTaskDelay(5000);
     }
 }

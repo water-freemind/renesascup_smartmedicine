@@ -17,6 +17,10 @@ extern "C" {
 
 void custom_init(lv_ui *ui);
 
+void load_scrPrintFini_cb();
+
+void slider_adjust_img_cb(lv_obj_t * img, int32_t brightValue, int16_t hueValue);
+
 #ifdef __cplusplus
 }
 #endif

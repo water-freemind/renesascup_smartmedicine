@@ -1,6 +1,7 @@
 /* --- START OF FILE ZDT_drv.c --- */
 
 #include "ZDT_drv.h"
+#include <stdint.h>
 #include <string.h> 
 #include "r_can_api.h"
 #include "Motor_thread.h"
@@ -8,7 +9,7 @@
 extern const can_instance_t can0;
 
 /* 
- * 修改点1：增加 dlc (数据长度) 参数，支持发送变长帧
+ * 底层发送函数
  */
 static fsp_err_t ZDT_Send_Raw(uint32_t id, uint8_t *data, uint8_t dlc)
 {
@@ -17,9 +18,10 @@ static fsp_err_t ZDT_Send_Raw(uint32_t id, uint8_t *data, uint8_t dlc)
     static uint8_t mb_idx = 0; 
     
     frame.id = id;
-    frame.id_mode = CAN_ID_MODE_STANDARD; 
+    frame.id_mode = CAN_ID_MODE_EXTENDED; 
     frame.type    = CAN_FRAME_TYPE_DATA;
-    frame.data_length_code = dlc; // 使用传入的真实长度
+    
+    frame.data_length_code = dlc; 
     frame.options = 0;
 
     memset(frame.data, 0, 8);
@@ -57,92 +59,104 @@ fsp_err_t ZDT_Driver_Init(void)
     return can0.p_api->open(can0.p_ctrl, can0.p_cfg);
 }
 
-void ZDT_Enable(uint8_t id, bool enable)
+void ZDT_Enable(uint32_t id, bool enable)
 {
-    uint8_t data[8] = {0};
+    // PCAN 截图：F3 AB 01 00 6B (长度: 5)
+    uint8_t data[5] = {0};
     data[0] = ZDT_CMD_ENABLE;       
     data[1] = 0xAB;                 
     data[2] = (uint8_t)enable;
-    data[3] = 0x00; // 同步位
-    data[4] = 0x6B; // 校验位
-    ZDT_Send_Raw(id, data, 8);
+    data[3] = 0x00; 
+    data[4] = 0x6B; 
+    
+    ZDT_Send_Raw(id, data, 5); // 严格发 5 个字节
 }
 
-void ZDT_SetZero(uint8_t id)
+void ZDT_SetZero(uint32_t id)
 {
-    uint8_t data[8] = {0};
+    // 设置零点通常是：93 6B (长度: 2)
+    uint8_t data[2] = {0};
     data[0] = ZDT_CMD_ZERO;         
     data[1] = 0x6B;
-    ZDT_Send_Raw(id, data, 8);
-}
-
-void ZDT_Gozero(uint8_t id,bool sync)
-{
-    uint8_t data[8] = {0};
-
-    data[0] = ZDT_CMD_GOZERO; // 0x9A
-    data[1] = 0x01;           // 设置完原点回零参数后，可以发送该命令触发原点回零功能。其中，00表示触发单圈就近回零，01表示触发单圈方向回零，02表示触发多圈无限位碰撞回零，03表示触发多圈有限位开关回零
-    data[2] = sync ? 0x01 : 0x00; // 同步标志
-    data[3] = 0x6B;           // 校验位
     
-    ZDT_Send_Raw(id, data, 8);
+    ZDT_Send_Raw(id, data, 2); // 严格发 2 个字节
 }
 
-/* 
- * 🔥 核心修复：12字节负载的梯形加减速位置控制 (完全匹配说明书)
- * 因为 CAN 一帧只有 8 字节，这里必须拆分成两帧发送！
- */
-void ZDT_MovePosition(uint8_t id, int32_t pos, uint16_t speed, uint8_t acc, bool sync)
+void ZDT_Gozero(uint32_t id, bool sync)
 {
-    uint8_t payload[16] = {0}; // 准备一个足够大的数组装两帧数据
+    uint8_t data[4] = {0};
 
-    // 获取绝对脉冲数用于拆分
+    data[0] = ZDT_CMD_GOZERO; 
+    data[1] = 0x02;           //02表示触发多圈无限位碰撞回零
+    data[2] = sync ? 0x01 : 0x00; 
+    data[3] = 0x6B;           
+    
+    ZDT_Send_Raw(id, data, 4); // 严格发 4 个字节
+}
+
+void ZDT_MovePosition(uint32_t id, int32_t pos, uint16_t speed, bool sync)
+{
+    // 获取绝对脉冲数
     uint32_t abs_pos = (pos >= 0) ? (uint32_t)pos : (uint32_t)(-pos);
+    
+    // 说明书规定：00表示正向，01表示负向
+    uint8_t dir = (pos >= 0) ? 0x00 : 0x01; 
 
-    // ================== 组装完整的 12 字节指令 ==================
-    payload[0] = ZDT_CMD_POS_MOVE;             // 0: 指令 0xFD
-    payload[1] = (pos >= 0) ? 0x01 : 0x00;     // 1: 方向 (00=CW, 01=CCW)
-    
-    payload[2] = (uint8_t)((speed >> 8) & 0xFF);// 2: 速度高位
-    payload[3] = (uint8_t)(speed & 0xFF);       // 3: 速度低位
-    
-    payload[4] = acc;                          // 4: 加速度
-    
-    payload[5] = (uint8_t)((abs_pos >> 24) & 0xFF); // 5: 脉冲最高位
-    payload[6] = (uint8_t)((abs_pos >> 16) & 0xFF); // 6: 脉冲次高位
-    payload[7] = (uint8_t)((abs_pos >> 8) & 0xFF);  // 7: 脉冲次低位
-    payload[8] = (uint8_t)(abs_pos & 0xFF);         // 8: 脉冲最低位
-    
-    // 【重要】：这里假设你需要绝对位置模式。如果需要相对模式，请填 0x00
-    payload[9] = 0x01;                         // 9: 相对/绝对模式 (01=绝对)
-    
-    payload[10] = sync ? 0x01 : 0x00;          // 10: 多机同步标志
-    
-    payload[11] = 0x6B;                        // 11: 校验位 0x6B
+    // ====================================================
+    // 第一帧：FB + 方向(1) + 速度(2) + 脉冲(4)
+    // 刚好 8 个字节
+    // ====================================================
+    uint8_t frame1[8] = {
+        ZDT_CMD_PASS_LIMIT,                     // 0: 功能码 0xFB
+        dir,                                  // 1: 符号 (00=正, 01=负)
+        (uint8_t)((speed >> 8) & 0xFF),       // 2: 最大转速 高位
+        (uint8_t)(speed & 0xFF),              // 3: 最大转速 低位
+        (uint8_t)((abs_pos >> 24) & 0xFF),    // 4: 位置角度 最高位
+        (uint8_t)((abs_pos >> 16) & 0xFF),    // 5: 位置角度 次高位
+        (uint8_t)((abs_pos >> 8) & 0xFF),     // 6: 位置角度 次低位
+        (uint8_t)(abs_pos & 0xFF)             // 7: 位置角度 最低位
+    };
 
-    // ================== 拆成两帧发送 ==================
-    // 第一帧：发送前 8 个字节
-    ZDT_Send_Raw(id, &payload[0], 8);
+    // ====================================================
+    // 第二帧：FB + 绝对标志 + 同步标志 + 6B
+    // ====================================================
+    uint8_t frame2[8] = {
+        ZDT_CMD_POS_MOVE,                     // 0: 第二帧首字节必须也是 0xFB
+        0x01,                                 // 1: 相对/绝对标志 (强制写死 01=绝对模式)
+        sync ? 0x01 : 0x00,                   // 2: 多机同步标志
+        0x6B,                                 // 3: 校验字节 0x6B ！！！
+    };
+
+    // ================= 分包发送 =================
     
-    // 第二帧：发送剩余的 4 个字节 (从 payload[8] 到 payload[11])
-    // 凑满 8 字节发送，后面自动用 0 补齐，兼容性最好
-    ZDT_Send_Raw(id, &payload[8], 8);
+    // 发送第一包 (基础 ID)
+    ZDT_Send_Raw(id, frame1, 8);
+    
+    // 给电机大脑 1 毫秒喘息解析时间
+    R_BSP_SoftwareDelay(1, BSP_DELAY_UNITS_MILLISECONDS);
+    
+    // 发送第二包 (基础 ID + 1)
+    ZDT_Send_Raw(id + 1, frame2, 4);
 }
 
 void ZDT_SyncTrigger(void)
 {
-    uint8_t data[8] = {0};
+    // 触发指令：FF 66 (长度: 2)
+    uint8_t data[2] = {0};
     data[0] = 0xFF; 
     data[1] = 0x66; 
-    ZDT_Send_Raw(ZDT_ID_ALL, data, 8);
+    data[2] = 0x6B;
+    ZDT_Send_Raw(ZDT_ID_ALL, data, 3); // 严格发 3 个字节
 }
 
-void ZDT_Stop(uint8_t id)
+void ZDT_Stop(uint32_t id)
 {
-    uint8_t data[8] = {0};
-    data[0] = ZDT_CMD_SYSTEM; // 0xFE
-    data[1] = ZDT_SUB_STOP;   // 0x98
+    // 急停指令：FE 98 00 6B (长度: 4)
+    uint8_t data[4] = {0};
+    data[0] = ZDT_CMD_SYSTEM; 
+    data[1] = ZDT_SUB_STOP;   
     data[2] = 0x00; 
-    data[3] = 0x6B;           // 校验位
-    ZDT_Send_Raw(id, data, 8);
+    data[3] = 0x6B;           
+    
+    ZDT_Send_Raw(id, data, 4); // 严格发 4 个字节
 }
