@@ -72,11 +72,6 @@ fsp_err_t touchpad_driver_init(void)
     /* 打开 I2C 驱动 */
     err = g_i2c_master2.p_api->open(g_i2c_master2.p_ctrl, g_i2c_master2.p_cfg);
     
-    /* 可以在这里复位芯片 (如果连接了 RST 引脚) */
-    // R_BSP_PinWrite(RST_PIN, BSP_IO_LEVEL_LOW);
-    // R_BSP_SoftwareDelay(5, BSP_DELAY_UNITS_MILLISECONDS);
-    // R_BSP_PinWrite(RST_PIN, BSP_IO_LEVEL_HIGH);
-    
     return err;
 }
 

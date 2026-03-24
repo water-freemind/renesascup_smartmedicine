@@ -90,7 +90,7 @@ fsp_err_t drv_spi_display_flush_data(uint8_t * data, uint32_t len)
     return spi_send_data_cmd(data, SPI_SEND_DATA, len);
 }
 
-
+extern void my_lvgl_flush_ready_callback(void);
 void spi1_callback(spi_callback_args_t *p_args)
 {
     /* 判断是否是发送完成触发的中断 */
@@ -131,7 +131,7 @@ static void spi_display_init(void)
     spi_send_data_cmd((uint8_t[]){0x96}, SPI_SEND_DATA, 1);
 
     spi_send_data_cmd((uint8_t[]){0x36}, SPI_SEND_CMD, 1);
-    spi_send_data_cmd((uint8_t[]){0xE0}, SPI_SEND_DATA, 1); // 0x48 是竖屏，0x60 是横屏
+    spi_send_data_cmd((uint8_t[]){0xE8}, SPI_SEND_DATA, 1); // 0x48 是竖屏，0x60 是横屏
 
     spi_send_data_cmd((uint8_t[]){0x3a}, SPI_SEND_CMD, 1);
     spi_send_data_cmd((uint8_t[]){0x55}, SPI_SEND_DATA, 1); // 16-bit 像素格式
@@ -163,7 +163,7 @@ static void spi_display_init(void)
     spi_send_data_cmd((uint8_t[]){0x69}, SPI_SEND_DATA, 1);
 
     /* 3. 开启屏幕颜色反转 (IPS 屏幕必须开启此项，否则色彩错乱) */
-    spi_send_data_cmd((uint8_t[]){0x21}, SPI_SEND_CMD, 1); // 0x21: INVON
+    spi_send_data_cmd((uint8_t[]){0x21}, SPI_SEND_CMD, 1); // 0x20: INVOFF, 0x21: INVON
 
     /* 4. 开启显示 */
     spi_send_data_cmd((uint8_t[]){0x29}, SPI_SEND_CMD, 1);

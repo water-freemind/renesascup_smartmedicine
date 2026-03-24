@@ -672,7 +672,8 @@
 				315,
 				316,
 				317,
-				318
+				318,
+				319
 			]
 		}
 	],
@@ -1175,7 +1176,8 @@
 				315,
 				316,
 				317,
-				318
+				318,
+				319
 			]
 		}
 	],
@@ -3033,6 +3035,12 @@
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
 			"path" : "src/app/app_i2c_touchpad.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/app/app_spi_display_test.c",
 			"sourceGroupIndex" : 0
 		},
 		{

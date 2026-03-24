@@ -162,6 +162,10 @@ void ZDT_SyncTrigger(void)
     data[1] = 0x66; 
     data[2] = 0x6B;
     ZDT_Send_Raw(ZDT_ID_ALL, data, 3); 
+    data[0] = 0xFF; 
+    data[1] = 0x02; 
+    data[2] = 0x6B;
+    ZDT_Send_Raw(ZDT_ID_ALL, data, 3); 
 }
 
 void ZDT_Stop(uint32_t id)

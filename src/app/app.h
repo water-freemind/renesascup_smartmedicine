@@ -23,4 +23,5 @@
 bool app_touchpad_read(int16_t *x, int16_t *y);
 void app_lvgl(void);
 void app_touchpad_init(void);
+void app_spi_display_test(void);
 #endif /*APP_TEST_H*/

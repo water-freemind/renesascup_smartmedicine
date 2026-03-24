@@ -2,6 +2,7 @@
 #include "ZDT_app.h"
 #include "ZDT_drv.h"
 #include "app.h"
+#include "uart_drv.h"
 #include "app/ZDT_app.h"
 #include <stdbool.h>
 
@@ -32,21 +33,37 @@ const canfd_afl_entry_t my_can_filter[1] =
         }
     }
 };
-
+volatile bool g_is_x_done = false;
+volatile bool g_is_y_done = false;
+volatile bool g_is_z_done = false;
+volatile bool g_is_catch_done = false;
 void can0_callback(can_callback_args_t *p_args)
 {
-    /* 这里处理 CAN 中断事件 */
-    switch (p_args->event)
+    // 如果是“接收完成”中断
+    if (CAN_EVENT_RX_COMPLETE == p_args->event)
     {
-        case CAN_EVENT_RX_COMPLETE:// 收到了一帧数据
-            break;
-        case CAN_EVENT_TX_COMPLETE:// 成功发送了一帧数据
-            break;
-        case CAN_EVENT_ERR_GLOBAL:
-        case CAN_EVENT_ERR_CHANNEL:// CAN 错误事件
-            break;
-        default:
-            break;
+        can_frame_t *rx_frame = &p_args->frame;
+
+        //判断是否是“运动到位”报文 (长度为3，内容为 FD 9F 6B)
+        if (rx_frame->data_length_code == 3 &&
+            rx_frame->data[0] == 0xFD &&
+            rx_frame->data[1] == 0x9F &&
+            rx_frame->data[2] == 0x6B)
+        {
+            //判断是哪个电机发来的
+            if (rx_frame->id == ZDT_ID_X) {
+                g_is_x_done = true;
+            } 
+            else if (rx_frame->id == ZDT_ID_Y) {
+                g_is_y_done = true;
+            } 
+            else if (rx_frame->id == ZDT_ID_Z) {
+                g_is_z_done = true;
+            }
+            else if (rx_frame->id == ZDT_ID_CATCH) {
+                g_is_catch_done = true;
+            }
+        }
     }
 }
 /* Motor_thread entry function */
@@ -59,13 +76,10 @@ void Motor_thread_entry(void * pvParameters)
     ZDT_Driver_Init();// 初始化 CAN 驱动
     ZDT_Enable_ALL();// 使能所有电机
     ZDT_Gozero_ALL();
+    vTaskDelay(5000);
     while(1)
     { 
-        Move_XY_To_mm(300, 100, 200, 120, 1);
-        ZDT_SyncTrigger();
-        vTaskDelay(6000);
-        Move_XY_To_mm(200, 200, 200, 120, 1);
-        ZDT_SyncTrigger();
-        vTaskDelay(6000);
+        Move_XY_To_mm(420, 420, 200, 60, 0);
+        printf("g_is_x_done: %d, g_is_y_done: %d\n", g_is_x_done, g_is_y_done);
     }
 }
