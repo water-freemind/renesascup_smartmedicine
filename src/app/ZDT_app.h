@@ -11,10 +11,13 @@
  * Macro definitions
  **********************************************************************************************************************/
 
-#define Medicine_cabinet_height 1000 //药柜高度，单位mm
-#define Medicine_cabinet_width 500 //药柜宽度，单位mm
-#define Medicine_cabinet_first_height 500//药柜第一层高度，单位mm
-#define Medicine_cabinet_shelf_num 5 //药柜层数
+#define cabinet_height 420 //药柜高度，单位mm
+#define cabinet_width 420 //药柜宽度，单位mm
+#define cabinet_first_floor 0//药柜第一层高度，单位mm,第三层高320mm，第二层
+#define cabinet_second_floor 160
+#define cabinet_third_floor 320
+#define cabinet_per_floor 0//药柜每层高度，单位mm
+#define cabinet_shelf_num 3 //药柜层数
 /**********************************************************************************************************************
  * Typedef definitions
  **********************************************************************************************************************/
@@ -29,4 +32,5 @@
 void ZDT_Enable_ALL(void);//使能所有电机
 void ZDT_Gozero_ALL(void);//所有电机回零，Z 轴先单独回零，X 和 Y 轴同步回零
 void Move_XY_To_mm(float x_mm, float y_mm, uint16_t speed, uint8_t acc, bool sync);
+void Catch(uint16_t medicine_width_mm,uint16_t speed, uint8_t acc ,uint8_t catch_strength);
 #endif /*APP_TEST_H*/

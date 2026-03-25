@@ -3,7 +3,7 @@
 #include "ZDT_drv.h"
 #include "app.h"
 #include "uart_drv.h"
-#include "app/ZDT_app.h"
+#include "ZDT_app.h"
 #include <stdbool.h>
 
 //canid 过滤器配置
@@ -79,7 +79,10 @@ void Motor_thread_entry(void * pvParameters)
     vTaskDelay(5000);
     while(1)
     { 
-        Move_XY_To_mm(420, 420, 200, 60, 0);
+        Move_XY_To_mm(0, cabinet_second_floor, 300, 60, 0);
+        if(g_is_x_done == 1 && g_is_y_done == 1){
+            Catch(100, 150, 60, 0);
+        }
         printf("g_is_x_done: %d, g_is_y_done: %d\n", g_is_x_done, g_is_y_done);
     }
 }
