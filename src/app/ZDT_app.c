@@ -27,10 +27,15 @@ void ZDT_Enable_ALL(void)
 
 void ZDT_Gozero_ALL(void)
 {
-    // Z 轴单独回零，立即执行 (sync: false)
+    g_is_x_done = false;
+    g_is_y_done = false;    
+    g_is_z_done = false;
+    g_is_catch_done = false;
     ZDT_Gozero(ZDT_ID_Z, false);
+    vTaskDelay(4000);
     ZDT_Gozero(ZDT_ID_X, false);
     ZDT_Gozero(ZDT_ID_Y, false);
+    vTaskDelay(5000);
     ZDT_Gozero(ZDT_ID_CATCH, false);
 }
 void Move_XY_To_mm(float x_mm, float y_mm, uint16_t speed, uint8_t acc, bool sync)
@@ -78,3 +83,4 @@ void Catch(uint16_t medicine_width_mm, uint16_t speed, uint8_t acc, uint8_t catc
     ZDT_MovePosition(ZDT_ID_CATCH, catch_pulse, speed, acc, false);
     vTaskDelay(10);
 }
+

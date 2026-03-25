@@ -77,12 +77,30 @@ void Motor_thread_entry(void * pvParameters)
     ZDT_Enable_ALL();// 使能所有电机
     ZDT_Gozero_ALL();
     vTaskDelay(5000);
+    Move_XY_To_mm(400, cabinet_second_floor, 300, 60, 0);
+    
     while(1)
     { 
-        Move_XY_To_mm(0, cabinet_second_floor, 300, 60, 0);
+        
         if(g_is_x_done == 1 && g_is_y_done == 1){
-            Catch(100, 150, 60, 0);
+            ZDT_MovePosition(ZDT_ID_Z, 130000, 1500, 0, 0);
+            vTaskDelay(10);
+            if(g_is_z_done == 1){
+                g_is_z_done = 0;
+                Catch(80, 150, 60, 1);
+            }
         }
-        printf("g_is_x_done: %d, g_is_y_done: %d\n", g_is_x_done, g_is_y_done);
+        if(g_is_catch_done == 1){
+                ZDT_Gozero(ZDT_ID_Z,0);
+                g_is_x_done = 0;
+                g_is_y_done = 0;
+                vTaskDelay(4000);
+                
+                Move_XY_To_mm(0, cabinet_first_floor, 300, 60, 0);
+                if(g_is_x_done == 1 && g_is_y_done == 1){
+                    ZDT_Gozero(ZDT_ID_CATCH,0);
+                }
+        }
     }
 }
+

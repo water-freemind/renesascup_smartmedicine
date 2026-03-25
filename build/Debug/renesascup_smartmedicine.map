@@ -15,7 +15,7 @@ C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m
 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fwalk.o)
                               C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o) (_fwalk_sglue)
 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-printf.o)
-                              CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj (printf)
+                              CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/app_i2c_touchpad.c.obj (printf)
 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-puts.o)
                               CMakeFiles/renesascup_smartmedicine.elf.dir/src/GUI_Thread_entry.c.obj (puts)
 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-snprintf.o)
@@ -8879,6 +8879,10 @@ Discarded input sections
  .bss           0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-printf.o)
  .text._printf_r
                 0x00000000       0x1c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-printf.o)
+ .text.printf   0x00000000       0x24 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-printf.o)
+ .debug_frame   0x00000000       0x6c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-printf.o)
+ .ARM.attributes
+                0x00000000       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-printf.o)
  .text          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-puts.o)
  .data          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-puts.o)
  .bss           0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-puts.o)
@@ -9044,13 +9048,33 @@ Discarded input sections
  .text          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
  .data          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
  .bss           0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
+ .text.__sfputc_r
+                0x00000000       0x2e C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
+ .text.__sfputs_r
+                0x00000000       0x24 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
  .text.__sprint_r
                 0x00000000       0x1a C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
+ .rodata._vfprintf_r.str1.1
+                0x00000000       0x11 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
+ .text._vfprintf_r
+                0x00000000      0x230 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
  .text.vfprintf
                 0x00000000       0x14 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
+ .debug_frame   0x00000000       0xa8 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
+ .ARM.attributes
+                0x00000000       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
  .text          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
  .data          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
  .bss           0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .text._printf_common
+                0x00000000       0xe4 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .rodata._printf_i.str1.1
+                0x00000000       0x22 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .text._printf_i
+                0x00000000      0x23c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .debug_frame   0x00000000       0x60 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
+ .ARM.attributes
+                0x00000000       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
  .text          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fflush.o)
  .data          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fflush.o)
  .bss           0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fflush.o)
@@ -9078,6 +9102,10 @@ Discarded input sections
  .text          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memchr-stub.o)
  .data          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memchr-stub.o)
  .bss           0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memchr-stub.o)
+ .text.memchr   0x00000000       0x1c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memchr-stub.o)
+ .debug_frame   0x00000000       0x28 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memchr-stub.o)
+ .ARM.attributes
+                0x00000000       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memchr-stub.o)
  .text          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-reallocr.o)
  .data          0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-reallocr.o)
  .bss           0x00000000        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-reallocr.o)
@@ -9998,7 +10026,7 @@ __ram_thread_stack$$
                 0x2001c000                        __ddsc_RAM_END = .
 
 __flash_readonly$$
-                0x00000174     0x6cb0
+                0x00000174     0x6724
                 0x00000174                        __flash_readonly$$Base = .
  *(.flash)
  *(.flash_code)
@@ -10393,421 +10421,392 @@ __flash_readonly$$
                 0x00004968       0x6c CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
                 0x00004968                can0_callback
  .text.Motor_thread_entry
-                0x000049d4       0x6c CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
+                0x000049d4       0xec CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
                 0x000049d4                Motor_thread_entry
  .text.ZDT_Enable_ALL
-                0x00004a40       0x30 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
-                0x00004a40                ZDT_Enable_ALL
+                0x00004ac0       0x30 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
+                0x00004ac0                ZDT_Enable_ALL
  .text.ZDT_Gozero_ALL
-                0x00004a70       0x30 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
-                0x00004a70                ZDT_Gozero_ALL
+                0x00004af0       0x60 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
+                0x00004af0                ZDT_Gozero_ALL
  .text.Move_XY_To_mm
-                0x00004aa0       0xbc CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
-                0x00004aa0                Move_XY_To_mm
- .text.Catch    0x00004b5c       0x94 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
-                0x00004b5c                Catch
+                0x00004b50       0xbc CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
+                0x00004b50                Move_XY_To_mm
+ .text.Catch    0x00004c0c       0x94 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
+                0x00004c0c                Catch
  .text.ZDT_Send_Raw.isra.0
-                0x00004bf0       0xe4 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
+                0x00004ca0       0xe4 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
  .text.ZDT_Driver_Init
-                0x00004cd4       0x10 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
-                0x00004cd4                ZDT_Driver_Init
+                0x00004d84       0x10 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
+                0x00004d84                ZDT_Driver_Init
  .text.ZDT_Enable
-                0x00004ce4       0x28 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
-                0x00004ce4                ZDT_Enable
+                0x00004d94       0x28 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
+                0x00004d94                ZDT_Enable
  .text.ZDT_Gozero
-                0x00004d0c       0x28 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
-                0x00004d0c                ZDT_Gozero
+                0x00004dbc       0x28 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
+                0x00004dbc                ZDT_Gozero
  .text.ZDT_MovePosition
-                0x00004d34       0x68 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
-                0x00004d34                ZDT_MovePosition
+                0x00004de4       0x68 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
+                0x00004de4                ZDT_MovePosition
  .text.drv_uart_init
-                0x00004d9c       0x44 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
-                0x00004d9c                drv_uart_init
+                0x00004e4c       0x44 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
+                0x00004e4c                drv_uart_init
  .text.uart7_callback
-                0x00004de0       0x48 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
-                0x00004de0                uart7_callback
- .text._write   0x00004e28       0x40 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
-                0x00004e28                _write
+                0x00004e90       0x48 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
+                0x00004e90                uart7_callback
+ .text._write   0x00004ed8       0x40 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
+                0x00004ed8                _write
  .text.R_BSP_WarmStart
-                0x00004e68       0x18 CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
-                0x00004e68                R_BSP_WarmStart
- .text.std      0x00004e80       0x6c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
+                0x00004f18       0x18 CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
+                0x00004f18                R_BSP_WarmStart
+ .text.std      0x00004f30       0x6c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
  .text.stdio_exit_handler
-                0x00004eec       0x18 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
+                0x00004f9c       0x18 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
  .text.cleanup_stdio
-                0x00004f04       0x40 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
+                0x00004fb4       0x40 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
  .text.global_stdio_init.part.0
-                0x00004f44       0x3c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
+                0x00004ff4       0x3c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
  .text.__sfp_lock_acquire
-                0x00004f80        0xc C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
-                0x00004f80                __sfp_lock_acquire
+                0x00005030        0xc C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
+                0x00005030                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x00004f8c        0xc C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
-                0x00004f8c                __sfp_lock_release
- .text.__sinit  0x00004f98       0x30 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
-                0x00004f98                __sinit
+                0x0000503c        0xc C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
+                0x0000503c                __sfp_lock_release
+ .text.__sinit  0x00005048       0x30 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
+                0x00005048                __sinit
  .text._fwalk_sglue
-                0x00004fc8       0x3c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fwalk.o)
-                0x00004fc8                _fwalk_sglue
- .text.printf   0x00005004       0x24 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-printf.o)
-                0x00005004                iprintf
-                0x00005004                printf
- .text._puts_r  0x00005028       0xaa C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-puts.o)
-                0x00005028                _puts_r
- *fill*         0x000050d2        0x2 
- .text.puts     0x000050d4       0x10 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-puts.o)
-                0x000050d4                puts
- .text.__sread  0x000050e4       0x22 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-stdio.o)
-                0x000050e4                __sread
+                0x00005078       0x3c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fwalk.o)
+                0x00005078                _fwalk_sglue
+ .text._puts_r  0x000050b4       0xaa C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-puts.o)
+                0x000050b4                _puts_r
+ *fill*         0x0000515e        0x2 
+ .text.puts     0x00005160       0x10 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-puts.o)
+                0x00005160                puts
+ .text.__sread  0x00005170       0x22 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-stdio.o)
+                0x00005170                __sread
  .text.__swrite
-                0x00005106       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-stdio.o)
-                0x00005106                __swrite
- .text.__sseek  0x0000513e       0x24 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-stdio.o)
-                0x0000513e                __sseek
+                0x00005192       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-stdio.o)
+                0x00005192                __swrite
+ .text.__sseek  0x000051ca       0x24 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-stdio.o)
+                0x000051ca                __sseek
  .text.__sclose
-                0x00005162        0x8 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-stdio.o)
-                0x00005162                __sclose
+                0x000051ee        0x8 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-stdio.o)
+                0x000051ee                __sclose
  .text.__swbuf_r
-                0x0000516a       0x7c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-wbuf.o)
-                0x0000516a                __swbuf_r
- *fill*         0x000051e6        0x2 
+                0x000051f6       0x7c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-wbuf.o)
+                0x000051f6                __swbuf_r
+ *fill*         0x00005272        0x2 
  .text.__swsetup_r
-                0x000051e8       0xac C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-wsetup.o)
-                0x000051e8                __swsetup_r
- .text.memset   0x00005294       0x10 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memset.o)
-                0x00005294                memset
+                0x00005274       0xac C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-wsetup.o)
+                0x00005274                __swsetup_r
+ .text.memset   0x00005320       0x10 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memset.o)
+                0x00005320                memset
  .text._close_r
-                0x000052a4       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-closer.o)
-                0x000052a4                _close_r
+                0x00005330       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-closer.o)
+                0x00005330                _close_r
  .text._lseek_r
-                0x000052c4       0x24 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lseekr.o)
-                0x000052c4                _lseek_r
- .text._read_r  0x000052e8       0x24 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-readr.o)
-                0x000052e8                _read_r
+                0x00005350       0x24 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lseekr.o)
+                0x00005350                _lseek_r
+ .text._read_r  0x00005374       0x24 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-readr.o)
+                0x00005374                _read_r
  .text._write_r
-                0x0000530c       0x24 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-writer.o)
-                0x0000530c                _write_r
- .text.__errno  0x00005330        0xc C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-errno.o)
-                0x00005330                __errno
+                0x00005398       0x24 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-writer.o)
+                0x00005398                _write_r
+ .text.__errno  0x000053bc        0xc C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-errno.o)
+                0x000053bc                __errno
  .text.__retarget_lock_init_recursive
-                0x0000533c        0x2 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lock.o)
-                0x0000533c                __retarget_lock_init_recursive
+                0x000053c8        0x2 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lock.o)
+                0x000053c8                __retarget_lock_init_recursive
  .text.__retarget_lock_acquire_recursive
-                0x0000533e        0x2 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lock.o)
-                0x0000533e                __retarget_lock_acquire_recursive
+                0x000053ca        0x2 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lock.o)
+                0x000053ca                __retarget_lock_acquire_recursive
  .text.__retarget_lock_release_recursive
-                0x00005340        0x2 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lock.o)
-                0x00005340                __retarget_lock_release_recursive
- .text.memcpy   0x00005342       0x1a C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
-                0x00005342                memcpy
- .text._free_r  0x0000535c       0x94 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-freer.o)
-                0x0000535c                _free_r
+                0x000053cc        0x2 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lock.o)
+                0x000053cc                __retarget_lock_release_recursive
+ .text.memcpy   0x000053ce       0x1a C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
+                0x000053ce                memcpy
+ .text._free_r  0x000053e8       0x94 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-freer.o)
+                0x000053e8                _free_r
  .text.sbrk_aligned
-                0x000053f0       0x44 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mallocr.o)
+                0x0000547c       0x44 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mallocr.o)
  .text._malloc_r
-                0x00005434      0x100 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mallocr.o)
-                0x00005434                _malloc_r
+                0x000054c0      0x100 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mallocr.o)
+                0x000054c0                _malloc_r
  .text.__malloc_lock
-                0x00005534        0xc C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mlock.o)
-                0x00005534                __malloc_lock
+                0x000055c0        0xc C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mlock.o)
+                0x000055c0                __malloc_lock
  .text.__malloc_unlock
-                0x00005540        0xc C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mlock.o)
-                0x00005540                __malloc_unlock
- .text.__sfputc_r
-                0x0000554c       0x2e C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
- .text.__sfputs_r
-                0x0000557a       0x24 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
-                0x0000557a                __sfputs_r
- *fill*         0x0000559e        0x2 
- .text._vfprintf_r
-                0x000055a0      0x230 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
-                0x000055a0                _vfprintf_r
-                0x000055a0                _vfiprintf_r
- .text._printf_common
-                0x000057d0       0xe4 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
-                0x000057d0                _printf_common
- .text._printf_i
-                0x000058b4      0x23c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
-                0x000058b4                _printf_i
+                0x000055cc        0xc C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mlock.o)
+                0x000055cc                __malloc_unlock
  .text.__sflush_r
-                0x00005af0      0x108 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fflush.o)
-                0x00005af0                __sflush_r
+                0x000055d8      0x108 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fflush.o)
+                0x000055d8                __sflush_r
  .text._fflush_r
-                0x00005bf8       0x50 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fflush.o)
-                0x00005bf8                _fflush_r
+                0x000056e0       0x50 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fflush.o)
+                0x000056e0                _fflush_r
  .text.__swhatbuf_r
-                0x00005c48       0x4a C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-makebuf.o)
-                0x00005c48                __swhatbuf_r
+                0x00005730       0x4a C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-makebuf.o)
+                0x00005730                __swhatbuf_r
  .text.__smakebuf_r
-                0x00005c92       0x78 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-makebuf.o)
-                0x00005c92                __smakebuf_r
- *fill*         0x00005d0a        0x2 
+                0x0000577a       0x78 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-makebuf.o)
+                0x0000577a                __smakebuf_r
+ *fill*         0x000057f2        0x2 
  .text._fstat_r
-                0x00005d0c       0x24 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fstatr.o)
-                0x00005d0c                _fstat_r
+                0x000057f4       0x24 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fstatr.o)
+                0x000057f4                _fstat_r
  .text._isatty_r
-                0x00005d30       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-isattyr.o)
-                0x00005d30                _isatty_r
- .text._sbrk_r  0x00005d50       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-sbrkr.o)
-                0x00005d50                _sbrk_r
- .text.memchr   0x00005d70       0x1c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memchr-stub.o)
-                0x00005d70                memchr
- .text._close   0x00005d8c       0x10 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(close.o)
-                0x00005d8c                _close
- .text._fstat   0x00005d9c       0x10 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(fstat.o)
-                0x00005d9c                _fstat
- .text._isatty  0x00005dac       0x10 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(isatty.o)
-                0x00005dac                _isatty
- .text._lseek   0x00005dbc       0x10 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(lseek.o)
-                0x00005dbc                _lseek
- .text._read    0x00005dcc       0x10 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(read.o)
-                0x00005dcc                _read
+                0x00005818       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-isattyr.o)
+                0x00005818                _isatty_r
+ .text._sbrk_r  0x00005838       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-sbrkr.o)
+                0x00005838                _sbrk_r
+ .text._close   0x00005858       0x10 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(close.o)
+                0x00005858                _close
+ .text._fstat   0x00005868       0x10 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(fstat.o)
+                0x00005868                _fstat
+ .text._isatty  0x00005878       0x10 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(isatty.o)
+                0x00005878                _isatty
+ .text._lseek   0x00005888       0x10 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(lseek.o)
+                0x00005888                _lseek
+ .text._read    0x00005898       0x10 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(read.o)
+                0x00005898                _read
  *(.rodata*)
  .rodata.pvPortMalloc.str1.4
-                0x00005ddc      0xaae CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x000058a8      0xa89 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
                                 0x1f1 (size before relaxing)
  .rodata.vPortFree.str1.4
-                0x0000688a      0x184 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- *fill*         0x0000688a        0x2 
+                0x00006331      0x184 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ *fill*         0x00006331        0x3 
  .rodata.__func__.0
-                0x0000688c       0x1b CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- *fill*         0x000068a7        0x1 
+                0x00006334       0x1b CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ *fill*         0x0000634f        0x1 
  .rodata.__func__.1
-                0x000068a8        0xa CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
- *fill*         0x000068b2        0x2 
+                0x00006350        0xa CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+ *fill*         0x0000635a        0x2 
  .rodata.__func__.2
-                0x000068b4        0xd CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
+                0x0000635c        0xd CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .rodata.vQueueUnregisterQueue.part.0.str1.4
-                0x000068c1       0x5c CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+                0x00006369       0x5c CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
  .rodata.xQueueGenericReset.str1.4
-                0x000068c1       0x2c CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+                0x00006369       0x2c CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
  .rodata.xQueueGenericCreateStatic.str1.4
-                0x000068c1       0x37 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+                0x00006369       0x37 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
  .rodata.xQueueCreateCountingSemaphoreStatic.str1.4
-                0x000068c1        0x8 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+                0x00006369        0x8 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
  .rodata.xQueueGenericSend.str1.4
-                0x000068c1       0xfb CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+                0x00006369       0xfb CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
  .rodata.xQueueGenericSendFromISR.str1.4
-                0x000068c1       0x22 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+                0x00006369       0x22 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
  .rodata.xQueueGiveFromISR.str1.4
-                0x000068c1       0x7d CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+                0x00006369       0x7d CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
  .rodata.xQueueReceive.str1.4
-                0x000068c1       0x66 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
- *fill*         0x000068c1        0x3 
+                0x00006369       0x66 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+ *fill*         0x00006369        0x3 
  .rodata.__func__.2
-                0x000068c4       0x14 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+                0x0000636c       0x14 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
  .rodata.__func__.12
-                0x000068d8       0x14 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+                0x00006380       0x14 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
  .rodata.__func__.13
-                0x000068ec        0xe CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
- *fill*         0x000068fa        0x2 
+                0x00006394        0xe CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+ *fill*         0x000063a2        0x2 
  .rodata.__func__.14
-                0x000068fc       0x12 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
- *fill*         0x0000690e        0x2 
+                0x000063a4       0x12 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+ *fill*         0x000063b6        0x2 
  .rodata.__func__.16
-                0x00006910       0x12 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
- *fill*         0x00006922        0x2 
+                0x000063b8       0x12 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+ *fill*         0x000063ca        0x2 
  .rodata.__func__.18
-                0x00006924       0x24 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+                0x000063cc       0x24 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
  .rodata.__func__.19
-                0x00006948       0x14 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+                0x000063f0       0x14 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
  .rodata.__func__.21
-                0x0000695c       0x1a CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
- *fill*         0x00006976        0x2 
+                0x00006404       0x1a CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+ *fill*         0x0000641e        0x2 
  .rodata.__func__.22
-                0x00006978       0x13 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
+                0x00006420       0x13 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
  .rodata.prvTaskIsTaskSuspended.part.0.str1.4
-                0x0000698b       0x5c CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x00006433       0x5c CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.prvInitialiseNewTask.constprop.0.str1.4
-                0x0000698b       0x11 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x00006433       0x11 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.prvCheckTasksWaitingTermination.str1.4
-                0x0000698b       0x32 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x00006433       0x32 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.xTaskIncrementTick.part.0.str1.4
-                0x0000698b       0x76 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x00006433       0x76 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.xTaskCreateStatic.str1.4
-                0x0000698b       0x55 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x00006433       0x55 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.vTaskStartScheduler.str1.4
-                0x0000698b       0x12 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x00006433       0x12 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.xTaskResumeAll.str1.4
-                0x0000698b       0x1b CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x00006433       0x1b CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.xTaskDelayUntil.str1.4
-                0x0000698b       0x47 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x00006433       0x47 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.vTaskSwitchContext.str1.4
-                0x0000698b        0xe CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x00006433        0xe CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.vTaskPlaceOnEventList.str1.4
-                0x0000698b        0xc CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x00006433        0xc CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.xTaskRemoveFromEventList.str1.4
-                0x0000698b        0xf CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x00006433        0xf CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.vTaskSetTimeOutState.str1.4
-                0x0000698b        0xa CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x00006433        0xa CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.xTaskCheckForTimeOut.str1.4
-                0x0000698b        0xe CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
- *fill*         0x0000698b        0x1 
+                0x00006433        0xe CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x00006433        0x1 
  .rodata.__func__.8
-                0x0000698c       0x15 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
- *fill*         0x000069a1        0x3 
+                0x00006434       0x15 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x00006449        0x3 
  .rodata.__func__.11
-                0x000069a4       0x19 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
- *fill*         0x000069bd        0x3 
+                0x0000644c       0x19 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x00006465        0x3 
  .rodata.__func__.12
-                0x000069c0       0x20 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x00006468       0x20 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.__func__.14
-                0x000069e0       0x16 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
- *fill*         0x000069f6        0x2 
+                0x00006488       0x16 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x0000649e        0x2 
  .rodata.__func__.15
-                0x000069f8       0x13 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
- *fill*         0x00006a0b        0x1 
+                0x000064a0       0x13 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x000064b3        0x1 
  .rodata.__func__.16
-                0x00006a0c       0x13 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
- *fill*         0x00006a1f        0x1 
+                0x000064b4       0x13 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x000064c7        0x1 
  .rodata.__func__.20
-                0x00006a20        0xf CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
- *fill*         0x00006a2f        0x1 
+                0x000064c8        0xf CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x000064d7        0x1 
  .rodata.__func__.21
-                0x00006a30       0x14 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x000064d8       0x14 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.__func__.28
-                0x00006a44        0xb CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
- *fill*         0x00006a4f        0x1 
+                0x000064ec        0xb CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x000064f7        0x1 
  .rodata.__func__.30
-                0x00006a50        0xd CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
- *fill*         0x00006a5d        0x3 
+                0x000064f8        0xd CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x00006505        0x3 
  .rodata.__func__.32
-                0x00006a60       0x15 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
- *fill*         0x00006a75        0x3 
+                0x00006508       0x15 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+ *fill*         0x0000651d        0x3 
  .rodata.__func__.33
-                0x00006a78       0x14 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x00006520       0x14 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.uxTopUsedPriority
-                0x00006a8c        0x4 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
+                0x00006534        0x4 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/tasks.c.obj
  .rodata.prvCheckForValidListAndQueue.str1.4
-                0x00006a90        0x5 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/timers.c.obj
+                0x00006538        0x5 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/timers.c.obj
  .rodata.prvInitialiseNewTimer.part.0.str1.4
-                0x00006a90       0x71 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/timers.c.obj
+                0x00006538       0x71 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/timers.c.obj
  .rodata.prvTimerTask.str1.4
-                0x00006a90       0x25 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/timers.c.obj
+                0x00006538       0x25 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/timers.c.obj
  .rodata.xTimerCreateTimerTask.str1.4
-                0x00006a90       0x10 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/timers.c.obj
+                0x00006538       0x10 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/timers.c.obj
  .rodata.__func__.16
-                0x00006a90       0x1b CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/timers.c.obj
- *fill*         0x00006aab        0x1 
+                0x00006538       0x1b CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/timers.c.obj
+ *fill*         0x00006553        0x1 
  .rodata.__func__.18
-                0x00006aac       0x16 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/timers.c.obj
- *fill*         0x00006ac2        0x2 
+                0x00006554       0x16 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/timers.c.obj
+ *fill*         0x0000656a        0x2 
  .rodata.g_prcr_masks
-                0x00006ac4        0xa CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_register_protection.c.obj
- *fill*         0x00006ace        0x2 
+                0x0000656c        0xa CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_register_protection.c.obj
+ *fill*         0x00006576        0x2 
  .rodata.g_init_info
-                0x00006ad0       0x18 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
-                0x00006ad0                g_init_info
+                0x00006578       0x18 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
+                0x00006578                g_init_info
  .rodata.nocache_list
-                0x00006ae8       0x10 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
+                0x00006590       0x10 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
  .rodata.copy_list
-                0x00006af8       0x80 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
+                0x000065a0       0x80 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
  .rodata.zero_list
-                0x00006b78       0x30 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
+                0x00006620       0x30 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/bsp/mcu/ra6m5/bsp_linker.c.obj
  .rodata.g_canfd_on_canfd
-                0x00006ba8       0x1c CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/r_canfd/r_canfd.c.obj
-                0x00006ba8                g_canfd_on_canfd
+                0x00006650       0x1c CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/r_canfd/r_canfd.c.obj
+                0x00006650                g_canfd_on_canfd
  .rodata.dlc_to_bytes
-                0x00006bc4       0x10 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/r_canfd/r_canfd.c.obj
+                0x0000666c       0x10 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/r_canfd/r_canfd.c.obj
  .rodata.g_vbatt_pins_input
-                0x00006bd4        0x6 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
- *fill*         0x00006bda        0x2 
+                0x0000667c        0x6 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/r_ioport/r_ioport.c.obj
+ *fill*         0x00006682        0x2 
  .rodata.g_uart_on_sci
-                0x00006bdc       0x2c CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
-                0x00006bdc                g_uart_on_sci
+                0x00006684       0x2c CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/r_sci_uart/r_sci_uart.c.obj
+                0x00006684                g_uart_on_sci
  .rodata.vPortSVCHandler_C.str1.4
-                0x00006c08       0x63 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
+                0x000066b0       0x63 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
  .rodata.vPortEnterCritical.str1.4
-                0x00006c08       0x46 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
+                0x000066b0       0x46 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
  .rodata.vPortExitCritical.str1.4
-                0x00006c08       0x12 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
+                0x000066b0       0x12 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
  .rodata.vPortValidateInterruptPriority.str1.4
-                0x00006c08       0x64 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
+                0x000066b0       0x64 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
  .rodata.__func__.0
-                0x00006c08       0x1f CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
- *fill*         0x00006c27        0x1 
+                0x000066b0       0x1f CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
+ *fill*         0x000066cf        0x1 
  .rodata.__func__.1
-                0x00006c28       0x12 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
- *fill*         0x00006c3a        0x2 
+                0x000066d0       0x12 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
+ *fill*         0x000066e2        0x2 
  .rodata.__func__.2
-                0x00006c3c       0x13 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
- *fill*         0x00006c4f        0x1 
+                0x000066e4       0x13 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
+ *fill*         0x000066f7        0x1 
  .rodata.__func__.3
-                0x00006c50       0x12 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
+                0x000066f8       0x12 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/rm_freertos_port/port.c.obj
  .rodata.GUI_Thread_create.str1.4
-                0x00006c62        0xb CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/GUI_Thread.c.obj
- *fill*         0x00006c62        0x2 
+                0x0000670a        0xb CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/GUI_Thread.c.obj
+ *fill*         0x0000670a        0x2 
  .rodata.GUI_Thread_parameters
-                0x00006c64        0x4 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/GUI_Thread.c.obj
-                0x00006c64                GUI_Thread_parameters
+                0x0000670c        0x4 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/GUI_Thread.c.obj
+                0x0000670c                GUI_Thread_parameters
  .rodata.g_uart7
-                0x00006c68        0xc CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/GUI_Thread.c.obj
-                0x00006c68                g_uart7
+                0x00006710        0xc CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/GUI_Thread.c.obj
+                0x00006710                g_uart7
  .rodata.g_uart7_cfg
-                0x00006c74       0x20 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/GUI_Thread.c.obj
-                0x00006c74                g_uart7_cfg
+                0x0000671c       0x20 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/GUI_Thread.c.obj
+                0x0000671c                g_uart7_cfg
  .rodata.g_uart7_cfg_extend
-                0x00006c94       0x14 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/GUI_Thread.c.obj
-                0x00006c94                g_uart7_cfg_extend
+                0x0000673c       0x14 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/GUI_Thread.c.obj
+                0x0000673c                g_uart7_cfg_extend
  .rodata.Motor_thread_create.str1.4
-                0x00006ca8        0xd CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/Motor_thread.c.obj
+                0x00006750        0xd CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/Motor_thread.c.obj
  .rodata.Motor_thread_parameters
-                0x00006ca8        0x4 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/Motor_thread.c.obj
-                0x00006ca8                Motor_thread_parameters
- .rodata.can0   0x00006cac        0xc CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/Motor_thread.c.obj
-                0x00006cac                can0
+                0x00006750        0x4 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/Motor_thread.c.obj
+                0x00006750                Motor_thread_parameters
+ .rodata.can0   0x00006754        0xc CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/Motor_thread.c.obj
+                0x00006754                can0
  .rodata.can0_cfg
-                0x00006cb8       0x18 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/Motor_thread.c.obj
-                0x00006cb8                can0_cfg
+                0x00006760       0x18 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/Motor_thread.c.obj
+                0x00006760                can0_cfg
  .rodata.g_bsp_pin_cfg
-                0x00006cd0        0xc CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/pin_data.c.obj
-                0x00006cd0                g_bsp_pin_cfg
+                0x00006778        0xc CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/pin_data.c.obj
+                0x00006778                g_bsp_pin_cfg
  .rodata.g_bsp_pin_cfg_data
-                0x00006cdc       0x90 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/pin_data.c.obj
-                0x00006cdc                g_bsp_pin_cfg_data
+                0x00006784       0x90 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/pin_data.c.obj
+                0x00006784                g_bsp_pin_cfg_data
  .rodata.g_interrupt_event_link_select
-                0x00006d6c       0x24 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/vector_data.c.obj
-                0x00006d6c                g_interrupt_event_link_select
+                0x00006814       0x24 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/vector_data.c.obj
+                0x00006814                g_interrupt_event_link_select
  .rodata.GUI_Thread_entry.str1.4
-                0x00006d90       0x19 CMakeFiles/renesascup_smartmedicine.elf.dir/src/GUI_Thread_entry.c.obj
- .rodata.Motor_thread_entry.str1.4
-                0x00006d90       0x22 CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
+                0x00006838       0x19 CMakeFiles/renesascup_smartmedicine.elf.dir/src/GUI_Thread_entry.c.obj
  .rodata.my_can_filter
-                0x00006d90       0x10 CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
-                0x00006d90                my_can_filter
- .rodata._vfprintf_r.str1.1
-                0x00006da0       0x33 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
-                                 0x11 (size before relaxing)
- .rodata._printf_i.str1.1
-                0x00006dd3       0x22 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x00006838       0x10 CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
+                0x00006838                my_can_filter
  *(.mcuboot_sce9_key)
  *(.version)
- *fill*         0x00006dd3        0x1 
- .version       0x00006dd4       0x50 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_common.c.obj
-                0x00006e24                        __flash_readonly$$Limit = .
+ .version       0x00006848       0x50 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/fsp/src/bsp/mcu/all/bsp_common.c.obj
+                0x00006898                        __flash_readonly$$Limit = .
 
-.glue_7         0x00006e24        0x0
- .glue_7        0x00006e24        0x0 linker stubs
+.glue_7         0x00006898        0x0
+ .glue_7        0x00006898        0x0 linker stubs
 
-.glue_7t        0x00006e24        0x0
- .glue_7t       0x00006e24        0x0 linker stubs
+.glue_7t        0x00006898        0x0
+ .glue_7t       0x00006898        0x0 linker stubs
 
-.vfp11_veneer   0x00006e24        0x0
- .vfp11_veneer  0x00006e24        0x0 linker stubs
+.vfp11_veneer   0x00006898        0x0
+ .vfp11_veneer  0x00006898        0x0 linker stubs
 
-.v4_bx          0x00006e24        0x0
- .v4_bx         0x00006e24        0x0 linker stubs
+.v4_bx          0x00006898        0x0
+ .v4_bx         0x00006898        0x0 linker stubs
 
-.init           0x00006e24        0x4
- .init          0x00006e24        0x4 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard/crti.o
-                0x00006e24                _init
+.init           0x00006898        0x4
+ .init          0x00006898        0x4 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard/crti.o
+                0x00006898                _init
 
-.fini           0x00006e28        0x4
- .fini          0x00006e28        0x4 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard/crti.o
-                0x00006e28                _fini
+.fini           0x0000689c        0x4
+ .fini          0x0000689c        0x4 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard/crti.o
+                0x0000689c                _fini
 
-.iplt           0x00006e2c        0x0
- .iplt          0x00006e2c        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard/crtbegin.o
+.iplt           0x000068a0        0x0
+ .iplt          0x000068a0        0x0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard/crtbegin.o
 
 __flash_ctor$$
  *crtbegin.o(.ctors)
@@ -10822,44 +10821,44 @@ __flash_ctor$$
  *(.dtors)
 
 __flash_preinit_array$$
-                0x00006e2c        0x0
-                0x00006e2c                        __preinit_array_start = .
+                0x000068a0        0x0
+                0x000068a0                        __preinit_array_start = .
  *(.preinit_array)
-                0x00006e2c                        __preinit_array_end = .
+                0x000068a0                        __preinit_array_end = .
 
 __flash_.got$$
  *(.got.plt)
  *(.got)
 
 __flash_init_array$$
-                0x00006e2c        0x4
-                0x00006e2c                        __init_array_start = .
+                0x000068a0        0x4
+                0x000068a0                        __init_array_start = .
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array)
- .init_array    0x00006e2c        0x4 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard/crtbegin.o
-                0x00006e30                        __init_array_end = .
+ .init_array    0x000068a0        0x4 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard/crtbegin.o
+                0x000068a4                        __init_array_end = .
 
 __flash_fini_array$$
-                0x00006e30        0x4
-                0x00006e30                        __fini_array_start = .
+                0x000068a4        0x4
+                0x000068a4                        __fini_array_start = .
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array)
- .fini_array    0x00006e30        0x4 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard/crtbegin.o
-                0x00006e34                        __fini_array_end = .
+ .fini_array    0x000068a4        0x4 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard/crtbegin.o
+                0x000068a8                        __fini_array_end = .
 
 __flash_arm.extab$$
  *(.ARM.extab*)
  *(.gnu.linkonce.armextab.*)
 
 __flash_arm.exidx$$
-                0x00006e34        0x0
-                0x00006e34                        __exidx_start = .
+                0x000068a8        0x0
+                0x000068a8                        __exidx_start = .
  *(.ARM.exidx*)
  *(.gnu.linkonce.armexidx.*)
-                0x00006e34                        __exidx_end = .
+                0x000068a8                        __exidx_end = .
 
-.flash.endof    0x00007000        0x0
-                0x00007000                        __ddsc_FLASH_END = .
+.flash.endof    0x00006a00        0x0
+                0x00006a00                        __ddsc_FLASH_END = .
 
 .option_setting_ofs0.startof
                 0x0100a100        0x0
@@ -11142,69 +11141,61 @@ LOAD linker stubs
  .ARM.attributes
                 0x000008f8       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fwalk.o)
  .ARM.attributes
-                0x00000930       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-printf.o)
+                0x00000930       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-puts.o)
  .ARM.attributes
-                0x00000968       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-puts.o)
+                0x00000968       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-stdio.o)
  .ARM.attributes
-                0x000009a0       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-stdio.o)
+                0x000009a0       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-wbuf.o)
  .ARM.attributes
-                0x000009d8       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-wbuf.o)
+                0x000009d8       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-wsetup.o)
  .ARM.attributes
-                0x00000a10       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-wsetup.o)
+                0x00000a10       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memset.o)
  .ARM.attributes
-                0x00000a48       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memset.o)
+                0x00000a48       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-closer.o)
  .ARM.attributes
-                0x00000a80       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-closer.o)
+                0x00000a80       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-reent.o)
  .ARM.attributes
-                0x00000ab8       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-reent.o)
+                0x00000ab8       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-impure.o)
  .ARM.attributes
-                0x00000af0       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-impure.o)
+                0x00000af0       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lseekr.o)
  .ARM.attributes
-                0x00000b28       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lseekr.o)
+                0x00000b28       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-readr.o)
  .ARM.attributes
-                0x00000b60       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-readr.o)
+                0x00000b60       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-writer.o)
  .ARM.attributes
-                0x00000b98       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-writer.o)
+                0x00000b98       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-errno.o)
  .ARM.attributes
-                0x00000bd0       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-errno.o)
+                0x00000bd0       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lock.o)
  .ARM.attributes
-                0x00000c08       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lock.o)
+                0x00000c08       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
  .ARM.attributes
-                0x00000c40       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
+                0x00000c40       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-freer.o)
  .ARM.attributes
-                0x00000c78       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-freer.o)
+                0x00000c78       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mallocr.o)
  .ARM.attributes
-                0x00000cb0       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mallocr.o)
+                0x00000cb0       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mlock.o)
  .ARM.attributes
-                0x00000ce8       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mlock.o)
+                0x00000ce8       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fflush.o)
  .ARM.attributes
-                0x00000d20       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
+                0x00000d20       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-makebuf.o)
  .ARM.attributes
-                0x00000d58       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
+                0x00000d58       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fstatr.o)
  .ARM.attributes
-                0x00000d90       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fflush.o)
+                0x00000d90       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-isattyr.o)
  .ARM.attributes
-                0x00000dc8       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-makebuf.o)
+                0x00000dc8       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-sbrkr.o)
  .ARM.attributes
-                0x00000e00       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fstatr.o)
+                0x00000e00       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(close.o)
  .ARM.attributes
-                0x00000e38       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-isattyr.o)
+                0x00000e38       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(fstat.o)
  .ARM.attributes
-                0x00000e70       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-sbrkr.o)
+                0x00000e70       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(isatty.o)
  .ARM.attributes
-                0x00000ea8       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memchr-stub.o)
+                0x00000ea8       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(lseek.o)
  .ARM.attributes
-                0x00000ee0       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(close.o)
+                0x00000ee0       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(read.o)
  .ARM.attributes
-                0x00000f18       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(fstat.o)
- .ARM.attributes
-                0x00000f50       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(isatty.o)
- .ARM.attributes
-                0x00000f88       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(lseek.o)
- .ARM.attributes
-                0x00000fc0       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(read.o)
- .ARM.attributes
-                0x00000ff8       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard/crtend.o
+                0x00000f18       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard/crtend.o
 
 .comment        0x00000000       0x44
  .comment       0x00000000       0x44 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/list.c.obj
@@ -11246,7 +11237,7 @@ LOAD linker stubs
  .comment       0x00000044       0x45 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
  .comment       0x00000044       0x45 CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
 
-.debug_info     0x00000000    0x6c443
+.debug_info     0x00000000    0x6c560
  .debug_info    0x00000000      0x2bc CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/list.c.obj
  .debug_info    0x000002bc      0x874 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .debug_info    0x00000b30     0x33dd CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
@@ -11279,13 +11270,13 @@ LOAD linker stubs
  .debug_info    0x00066102      0xa31 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/pin_data.c.obj
  .debug_info    0x00066b33      0x908 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/vector_data.c.obj
  .debug_info    0x0006743b      0x123 CMakeFiles/renesascup_smartmedicine.elf.dir/src/GUI_Thread_entry.c.obj
- .debug_info    0x0006755e      0xed7 CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
- .debug_info    0x00068435      0x453 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
- .debug_info    0x00068888     0x130e CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
- .debug_info    0x00069b96     0x18be CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
- .debug_info    0x0006b454      0xfef CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
+ .debug_info    0x0006755e      0xfbd CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
+ .debug_info    0x0006851b      0x48a CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
+ .debug_info    0x000689a5     0x130e CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
+ .debug_info    0x00069cb3     0x18be CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
+ .debug_info    0x0006b571      0xfef CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
 
-.debug_abbrev   0x00000000     0x6ce6
+.debug_abbrev   0x00000000     0x6cc9
  .debug_abbrev  0x00000000      0x114 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/list.c.obj
  .debug_abbrev  0x00000114      0x311 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .debug_abbrev  0x00000425      0x4df CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
@@ -11318,14 +11309,14 @@ LOAD linker stubs
  .debug_abbrev  0x00005e5a       0xff CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/pin_data.c.obj
  .debug_abbrev  0x00005f59       0xbe CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/vector_data.c.obj
  .debug_abbrev  0x00006017       0xc0 CMakeFiles/renesascup_smartmedicine.elf.dir/src/GUI_Thread_entry.c.obj
- .debug_abbrev  0x000060d7      0x2bc CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
- .debug_abbrev  0x00006393      0x134 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
- .debug_abbrev  0x000064c7      0x339 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
- .debug_abbrev  0x00006800      0x38e CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
- .debug_abbrev  0x00006b8e      0x158 CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
+ .debug_abbrev  0x000060d7      0x29f CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
+ .debug_abbrev  0x00006376      0x134 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
+ .debug_abbrev  0x000064aa      0x339 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
+ .debug_abbrev  0x000067e3      0x38e CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
+ .debug_abbrev  0x00006b71      0x158 CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
 
 .debug_loclists
-                0x00000000     0xd85e
+                0x00000000     0xd85f
  .debug_loclists
                 0x00000000       0x6a CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/list.c.obj
  .debug_loclists
@@ -11377,15 +11368,15 @@ LOAD linker stubs
  .debug_loclists
                 0x0000d145       0x29 CMakeFiles/renesascup_smartmedicine.elf.dir/src/GUI_Thread_entry.c.obj
  .debug_loclists
-                0x0000d16e       0x36 CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
+                0x0000d16e       0x37 CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
  .debug_loclists
-                0x0000d1a4      0x2b5 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
+                0x0000d1a5      0x2b5 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
  .debug_loclists
-                0x0000d459      0x291 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
+                0x0000d45a      0x291 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
  .debug_loclists
-                0x0000d6ea      0x14b CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
+                0x0000d6eb      0x14b CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
  .debug_loclists
-                0x0000d835       0x29 CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
+                0x0000d836       0x29 CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
 
 .debug_aranges  0x00000000      0xd68
  .debug_aranges
@@ -11464,7 +11455,7 @@ LOAD linker stubs
                 0x00000d48       0x20 CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
 
 .debug_rnglists
-                0x00000000     0x20d7
+                0x00000000     0x20d8
  .debug_rnglists
                 0x00000000       0x2b CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/list.c.obj
  .debug_rnglists
@@ -11522,17 +11513,17 @@ LOAD linker stubs
  .debug_rnglists
                 0x00001fcc       0x13 CMakeFiles/renesascup_smartmedicine.elf.dir/src/GUI_Thread_entry.c.obj
  .debug_rnglists
-                0x00001fdf       0x25 CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
+                0x00001fdf       0x26 CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
  .debug_rnglists
-                0x00002004       0x27 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
+                0x00002005       0x27 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
  .debug_rnglists
-                0x0000202b       0x65 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
+                0x0000202c       0x65 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
  .debug_rnglists
-                0x00002090       0x34 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
+                0x00002091       0x34 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
  .debug_rnglists
-                0x000020c4       0x13 CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
+                0x000020c5       0x13 CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
 
-.debug_line     0x00000000    0x16925
+.debug_line     0x00000000    0x1695d
  .debug_line    0x00000000      0x3b6 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/list.c.obj
  .debug_line    0x000003b6      0x8a6 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .debug_line    0x00000c5c     0x1fc6 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
@@ -11565,11 +11556,11 @@ LOAD linker stubs
  .debug_line    0x00014f5e      0x1e6 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/pin_data.c.obj
  .debug_line    0x00015144      0x11f CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/vector_data.c.obj
  .debug_line    0x00015263      0x1ea CMakeFiles/renesascup_smartmedicine.elf.dir/src/GUI_Thread_entry.c.obj
- .debug_line    0x0001544d      0x3f8 CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
- .debug_line    0x00015845      0x366 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
- .debug_line    0x00015bab      0x5e5 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
- .debug_line    0x00016190      0x4ca CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
- .debug_line    0x0001665a      0x2cb CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
+ .debug_line    0x0001544d      0x409 CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
+ .debug_line    0x00015856      0x38d CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
+ .debug_line    0x00015be3      0x5e5 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
+ .debug_line    0x000161c8      0x4ca CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
+ .debug_line    0x00016692      0x2cb CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
 
 .debug_str      0x00000000    0x15f7b
  .debug_str     0x00000000    0x15f7b CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/list.c.obj
@@ -11605,13 +11596,13 @@ LOAD linker stubs
  .debug_str     0x00015f7b     0x1dcb CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/pin_data.c.obj
  .debug_str     0x00015f7b     0x1ef3 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/vector_data.c.obj
  .debug_str     0x00015f7b      0x251 CMakeFiles/renesascup_smartmedicine.elf.dir/src/GUI_Thread_entry.c.obj
- .debug_str     0x00015f7b     0x2496 CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
- .debug_str     0x00015f7b      0x359 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
+ .debug_str     0x00015f7b     0x24bd CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
+ .debug_str     0x00015f7b      0x365 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
  .debug_str     0x00015f7b     0x242b CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
  .debug_str     0x00015f7b     0x281d CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
  .debug_str     0x00015f7b     0x321d CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
 
-.debug_frame    0x00000000     0x2d24
+.debug_frame    0x00000000     0x2b94
  .debug_frame   0x00000000       0x88 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/list.c.obj
  .debug_frame   0x00000088      0x108 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/portable/MemMang/heap_4.c.obj
  .debug_frame   0x00000190      0x3b8 CMakeFiles/renesascup_smartmedicine.elf.dir/ra/aws/FreeRTOS/FreeRTOS/Source/queue.c.obj
@@ -11640,40 +11631,36 @@ LOAD linker stubs
  .debug_frame   0x000020f4       0x20 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/hal_data.c.obj
  .debug_frame   0x00002114       0x90 CMakeFiles/renesascup_smartmedicine.elf.dir/ra_gen/main.c.obj
  .debug_frame   0x000021a4       0x28 CMakeFiles/renesascup_smartmedicine.elf.dir/src/GUI_Thread_entry.c.obj
- .debug_frame   0x000021cc       0x38 CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
- .debug_frame   0x00002204       0xa4 CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
- .debug_frame   0x000022a8      0x100 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
- .debug_frame   0x000023a8       0x88 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
- .debug_frame   0x00002430       0x20 CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
- .debug_frame   0x00002450      0x144 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
- .debug_frame   0x00002594       0x34 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fwalk.o)
- .debug_frame   0x000025c8       0x6c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-printf.o)
- .debug_frame   0x00002634       0x3c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-puts.o)
- .debug_frame   0x00002670       0x88 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-stdio.o)
- .debug_frame   0x000026f8       0x40 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-wbuf.o)
- .debug_frame   0x00002738       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-wsetup.o)
- .debug_frame   0x00002764       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memset.o)
- .debug_frame   0x00002784       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-closer.o)
- .debug_frame   0x000027b0       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-reent.o)
- .debug_frame   0x000027e8       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lseekr.o)
- .debug_frame   0x00002814       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-readr.o)
- .debug_frame   0x00002840       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-writer.o)
- .debug_frame   0x0000286c       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-errno.o)
- .debug_frame   0x0000288c       0xb0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lock.o)
- .debug_frame   0x0000293c       0x28 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
- .debug_frame   0x00002964       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-freer.o)
- .debug_frame   0x0000299c       0x50 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mallocr.o)
- .debug_frame   0x000029ec       0x30 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mlock.o)
- .debug_frame   0x00002a1c       0xa8 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf.o)
- .debug_frame   0x00002ac4       0x60 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-nano-vfprintf_i.o)
- .debug_frame   0x00002b24       0x5c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fflush.o)
- .debug_frame   0x00002b80       0x58 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-makebuf.o)
- .debug_frame   0x00002bd8       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fstatr.o)
- .debug_frame   0x00002c04       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-isattyr.o)
- .debug_frame   0x00002c30       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-sbrkr.o)
- .debug_frame   0x00002c5c       0x28 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memchr-stub.o)
- .debug_frame   0x00002c84       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(close.o)
- .debug_frame   0x00002ca4       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(fstat.o)
- .debug_frame   0x00002cc4       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(isatty.o)
- .debug_frame   0x00002ce4       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(lseek.o)
- .debug_frame   0x00002d04       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(read.o)
+ .debug_frame   0x000021cc       0x3c CMakeFiles/renesascup_smartmedicine.elf.dir/src/Motor_thread_entry.c.obj
+ .debug_frame   0x00002208       0xac CMakeFiles/renesascup_smartmedicine.elf.dir/src/app/ZDT_app.c.obj
+ .debug_frame   0x000022b4      0x100 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/ZDT_drv.c.obj
+ .debug_frame   0x000023b4       0x88 CMakeFiles/renesascup_smartmedicine.elf.dir/src/drive/uart_drv.c.obj
+ .debug_frame   0x0000243c       0x20 CMakeFiles/renesascup_smartmedicine.elf.dir/src/hal_warmstart.c.obj
+ .debug_frame   0x0000245c      0x144 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-findfp.o)
+ .debug_frame   0x000025a0       0x34 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fwalk.o)
+ .debug_frame   0x000025d4       0x3c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-puts.o)
+ .debug_frame   0x00002610       0x88 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-stdio.o)
+ .debug_frame   0x00002698       0x40 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-wbuf.o)
+ .debug_frame   0x000026d8       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-wsetup.o)
+ .debug_frame   0x00002704       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memset.o)
+ .debug_frame   0x00002724       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-closer.o)
+ .debug_frame   0x00002750       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-reent.o)
+ .debug_frame   0x00002788       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lseekr.o)
+ .debug_frame   0x000027b4       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-readr.o)
+ .debug_frame   0x000027e0       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-writer.o)
+ .debug_frame   0x0000280c       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-errno.o)
+ .debug_frame   0x0000282c       0xb0 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-lock.o)
+ .debug_frame   0x000028dc       0x28 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-memcpy-stub.o)
+ .debug_frame   0x00002904       0x38 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-freer.o)
+ .debug_frame   0x0000293c       0x50 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mallocr.o)
+ .debug_frame   0x0000298c       0x30 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-mlock.o)
+ .debug_frame   0x000029bc       0x5c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fflush.o)
+ .debug_frame   0x00002a18       0x58 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-makebuf.o)
+ .debug_frame   0x00002a70       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-fstatr.o)
+ .debug_frame   0x00002a9c       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-isattyr.o)
+ .debug_frame   0x00002ac8       0x2c C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libg_nano.a(libc_a-sbrkr.o)
+ .debug_frame   0x00002af4       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(close.o)
+ .debug_frame   0x00002b14       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(fstat.o)
+ .debug_frame   0x00002b34       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(isatty.o)
+ .debug_frame   0x00002b54       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(lseek.o)
+ .debug_frame   0x00002b74       0x20 C:/PROGRA~2/ARMGNU~1/13C7F1~1.2RE/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v8-m.main+fp/hard\libnosys.a(read.o)
