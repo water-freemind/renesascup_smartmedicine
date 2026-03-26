@@ -2,10 +2,13 @@
 #include "ZDT_app.h"
 #include "ZDT_drv.h"
 #include "app.h"
+#include "app/ZDT_app.h"
 #include "uart_drv.h"
 #include "ZDT_app.h"
 #include <stdbool.h>
-
+#include <stdint.h>
+#include <stdio.h>
+#include "uart_app.h"
 //canid 过滤器配置
 const canfd_afl_entry_t my_can_filter[1] = 
 {
@@ -68,6 +71,8 @@ void can0_callback(can_callback_args_t *p_args)
 }
 /* Motor_thread entry function */
 /* pvParameters contains TaskHandle_t */
+extern volatile uint16_t medata[data_length];
+extern volatile uint8_t is_receving;
 void Motor_thread_entry(void * pvParameters)
 {
     FSP_PARAMETER_NOT_USED(pvParameters);
@@ -77,29 +82,11 @@ void Motor_thread_entry(void * pvParameters)
     ZDT_Enable_ALL();// 使能所有电机
     ZDT_Gozero_ALL();
     vTaskDelay(5000);
-    Move_XY_To_mm(400, cabinet_second_floor, 300, 60, 0);
-    
+    getMedicine(260, cabinet_second_floor, 50, 1);
     while(1)
     { 
-        
-        if(g_is_x_done == 1 && g_is_y_done == 1){
-            ZDT_MovePosition(ZDT_ID_Z, 130000, 1500, 0, 0);
-            vTaskDelay(10);
-            if(g_is_z_done == 1){
-                g_is_z_done = 0;
-                Catch(80, 150, 60, 1);
-            }
-        }
-        if(g_is_catch_done == 1){
-                ZDT_Gozero(ZDT_ID_Z,0);
-                g_is_x_done = 0;
-                g_is_y_done = 0;
-                vTaskDelay(4000);
-                
-                Move_XY_To_mm(0, cabinet_first_floor, 300, 60, 0);
-                if(g_is_x_done == 1 && g_is_y_done == 1){
-                    ZDT_Gozero(ZDT_ID_CATCH,0);
-                }
+        if(is_receving==0){
+            //接收到正确数据
         }
     }
 }

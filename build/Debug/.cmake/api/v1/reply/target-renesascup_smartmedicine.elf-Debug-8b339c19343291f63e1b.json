@@ -673,7 +673,8 @@
 				316,
 				317,
 				318,
-				319
+				319,
+				320
 			]
 		}
 	],
@@ -1177,7 +1178,8 @@
 				316,
 				317,
 				318,
-				319
+				319,
+				320
 			]
 		}
 	],
@@ -3089,6 +3091,12 @@
 			"backtrace" : 3,
 			"compileGroupIndex" : 0,
 			"path" : "src/drive/led_drv.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 3,
+			"compileGroupIndex" : 0,
+			"path" : "src/drive/uart_app.c",
 			"sourceGroupIndex" : 0
 		},
 		{

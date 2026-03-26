@@ -3,8 +3,9 @@
  **********************************************************************************************************************/
 
 #include "uart_drv.h"
+#include "r_uart_api.h"
 #include <stdio.h>
-
+#include "uart_app.h"
 /***********************************************************************************************************************
  * Private global variables
  **********************************************************************************************************************/
@@ -77,6 +78,13 @@ void uart7_callback(uart_callback_args_t * p_args)
         case UART_EVENT_RX_COMPLETE:
         {
             /* 接收处理逻辑 (如果需要) */
+            
+            break;
+        }
+        //单字节接收中断
+        case UART_EVENT_RX_CHAR:
+        {
+            receve_data_from_uart(p_args->data);
             break;
         }
         default:

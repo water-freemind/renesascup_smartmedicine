@@ -35,7 +35,7 @@ void ZDT_Gozero_ALL(void)
     vTaskDelay(4000);
     ZDT_Gozero(ZDT_ID_X, false);
     ZDT_Gozero(ZDT_ID_Y, false);
-    vTaskDelay(5000);
+    //vTaskDelay(5000);
     ZDT_Gozero(ZDT_ID_CATCH, false);
 }
 void Move_XY_To_mm(float x_mm, float y_mm, uint16_t speed, uint8_t acc, bool sync)
@@ -82,5 +82,47 @@ void Catch(uint16_t medicine_width_mm, uint16_t speed, uint8_t acc, uint8_t catc
     g_is_catch_done = false;
     ZDT_MovePosition(ZDT_ID_CATCH, catch_pulse, speed, acc, false);
     vTaskDelay(10);
+}
+
+void getMedicine(float x,float floor,uint16_t width,uint8_t catch_strength){
+    Move_XY_To_mm(x, floor, 300, 60, 0);
+    uint8_t status=0;
+    uint8_t status2=0;
+    while(status2==0)
+    {   
+        if(g_is_x_done == 1 && g_is_y_done == 1 && g_is_catch_done!=1){
+            ZDT_MovePosition(ZDT_ID_Z, 130000, 1500, 0, 0);
+            vTaskDelay(10);
+            if(g_is_z_done == 1){
+                g_is_z_done = 0;
+                Catch(width, 150, 60, 2);
+                g_is_x_done = 0;
+                g_is_y_done = 0;
+            } 
+        }
+        if(g_is_catch_done == 1){
+                if(g_is_x_done == 0 && g_is_y_done == 0 && status==0){
+                    Move_XY_To_mm(x, floor+30, 300, 60, 0);
+                }
+                if(g_is_x_done == 1 && g_is_y_done == 1 && status==0){
+                    ZDT_Gozero(ZDT_ID_Z,0);
+                    vTaskDelay(4000);
+                    g_is_x_done = 0;
+                    g_is_y_done = 0;
+                    Move_XY_To_mm(0, cabinet_first_floor, 300, 60, 0);
+                    status=1; 
+                }
+                if(g_is_x_done == 1 && g_is_y_done == 1 && status==1){
+                        ZDT_Gozero(ZDT_ID_CATCH,0);
+                        vTaskDelay(1000);
+                        status2=1;
+                }
+                
+        }
+    }
+    g_is_x_done = false;
+    g_is_y_done = false;    
+    g_is_z_done = false;
+    g_is_catch_done = false;
 }
 
