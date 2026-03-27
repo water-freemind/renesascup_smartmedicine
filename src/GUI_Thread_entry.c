@@ -2,13 +2,14 @@
 #include <stdio.h>
 #include "app.h"
 #include "lvgl.h"
+#include "projdefs.h"
 /* GUI_Thread entry function */
 /* pvParameters contains TaskHandle_t */
 void GUI_Thread_entry(void * pvParameters)
 {
     FSP_PARAMETER_NOT_USED(pvParameters);
-    app_lvgl();
+    //app_lvgl();
     while (1) {
-        
+        vTaskDelay(pdMS_TO_TICKS(10));
     }
 }

@@ -15,13 +15,6 @@ lv_ui guider_ui;
 extern volatile uint8_t is_receving;
 extern volatile uint8_t is_cd;
 extern volatile uint8_t scan_flag; 
-void ui_update_data(void)
-{
-    // lv_label_set_text(guider_ui.scrSetting_label_x_pos, "x_position");
-    // lv_label_set_text(guider_ui.scrSetting_label_y_pos, "y_position");
-
-    
-}
 
 void app_lvgl(void)
 {
@@ -48,7 +41,6 @@ void app_lvgl(void)
 
     while(1)
     {
-        //ui_update_data();
         if (scan_flag==1){
             if (is_receving==0)
             {

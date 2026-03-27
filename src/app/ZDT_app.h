@@ -18,6 +18,9 @@
 #define cabinet_third_floor 320
 #define cabinet_per_floor 0//药柜每层高度，单位mm
 #define cabinet_shelf_num 3 //药柜层数
+
+#define store_area_x 50
+#define store_area_y 299
 /* 定义指令类型*/
 typedef enum {
     CMD_NONE = 0,
@@ -50,4 +53,5 @@ void ZDT_Gozero_ALL(void);//所有电机回零，Z 轴先单独回零，X 和 Y 
 void Move_XY_To_mm(float x_mm, float y_mm, uint16_t speed, uint8_t acc, bool sync);
 void Catch(uint16_t medicine_width_mm,uint16_t speed, uint8_t acc ,uint8_t catch_strength);
 void getMedicine(float x,float floor,uint16_t width,uint8_t catch_strength);
+void storeMedicine(float store_x,float store_y,uint16_t width,uint8_t catch_strength);
 #endif /*APP_TEST_H*/

@@ -3,6 +3,7 @@
 
 #include <stdint.h>
 
+#include "projdefs.h"
 #include "uart_drv.h"
 
 #define PULSE_PER_MM_XY  (3600.0f / 84.0f) // X/Y 轴每毫米对应的脉冲数 (以细分后每转 16384 脉冲为基准)
@@ -93,7 +94,7 @@ void getMedicine(float x,float floor,uint16_t width,uint8_t catch_strength){
     while(status2==0)
     {   
         if(g_is_x_done == 1 && g_is_y_done == 1 && g_is_catch_done!=1){
-            ZDT_MovePosition(ZDT_ID_Z, 130000, 1500, 0, 0);
+            ZDT_MovePosition(ZDT_ID_Z, 150000, 1500, 0, 0);
             vTaskDelay(10);
             if(g_is_z_done == 1){
                 g_is_z_done = 0;
@@ -130,3 +131,81 @@ void getMedicine(float x,float floor,uint16_t width,uint8_t catch_strength){
     g_is_catch_done = false;
 }
 
+void storeMedicine(float store_x,float store_y,uint16_t width,uint8_t catch_strength){
+    Move_XY_To_mm(store_area_x, store_area_y, 300, 60, 0);
+    uint8_t status = 0;
+    uint8_t is_done = 0;
+    while(!is_done){
+        switch (status) {
+            case 0:
+                //阶段一，先让Z出去,得判断XY是否到位
+                if(g_is_x_done==1 && g_is_y_done==1){
+                    ZDT_MovePosition(ZDT_ID_Z, 200000, 1500, 0, 0);
+                    g_is_x_done=0;
+                    g_is_y_done=0;
+                    status=1;
+                }
+                break;
+            case 1:
+                //先判断Z是否到位，到位后夹
+                if(g_is_z_done==1){
+                    Catch(width, 150, 60, 2);
+                    g_is_z_done=0;
+                    status=2;
+                }
+                break;
+
+            case 2:
+                //判断夹爪是否到位，到位后XY往上抬
+                if(g_is_catch_done==1){
+                    Move_XY_To_mm(store_area_x, store_area_y+50, 300, 60, 0);
+                    g_is_catch_done=0;
+                    status=3;
+                }
+                break;
+            case 3:
+                //判断XY是否到位，到位后Z归零
+                if(g_is_x_done==1 && g_is_y_done==1){
+                    ZDT_MovePosition(ZDT_ID_Z, 100, 1500, 0, 0);
+                    //ZDT_Gozero(ZDT_ID_Z, 0);
+                    //vTaskDelay(pdMS_TO_TICKS(4000));
+                    g_is_x_done=0;
+                    g_is_y_done=0;
+                    status=4;
+                }
+                break;
+            case 4:
+                if(g_is_z_done==1){
+                    g_is_z_done=0;
+                    Move_XY_To_mm(store_x,store_y+20,300,60,0);
+                    status=5;
+                }
+                
+                break;
+            case 5:
+                if(g_is_x_done==1 && g_is_y_done==1){
+                    g_is_x_done=0;
+                    g_is_y_done=0;
+                    ZDT_MovePosition(ZDT_ID_Z, 200000, 1500, 0, 0);
+                    status=6;
+                }
+                break;
+            case 6:
+                if(g_is_z_done==1){
+                    g_is_z_done=0;
+                    ZDT_Gozero(ZDT_ID_CATCH, 0);
+                    vTaskDelay(pdMS_TO_TICKS(500));
+                    status=7;
+                }
+                break;
+            case 7:
+                ZDT_Gozero_ALL();
+                vTaskDelay(pdMS_TO_TICKS(4000));
+                status=8;
+                is_done=1;
+                break;
+            default:
+                break;
+        }
+    }
+}

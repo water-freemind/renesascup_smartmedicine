@@ -219,20 +219,6 @@ static void scrstore_event_handler (lv_event_t *e)
     }
 }
 
-static void scrstore_btn_1_event_handler (lv_event_t *e)
-{
-    lv_event_code_t code = lv_event_get_code(e);
-    switch (code) {
-    case LV_EVENT_PRESSED:
-    {
-        ui_load_scr_animation(&guider_ui, &guider_ui.scrHome, guider_ui.scrHome_del, &guider_ui.scrstore_del, setup_scr_scrHome, LV_SCR_LOAD_ANIM_NONE, 200, 200, false, true);
-        break;
-    }
-    default:
-        break;
-    }
-}
-
 static void scrstore_btnBack_event_handler (lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
@@ -250,7 +236,6 @@ static void scrstore_btnBack_event_handler (lv_event_t *e)
 void events_init_scrstore (lv_ui *ui)
 {
     lv_obj_add_event_cb(ui->scrstore, scrstore_event_handler, LV_EVENT_ALL, ui);
-    lv_obj_add_event_cb(ui->scrstore_btn_1, scrstore_btn_1_event_handler, LV_EVENT_ALL, ui);
     lv_obj_add_event_cb(ui->scrstore_btnBack, scrstore_btnBack_event_handler, LV_EVENT_ALL, ui);
 }
 

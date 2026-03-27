@@ -62,11 +62,10 @@ typedef struct
 	lv_obj_t *scrscan_btnBack_label;
 	lv_obj_t *scrscan_labelTitle;
 	lv_obj_t *scrscan_imgScanned;
+	lv_obj_t *scrscan_label_1;
 	lv_obj_t *scrstore;
 	bool scrstore_del;
 	lv_obj_t *scrstore_contBG;
-	lv_obj_t *scrstore_btn_1;
-	lv_obj_t *scrstore_btn_1_label;
 	lv_obj_t *scrstore_labelTitle;
 	lv_obj_t *scrstore_btnBack;
 	lv_obj_t *scrstore_btnBack_label;
@@ -163,8 +162,9 @@ LV_FONT_DECLARE(lv_font_st_30)
 LV_FONT_DECLARE(lv_font_montserratMedium_25)
 LV_FONT_DECLARE(lv_font_st_20)
 LV_FONT_DECLARE(lv_font_montserratMedium_18)
-LV_FONT_DECLARE(lv_font_montserratMedium_16)
+LV_FONT_DECLARE(lv_font_montserratMedium_27)
 LV_FONT_DECLARE(lv_font_montserratMedium_20)
+LV_FONT_DECLARE(lv_font_montserratMedium_16)
 LV_FONT_DECLARE(lv_font_montserratMedium_14)
 
 

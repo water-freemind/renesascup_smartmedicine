@@ -46,32 +46,6 @@ void setup_scr_scrstore(lv_ui *ui)
     lv_obj_set_style_pad_right(ui->scrstore_contBG, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_width(ui->scrstore_contBG, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-    //Write codes scrstore_btn_1
-    ui->scrstore_btn_1 = lv_btn_create(ui->scrstore);
-    ui->scrstore_btn_1_label = lv_label_create(ui->scrstore_btn_1);
-    lv_label_set_text(ui->scrstore_btn_1_label, "BACK");
-    lv_label_set_long_mode(ui->scrstore_btn_1_label, LV_LABEL_LONG_WRAP);
-    lv_obj_align(ui->scrstore_btn_1_label, LV_ALIGN_CENTER, 0, 0);
-    lv_obj_set_style_pad_all(ui->scrstore_btn_1, 0, LV_STATE_DEFAULT);
-    lv_obj_set_width(ui->scrstore_btn_1_label, LV_PCT(100));
-    lv_obj_set_pos(ui->scrstore_btn_1, 180, 251);
-    lv_obj_set_size(ui->scrstore_btn_1, 120, 45);
-
-    //Write style for scrstore_btn_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_bg_opa(ui->scrstore_btn_1, 220, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui->scrstore_btn_1, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_dir(ui->scrstore_btn_1, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_width(ui->scrstore_btn_1, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_opa(ui->scrstore_btn_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_color(ui->scrstore_btn_1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_side(ui->scrstore_btn_1, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_radius(ui->scrstore_btn_1, 22, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_shadow_width(ui->scrstore_btn_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_color(ui->scrstore_btn_1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->scrstore_btn_1, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui->scrstore_btn_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->scrstore_btn_1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
-
     //Write codes scrstore_labelTitle
     ui->scrstore_labelTitle = lv_label_create(ui->scrstore);
     lv_label_set_text(ui->scrstore_labelTitle, "SCANNING IMAGE");

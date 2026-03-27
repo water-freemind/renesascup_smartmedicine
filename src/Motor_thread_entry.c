@@ -89,32 +89,36 @@ void Motor_thread_entry(void * pvParameters)
     ZDT_Driver_Init();// 初始化 CAN 驱动
     ZDT_Enable_ALL();// 使能所有电机
     ZDT_Gozero_ALL();
-    vTaskDelay(5000);
-    /* 创建信箱实体 (容量为10，每封信容量MotorMsg_t ) */
-    g_motor_queue = xQueueCreate(10, sizeof(MotorMsg_t));
-    if (g_motor_queue == NULL) {
-        while(1); // 内存不足创建失败，卡死
-    }
+    vTaskDelay(4000);
     
-    MotorMsg_t rx_msg;
+    /* 创建信箱实体 (容量为10，每封信容量MotorMsg_t ) */
+    // g_motor_queue = xQueueCreate(10, sizeof(MotorMsg_t));
+    // if (g_motor_queue == NULL) {
+    //     while(1); // 内存不足创建失败，卡死
+    // }
+
+    storeMedicine(420,0,85,4);
+
+    // MotorMsg_t rx_msg;
     while(1)
     { 
         // 处理GUI界面返回的信件队列
-        if (xQueueReceive(g_motor_queue, &rx_msg,pdMS_TO_TICKS(50)) == pdTRUE)
-        {
-            if (rx_msg.cmd == CMD_ZERO_ALL) {
-                ZDT_Gozero_ALL();
-            }
-            else if (rx_msg.cmd == CMD_MOVE_XY_MM) {
-                Move_XY_To_mm(rx_msg.target_x, rx_msg.target_y, 2000, 100, true);
-            }
-            else if (rx_msg.cmd == CMD_SCAN) {
-                scan_flag = 1;   
-            }
-        }
-        if(is_cd==1){
-            getMedicine(medata[2], medata[3], medata[0], 2);
-        }
+        // if (xQueueReceive(g_motor_queue, &rx_msg,pdMS_TO_TICKS(50)) == pdTRUE)
+        // {
+        //     if (rx_msg.cmd == CMD_ZERO_ALL) {
+        //         ZDT_Gozero_ALL();
+        //     }
+        //     else if (rx_msg.cmd == CMD_MOVE_XY_MM) {
+        //         Move_XY_To_mm(rx_msg.target_x, rx_msg.target_y, 2000, 100, true);
+        //     }
+        //     else if (rx_msg.cmd == CMD_SCAN) {
+        //         scan_flag = 1;   
+        //     }
+        // }
+        // if(is_cd==1){
+        //     getMedicine(medata[2], medata[3], medata[0], 2);
+        // }
+        vTaskDelay(pdMS_TO_TICKS(10));
     }
 }
 

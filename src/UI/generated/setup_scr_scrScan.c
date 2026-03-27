@@ -105,6 +105,29 @@ void setup_scr_scrscan(lv_ui *ui)
     lv_obj_set_style_radius(ui->scrscan_imgScanned, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_clip_corner(ui->scrscan_imgScanned, true, LV_PART_MAIN|LV_STATE_DEFAULT);
 
+    //Write codes scrscan_label_1
+    ui->scrscan_label_1 = lv_label_create(ui->scrscan);
+    lv_label_set_text(ui->scrscan_label_1, "Scanning.......");
+    lv_label_set_long_mode(ui->scrscan_label_1, LV_LABEL_LONG_SCROLL_CIRCULAR);
+    lv_obj_set_pos(ui->scrscan_label_1, 182, 166);
+    lv_obj_set_size(ui->scrscan_label_1, 117, 38);
+
+    //Write style for scrscan_label_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scrscan_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scrscan_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scrscan_label_1, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scrscan_label_1, &lv_font_montserratMedium_27, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scrscan_label_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scrscan_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scrscan_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scrscan_label_1, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scrscan_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scrscan_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scrscan_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scrscan_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scrscan_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scrscan_label_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
     //The custom code of scrscan.
 
 
