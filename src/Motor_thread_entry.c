@@ -96,9 +96,9 @@ void Motor_thread_entry(void * pvParameters)
     // if (g_motor_queue == NULL) {
     //     while(1); // 内存不足创建失败，卡死
     // }
-
-    storeMedicine(420,0,85,4);
-
+    //第一格 50 第二格250 第三格420
+    //storeMedicine(420,0,85,4);
+    getMedicine(250, cabinet_first_floor, 96, 3);
     // MotorMsg_t rx_msg;
     while(1)
     { 
