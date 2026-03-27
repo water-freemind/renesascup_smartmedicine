@@ -5,18 +5,23 @@
 #include "lv_port_indev.h"
 #include "lvgl.h"
 #include <stdio.h>
+#include "ZDT_app.h"
 
-/* ================================================== */
-/* 1. 引入 GUI Guider 生成的头文件                      */
-/* ================================================== */
 #include "gui_guider.h"
 #include "events_init.h"
 #include "custom.h"
 
-/* ================================================== */
-/* 2. 声明全局的 UI 结构体对象                           */
-/* ================================================== */
 lv_ui guider_ui;
+extern volatile uint8_t is_receving;
+extern volatile uint8_t is_cd;
+extern volatile uint8_t scan_flag; 
+void ui_update_data(void)
+{
+    // lv_label_set_text(guider_ui.scrSetting_label_x_pos, "x_position");
+    // lv_label_set_text(guider_ui.scrSetting_label_y_pos, "y_position");
+
+    
+}
 
 void app_lvgl(void)
 {
@@ -37,20 +42,23 @@ void app_lvgl(void)
     lv_port_disp_init();
     lv_port_indev_init();
 
-    /* ================================================== */
-    /* 3. 实例化并加载 GUI Guider 生成的 UI 界面             */
-    /* ================================================== */
     setup_ui(&guider_ui);     // 加载控件、布局、样式
     events_init(&guider_ui);  // 绑定事件 (比如按钮点击)
     custom_init(&guider_ui);  // 加载自定义代码
 
     while(1)
     {
+        //ui_update_data();
+        if (scan_flag==1){
+            if (is_receving==0)
+            {
+                is_cd=1;
+                scan_flag=0;
+                setup_scr_scrHome(&guider_ui); 
+                lv_scr_load(guider_ui.scrHome);
+            }
+        }
         lv_task_handler(); 
-        
-        // 【注意】：因为这个函数是在 RTOS 的 GUI_Thread 里被调用的
-        // 最好使用 vTaskDelay，但如果你的底层必须用 R_BSP_SoftwareDelay，
-        // 请确保这个线程的优先级设置得合适，不要阻塞了电机线程。
         vTaskDelay(pdMS_TO_TICKS(5)); 
     }
 }

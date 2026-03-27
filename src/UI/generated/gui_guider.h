@@ -46,60 +46,58 @@ typedef struct
 	lv_obj_t *scrHome_barRedInk;
 	lv_obj_t *scrHome_barYellowInk;
 	lv_obj_t *scrHome_barBlackInk;
-	lv_obj_t *scrCopy;
-	bool scrCopy_del;
-	lv_obj_t *scrCopy_contBG;
-	lv_obj_t *scrCopy_labelTitle;
-	lv_obj_t *scrCopy_btnNext;
-	lv_obj_t *scrCopy_btnNext_label;
-	lv_obj_t *scrCopy_btnBack;
-	lv_obj_t *scrCopy_btnBack_label;
-	lv_obj_t *scrCopy_img_1;
-	lv_obj_t *scrCopy2;
-	bool scrCopy2_del;
-	lv_obj_t *scrCopy2_contBG;
-	lv_obj_t *scrCopy2_btnBack;
-	lv_obj_t *scrCopy2_btnBack_label;
-	lv_obj_t *scrCopy2_labelTitle;
-	lv_obj_t *scrCopy2_imgScanned;
-	lv_obj_t *scrScan;
-	bool scrScan_del;
-	lv_obj_t *scrScan_contBG;
-	lv_obj_t *scrScan_labelTitle;
-	lv_obj_t *scrScan_imgScanned;
-	lv_obj_t *scrScan_contPanel;
-	lv_obj_t *scrScan_imgIconBright;
-	lv_obj_t *scrScan_imgIconHue;
-	lv_obj_t *scrScan_sliderBright;
-	lv_obj_t *scrScan_sliderHue;
-	lv_obj_t *scrScan_btnNext;
-	lv_obj_t *scrScan_btnNext_label;
-	lv_obj_t *scrScan_btnBack;
-	lv_obj_t *scrScan_btnBack_label;
-	lv_obj_t *scrPrintMenu;
-	bool scrPrintMenu_del;
-	lv_obj_t *scrPrintMenu_contBG;
-	lv_obj_t *scrPrintMenu_labelTitle;
-	lv_obj_t *scrPrintMenu_btnBack;
-	lv_obj_t *scrPrintMenu_btnBack_label;
-	lv_obj_t *scrPrintMenu_contMain;
-	lv_obj_t *scrPrintMenu_btnleft;
-	lv_obj_t *scrPrintMenu_imgInternet;
-	lv_obj_t *scrPrintMenu_btndown;
-	lv_obj_t *scrPrintMenu_imgMobile;
-	lv_obj_t *scrPrintMenu_btnup;
-	lv_obj_t *scrPrintMenu_imgUSB;
-	lv_obj_t *scrPrintMenu_btnright;
-	lv_obj_t *scrPrintMenu_img_1;
-	lv_obj_t *scrSetup;
-	bool scrSetup_del;
-	lv_obj_t *scrSetup_contBG;
-	lv_obj_t *scrSetup_imgPrinter;
-	lv_obj_t *scrSetup_imgWave;
-	lv_obj_t *scrSetup_imgCloud;
-	lv_obj_t *scrSetup_labelPrompt;
-	lv_obj_t *scrSetup_btnBack;
-	lv_obj_t *scrSetup_btnBack_label;
+	lv_obj_t *scrsecurity;
+	bool scrsecurity_del;
+	lv_obj_t *scrsecurity_contBG;
+	lv_obj_t *scrsecurity_btnBack;
+	lv_obj_t *scrsecurity_btnBack_label;
+	lv_obj_t *scrsecurity_labelTitle;
+	lv_obj_t *scrsecurity_btnNext;
+	lv_obj_t *scrsecurity_btnNext_label;
+	lv_obj_t *scrsecurity_img_1;
+	lv_obj_t *scrscan;
+	bool scrscan_del;
+	lv_obj_t *scrscan_contBG;
+	lv_obj_t *scrscan_btnBack;
+	lv_obj_t *scrscan_btnBack_label;
+	lv_obj_t *scrscan_labelTitle;
+	lv_obj_t *scrscan_imgScanned;
+	lv_obj_t *scrstore;
+	bool scrstore_del;
+	lv_obj_t *scrstore_contBG;
+	lv_obj_t *scrstore_btn_1;
+	lv_obj_t *scrstore_btn_1_label;
+	lv_obj_t *scrstore_labelTitle;
+	lv_obj_t *scrstore_btnBack;
+	lv_obj_t *scrstore_btnBack_label;
+	lv_obj_t *scrcontrol;
+	bool scrcontrol_del;
+	lv_obj_t *scrcontrol_contBG;
+	lv_obj_t *scrcontrol_labelTitle;
+	lv_obj_t *scrcontrol_btnBack;
+	lv_obj_t *scrcontrol_btnBack_label;
+	lv_obj_t *scrcontrol_contMain;
+	lv_obj_t *scrcontrol_btnleft;
+	lv_obj_t *scrcontrol_imgInternet;
+	lv_obj_t *scrcontrol_btndown;
+	lv_obj_t *scrcontrol_imgMobile;
+	lv_obj_t *scrcontrol_btnup;
+	lv_obj_t *scrcontrol_imgUSB;
+	lv_obj_t *scrcontrol_btnright;
+	lv_obj_t *scrcontrol_img_1;
+	lv_obj_t *scrSetting;
+	bool scrSetting_del;
+	lv_obj_t *scrSetting_contBG;
+	lv_obj_t *scrSetting_btnBack;
+	lv_obj_t *scrSetting_btnBack_label;
+	lv_obj_t *scrSetting_btn_1;
+	lv_obj_t *scrSetting_btn_1_label;
+	lv_obj_t *scrSetting_cont_1;
+	lv_obj_t *scrSetting_label_text;
+	lv_obj_t *scrSetting_label_x_pos;
+	lv_span_t *scrSetting_label_x_pos_span;
+	lv_obj_t *scrSetting_label_y_pos;
+	lv_span_t *scrSetting_label_y_pos_span;
 }lv_ui;
 
 typedef void (*ui_setup_scr_t)(lv_ui * ui);
@@ -124,11 +122,11 @@ extern lv_ui guider_ui;
 
 
 void setup_scr_scrHome(lv_ui *ui);
-void setup_scr_scrCopy(lv_ui *ui);
-void setup_scr_scrCopy2(lv_ui *ui);
-void setup_scr_scrScan(lv_ui *ui);
-void setup_scr_scrPrintMenu(lv_ui *ui);
-void setup_scr_scrSetup(lv_ui *ui);
+void setup_scr_scrsecurity(lv_ui *ui);
+void setup_scr_scrscan(lv_ui *ui);
+void setup_scr_scrstore(lv_ui *ui);
+void setup_scr_scrcontrol(lv_ui *ui);
+void setup_scr_scrSetting(lv_ui *ui);
 
 LV_IMG_DECLARE(_btn_bg_4_100x141);
 LV_IMG_DECLARE(_setup_alpha_40x40);
@@ -146,10 +144,7 @@ LV_IMG_DECLARE(_tel_alpha_28x28);
 LV_IMG_DECLARE(_eco_alpha_29x25);
 LV_IMG_DECLARE(_pc_alpha_30x28);
 LV_IMG_DECLARE(_scan_alpha_100x100);
-LV_IMG_DECLARE(_scan_alpha_100x100);
-LV_IMG_DECLARE(_example_alpha_310x228);
-LV_IMG_DECLARE(_bright_alpha_20x20);
-LV_IMG_DECLARE(_hue_alpha_18x18);
+LV_IMG_DECLARE(_scan_alpha_174x167);
 
 LV_IMG_DECLARE(_btn_bg_4_100x70);
 LV_IMG_DECLARE(_right_alpha_40x40);
@@ -162,17 +157,15 @@ LV_IMG_DECLARE(_up2_alpha_40x40);
 
 LV_IMG_DECLARE(_btn_bg_1_100x70);
 LV_IMG_DECLARE(_left_alpha_40x40);
-LV_IMG_DECLARE(_printer2_alpha_84x91);
-LV_IMG_DECLARE(_no_internet_alpha_40x43);
-LV_IMG_DECLARE(_cloud_alpha_74x60);
 
 LV_FONT_DECLARE(lv_font_st_18)
 LV_FONT_DECLARE(lv_font_st_30)
+LV_FONT_DECLARE(lv_font_montserratMedium_25)
 LV_FONT_DECLARE(lv_font_st_20)
 LV_FONT_DECLARE(lv_font_montserratMedium_18)
-LV_FONT_DECLARE(lv_font_montserratMedium_25)
-LV_FONT_DECLARE(lv_font_montserratMedium_20)
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
+LV_FONT_DECLARE(lv_font_montserratMedium_20)
+LV_FONT_DECLARE(lv_font_montserratMedium_14)
 
 
 #ifdef __cplusplus

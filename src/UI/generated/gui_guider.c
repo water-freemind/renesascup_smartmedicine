@@ -76,11 +76,11 @@ void init_scr_del_flag(lv_ui *ui)
 {
 
     ui->scrHome_del = true;
-    ui->scrCopy_del = true;
-    ui->scrCopy2_del = true;
-    ui->scrScan_del = true;
-    ui->scrPrintMenu_del = true;
-    ui->scrSetup_del = true;
+    ui->scrsecurity_del = true;
+    ui->scrscan_del = true;
+    ui->scrstore_del = true;
+    ui->scrcontrol_del = true;
+    ui->scrSetting_del = true;
 }
 
 void setup_ui(lv_ui *ui)

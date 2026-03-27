@@ -95,13 +95,17 @@
       <configSetting altId="p409.gpio_mode.gpio_mode_peripheral" configurationId="p409.gpio_mode"/>
       <configSetting altId="p410.gpio_speed.gpio_speed_medium" configurationId="p410.gpio_drivecapacity"/>
       <configSetting altId="p410.gpio_mode.gpio_mode_peripheral" configurationId="p410.gpio_mode"/>
+      <configSetting altId="p501.gpio_mode.gpio_mode_peripheral" configurationId="p501.gpio_mode"/>
+      <configSetting altId="p502.gpio_mode.gpio_mode_peripheral" configurationId="p502.gpio_mode"/>
       <configSetting altId="p608.output.high" configurationId="p608"/>
       <configSetting altId="p608.gpio_speed.gpio_speed_high" configurationId="p608.gpio_drivecapacity"/>
       <configSetting altId="p608.gpio_mode.gpio_mode_out.high" configurationId="p608.gpio_mode"/>
       <configSetting altId="p613.gpio_mode.gpio_mode_peripheral" configurationId="p613.gpio_mode"/>
       <configSetting altId="p614.gpio_mode.gpio_mode_peripheral" configurationId="p614.gpio_mode"/>
-      <configSetting altId="sci7.rxd.p614" configurationId="sci7.rxd" isUsedByDriver="true" peripheral="SCI7"/>
-      <configSetting altId="sci7.txd.p613" configurationId="sci7.txd" isUsedByDriver="true" peripheral="SCI7"/>
+      <configSetting altId="sci5.rxd.p502" configurationId="sci5.rxd" isUsedByDriver="true" peripheral="SCI5"/>
+      <configSetting altId="sci5.txd.p501" configurationId="sci5.txd" isUsedByDriver="true" peripheral="SCI5"/>
+      <configSetting altId="sci7.rxd.p614" configurationId="sci7.rxd" peripheral="SCI7"/>
+      <configSetting altId="sci7.txd.p613" configurationId="sci7.txd" peripheral="SCI7"/>
       <configSetting altId="spi1.miso.p100" configurationId="spi1.miso" isUsedByDriver="true" peripheral="SPI1"/>
       <configSetting altId="spi1.mosi.p101" configurationId="spi1.mosi" isUsedByDriver="true" peripheral="SPI1"/>
       <configSetting altId="spi1.rspck.p102" configurationId="spi1.rspck" isUsedByDriver="true" peripheral="SPI1"/>

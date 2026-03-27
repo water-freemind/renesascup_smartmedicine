@@ -38,14 +38,14 @@
         #define CAN_GLERR_IRQn          ((IRQn_Type) 3) /* CAN GLERR (Global error) */
         #define VECTOR_NUMBER_CAN_RXF ((IRQn_Type) 4) /* CAN RXF (Global receive FIFO interrupt) */
         #define CAN_RXF_IRQn          ((IRQn_Type) 4) /* CAN RXF (Global receive FIFO interrupt) */
-        #define VECTOR_NUMBER_SCI7_RXI ((IRQn_Type) 5) /* SCI7 RXI (Receive data full) */
-        #define SCI7_RXI_IRQn          ((IRQn_Type) 5) /* SCI7 RXI (Receive data full) */
-        #define VECTOR_NUMBER_SCI7_TXI ((IRQn_Type) 6) /* SCI7 TXI (Transmit data empty) */
-        #define SCI7_TXI_IRQn          ((IRQn_Type) 6) /* SCI7 TXI (Transmit data empty) */
-        #define VECTOR_NUMBER_SCI7_TEI ((IRQn_Type) 7) /* SCI7 TEI (Transmit end) */
-        #define SCI7_TEI_IRQn          ((IRQn_Type) 7) /* SCI7 TEI (Transmit end) */
-        #define VECTOR_NUMBER_SCI7_ERI ((IRQn_Type) 8) /* SCI7 ERI (Receive error) */
-        #define SCI7_ERI_IRQn          ((IRQn_Type) 8) /* SCI7 ERI (Receive error) */
+        #define VECTOR_NUMBER_SCI5_RXI ((IRQn_Type) 5) /* SCI5 RXI (Receive data full) */
+        #define SCI5_RXI_IRQn          ((IRQn_Type) 5) /* SCI5 RXI (Receive data full) */
+        #define VECTOR_NUMBER_SCI5_TXI ((IRQn_Type) 6) /* SCI5 TXI (Transmit data empty) */
+        #define SCI5_TXI_IRQn          ((IRQn_Type) 6) /* SCI5 TXI (Transmit data empty) */
+        #define VECTOR_NUMBER_SCI5_TEI ((IRQn_Type) 7) /* SCI5 TEI (Transmit end) */
+        #define SCI5_TEI_IRQn          ((IRQn_Type) 7) /* SCI5 TEI (Transmit end) */
+        #define VECTOR_NUMBER_SCI5_ERI ((IRQn_Type) 8) /* SCI5 ERI (Receive error) */
+        #define SCI5_ERI_IRQn          ((IRQn_Type) 8) /* SCI5 ERI (Receive error) */
         #define VECTOR_NUMBER_IIC2_RXI ((IRQn_Type) 9) /* IIC2 RXI (Receive data full) */
         #define IIC2_RXI_IRQn          ((IRQn_Type) 9) /* IIC2 RXI (Receive data full) */
         #define VECTOR_NUMBER_IIC2_TXI ((IRQn_Type) 10) /* IIC2 TXI (Transmit data empty) */

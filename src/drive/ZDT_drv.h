@@ -21,6 +21,11 @@
 //脉冲转长度 (单位: mm/pulse, 以细分后每转 16384 脉冲为基准)
 #define PULSE_PER_REV  16384.0f //一圈是 16384 脉冲
 
+/*外部变量声明*/
+extern volatile uint16_t x_position;
+extern volatile uint16_t y_position;
+extern volatile uint16_t z_position;
+extern volatile uint16_t catch_position;
 
 /* --- 驱动函数声明 --- */
 

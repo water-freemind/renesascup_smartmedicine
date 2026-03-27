@@ -23,13 +23,17 @@
             <slot name="P409.CM33" secure="true"/>
             <slot name="P410.CM33" secure="true"/>
         </peripheral>
+        <peripheral name="PORT5.CM33" group="PORT">
+            <slot name="P501.CM33" secure="true"/>
+            <slot name="P502.CM33" secure="true"/>
+        </peripheral>
         <peripheral name="PORT6.CM33" group="PORT">
             <slot name="P608.CM33" secure="true"/>
             <slot name="P613.CM33" secure="true"/>
             <slot name="P614.CM33" secure="true"/>
         </peripheral>
         <peripheral name="CANFD0.CM33" group="CANFD" security="s"/>
-        <peripheral name="SCI7.CM33" group="SCI" security="s"/>
+        <peripheral name="SCI5.CM33" group="SCI" security="s"/>
         <peripheral name="IIC2.CM33" group="IIC" security="s"/>
         <peripheral name="SPI1.CM33" group="SPI" security="s"/>
         <peripheral name="DMA_DMAC1.CM33" group="DMA_DMAC" security="s"/>

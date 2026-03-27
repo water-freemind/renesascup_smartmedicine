@@ -391,7 +391,7 @@ sci_uart_instance_ctrl_t     g_uart7_ctrl;
             /** UART interface configuration */
             const uart_cfg_t g_uart7_cfg =
             {
-                .channel             = 7,
+                .channel             = 5,
                 .data_bits           = UART_DATA_BITS_8,
                 .parity              = UART_PARITY_OFF,
                 .stop_bits           = UART_STOP_BITS_1,
@@ -414,23 +414,23 @@ sci_uart_instance_ctrl_t     g_uart7_ctrl;
                 .txi_ipl             = (12),
                 .tei_ipl             = (12),
                 .eri_ipl             = (12),
-#if defined(VECTOR_NUMBER_SCI7_RXI)
-                .rxi_irq             = VECTOR_NUMBER_SCI7_RXI,
+#if defined(VECTOR_NUMBER_SCI5_RXI)
+                .rxi_irq             = VECTOR_NUMBER_SCI5_RXI,
 #else
                 .rxi_irq             = FSP_INVALID_VECTOR,
 #endif
-#if defined(VECTOR_NUMBER_SCI7_TXI)
-                .txi_irq             = VECTOR_NUMBER_SCI7_TXI,
+#if defined(VECTOR_NUMBER_SCI5_TXI)
+                .txi_irq             = VECTOR_NUMBER_SCI5_TXI,
 #else
                 .txi_irq             = FSP_INVALID_VECTOR,
 #endif
-#if defined(VECTOR_NUMBER_SCI7_TEI)
-                .tei_irq             = VECTOR_NUMBER_SCI7_TEI,
+#if defined(VECTOR_NUMBER_SCI5_TEI)
+                .tei_irq             = VECTOR_NUMBER_SCI5_TEI,
 #else
                 .tei_irq             = FSP_INVALID_VECTOR,
 #endif
-#if defined(VECTOR_NUMBER_SCI7_ERI)
-                .eri_irq             = VECTOR_NUMBER_SCI7_ERI,
+#if defined(VECTOR_NUMBER_SCI5_ERI)
+                .eri_irq             = VECTOR_NUMBER_SCI5_ERI,
 #else
                 .eri_irq             = FSP_INVALID_VECTOR,
 #endif

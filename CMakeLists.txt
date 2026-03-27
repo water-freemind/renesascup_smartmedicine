@@ -44,6 +44,9 @@ project(renesascup_smartmedicine
 	VERSION 1.0.0
 	LANGUAGES C CXX ASM)
 
+#添加编译选项
+add_compile_definitions(LV_LVGL_H_INCLUDE_SIMPLE)
+
 set(CMAKE_CROSSCOMPILING "TRUE")
 set(CMAKE_EXPORT_COMPILE_COMMANDS "TRUE")
 
@@ -64,6 +67,7 @@ include_directories(
 	${CMAKE_CURRENT_SOURCE_DIR}/src/Middlewares/LVGL/demos
     ${CMAKE_CURRENT_SOURCE_DIR}/src/UI/generated
     ${CMAKE_CURRENT_SOURCE_DIR}/src/UI/custom
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/UI/generated/guider_customer_fonts
 )
 
 # 收集所有源文件
@@ -71,8 +75,10 @@ file(GLOB_RECURSE DRIVE_SOURCES
     "${CMAKE_CURRENT_SOURCE_DIR}/src/drive/*.c"
     "${CMAKE_CURRENT_SOURCE_DIR}/src/app/*.c"
 	"${CMAKE_CURRENT_SOURCE_DIR}/src/Middlewares/LVGL/*.c"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/ui/generated/*.c"
-    "${CMAKE_CURRENT_SOURCE_DIR}/src/ui/custom/*.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/UI/generated/*.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/UI/custom/*.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/UI/generated/guider_fonts/*.c"
+    "${CMAKE_CURRENT_SOURCE_DIR}/src/UI/generated/images/*.c"
 )
 
 # 把源文件添加到主目标

@@ -4,9 +4,9 @@
 #if 0
                 static StaticTask_t Motor_thread_memory;
                 #if defined(__ARMCC_VERSION)           /* AC6 compiler */
-                static uint8_t Motor_thread_stack[1024] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
+                static uint8_t Motor_thread_stack[2048] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
                 #else
-                static uint8_t Motor_thread_stack[1024] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.Motor_thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
+                static uint8_t Motor_thread_stack[2048] BSP_PLACE_IN_SECTION(BSP_UNINIT_SECTION_PREFIX ".stack.Motor_thread") BSP_ALIGN_VARIABLE(BSP_STACK_ALIGNMENT);
                 #endif
                 #endif
                 TaskHandle_t Motor_thread;
@@ -152,9 +152,9 @@ extern uint32_t g_fsp_common_thread_count;
                     #endif
                         Motor_thread_func,
                         (const char *)"Motor_thread",
-                        1024/4, // In words, not bytes
+                        2048/4, // In words, not bytes
                         (void *) &Motor_thread_parameters, //pvParameters
-                        1,
+                        2,
                         #if 0
                         (StackType_t *)&Motor_thread_stack,
                         (StaticTask_t *)&Motor_thread_memory

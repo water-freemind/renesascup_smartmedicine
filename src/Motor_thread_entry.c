@@ -1,8 +1,7 @@
 #include "Motor_thread.h"
 #include "ZDT_app.h"
 #include "ZDT_drv.h"
-#include "app.h"
-#include "app/ZDT_app.h"
+#include "projdefs.h"
 #include "uart_drv.h"
 #include "ZDT_app.h"
 #include <stdbool.h>
@@ -40,6 +39,10 @@ volatile bool g_is_x_done = false;
 volatile bool g_is_y_done = false;
 volatile bool g_is_z_done = false;
 volatile bool g_is_catch_done = false;
+volatile uint16_t x_position;
+volatile uint16_t y_position;
+volatile uint16_t z_position;
+volatile uint16_t catch_position;
 void can0_callback(can_callback_args_t *p_args)
 {
     // 如果是“接收完成”中断
@@ -69,10 +72,15 @@ void can0_callback(can_callback_args_t *p_args)
         }
     }
 }
+
 /* Motor_thread entry function */
 /* pvParameters contains TaskHandle_t */
 extern volatile uint16_t medata[data_length];
 extern volatile uint8_t is_receving;
+extern volatile uint8_t is_cd;
+volatile uint8_t scan_flag = 0 ; 
+QueueHandle_t g_motor_queue = NULL; //创建消息队列
+
 void Motor_thread_entry(void * pvParameters)
 {
     FSP_PARAMETER_NOT_USED(pvParameters);
@@ -82,11 +90,30 @@ void Motor_thread_entry(void * pvParameters)
     ZDT_Enable_ALL();// 使能所有电机
     ZDT_Gozero_ALL();
     vTaskDelay(5000);
-    getMedicine(260, cabinet_second_floor, 50, 1);
+    /* 创建信箱实体 (容量为10，每封信容量MotorMsg_t ) */
+    g_motor_queue = xQueueCreate(10, sizeof(MotorMsg_t));
+    if (g_motor_queue == NULL) {
+        while(1); // 内存不足创建失败，卡死
+    }
+    
+    MotorMsg_t rx_msg;
     while(1)
     { 
-        if(is_receving==0){
-            //接收到正确数据
+        // 处理GUI界面返回的信件队列
+        if (xQueueReceive(g_motor_queue, &rx_msg,pdMS_TO_TICKS(50)) == pdTRUE)
+        {
+            if (rx_msg.cmd == CMD_ZERO_ALL) {
+                ZDT_Gozero_ALL();
+            }
+            else if (rx_msg.cmd == CMD_MOVE_XY_MM) {
+                Move_XY_To_mm(rx_msg.target_x, rx_msg.target_y, 2000, 100, true);
+            }
+            else if (rx_msg.cmd == CMD_SCAN) {
+                scan_flag = 1;   
+            }
+        }
+        if(is_cd==1){
+            getMedicine(medata[2], medata[3], medata[0], 2);
         }
     }
 }

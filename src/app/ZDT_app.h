@@ -18,13 +18,29 @@
 #define cabinet_third_floor 320
 #define cabinet_per_floor 0//药柜每层高度，单位mm
 #define cabinet_shelf_num 3 //药柜层数
-/**********************************************************************************************************************
- * Typedef definitions
- **********************************************************************************************************************/
+/* 定义指令类型*/
+typedef enum {
+    CMD_NONE = 0,
+    CMD_ZERO_ALL,       // 全部回零
+    CMD_MOVE_XY_MM,     // 移动 XY 坐标
+    CMD_CATCH_MEDICINE, // 夹取药盒
+    CMD_SCAN,
+} MotorCmdType_t;
 
-/***********************************************************************************************************************
- * Exported global variables
- **********************************************************************************************************************/
+/*“信件”的格式*/
+typedef struct {
+    MotorCmdType_t cmd;      // 指令类型
+    float target_x;          // X 坐标参数 (毫米)
+    float target_y;          // Y 坐标参数 (毫米)
+    uint16_t medicine_width; // 药盒宽度 (夹取用)
+} MotorMsg_t;
+
+/*外部变量声明*/
+extern QueueHandle_t g_motor_queue;
+extern volatile uint16_t x_position;
+extern volatile uint16_t y_position;
+extern volatile uint16_t z_position;
+extern volatile uint16_t catch_position;
 
 /***********************************************************************************************************************
  * Exported global functions (to be accessed by other files)

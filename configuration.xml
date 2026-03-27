@@ -314,7 +314,7 @@
     </module>
     <module id="module.driver.uart_on_sci_uart.1707836327">
       <property id="module.driver.uart.name" value="g_uart7"/>
-      <property id="module.driver.uart.channel" value="7"/>
+      <property id="module.driver.uart.channel" value="5"/>
       <property id="module.driver.uart.data_bits" value="module.driver.uart.data_bits.data_bits_8"/>
       <property id="module.driver.uart.parity" value="module.driver.uart.parity.parity_off"/>
       <property id="module.driver.uart.stop_bits" value="module.driver.uart.stop_bits.stop_bits_1"/>
@@ -472,8 +472,8 @@
     <context id="rtos.awsfreertos.thread.0">
       <property id="_symbol" value="Motor_thread"/>
       <property id="rtos.awsfreertos.thread.name" value="Motor_thread"/>
-      <property id="rtos.awsfreertos.thread.stack" value="1024"/>
-      <property id="rtos.awsfreertos.thread.priority" value="1"/>
+      <property id="rtos.awsfreertos.thread.stack" value="2048"/>
+      <property id="rtos.awsfreertos.thread.priority" value="2"/>
       <property id="rtos.awsfreertos.thread.context" value="NULL"/>
       <property id="rtos.awsfreertos.thread.allocation" value="rtos.awsfreertos.thread.allocation.dynamic"/>
       <property id="rtos.awsfreertos.thread.secure_context" value="rtos.awsfreertos.thread.secure_context.enable"/>
@@ -768,6 +768,10 @@
       <configSetting altId="p410.iic2.scl" configurationId="p410"/>
       <configSetting altId="p410.gpio_speed.gpio_speed_medium" configurationId="p410.gpio_drivecapacity"/>
       <configSetting altId="p410.gpio_mode.gpio_mode_peripheral" configurationId="p410.gpio_mode"/>
+      <configSetting altId="p501.sci5.txd" configurationId="p501"/>
+      <configSetting altId="p501.gpio_mode.gpio_mode_peripheral" configurationId="p501.gpio_mode"/>
+      <configSetting altId="p502.sci5.rxd" configurationId="p502"/>
+      <configSetting altId="p502.gpio_mode.gpio_mode_peripheral" configurationId="p502.gpio_mode"/>
       <configSetting altId="p608.output.high" configurationId="p608"/>
       <configSetting altId="p608.gpio_speed.gpio_speed_high" configurationId="p608.gpio_drivecapacity"/>
       <configSetting altId="p608.gpio_mode.gpio_mode_out.high" configurationId="p608.gpio_mode"/>
@@ -775,6 +779,9 @@
       <configSetting altId="p613.gpio_mode.gpio_mode_peripheral" configurationId="p613.gpio_mode"/>
       <configSetting altId="p614.sci7.rxd" configurationId="p614"/>
       <configSetting altId="p614.gpio_mode.gpio_mode_peripheral" configurationId="p614.gpio_mode"/>
+      <configSetting altId="sci5.mode.asynchronous.free" configurationId="sci5.mode"/>
+      <configSetting altId="sci5.rxd.p502" configurationId="sci5.rxd"/>
+      <configSetting altId="sci5.txd.p501" configurationId="sci5.txd"/>
       <configSetting altId="sci7.mode.asynchronous.free" configurationId="sci7.mode"/>
       <configSetting altId="sci7.rxd.p614" configurationId="sci7.rxd"/>
       <configSetting altId="sci7.txd.p613" configurationId="sci7.txd"/>

@@ -476,7 +476,7 @@ void setup_scr_scrHome(lv_ui *ui)
     lv_bar_set_mode(ui->scrHome_barRedInk, LV_BAR_MODE_NORMAL);
     lv_bar_set_range(ui->scrHome_barRedInk, 0, 100);
     lv_bar_set_value(ui->scrHome_barRedInk, 25, LV_ANIM_ON);
-    lv_obj_set_pos(ui->scrHome_barRedInk, 41, 0);
+    lv_obj_set_pos(ui->scrHome_barRedInk, 40, 0);
     lv_obj_set_size(ui->scrHome_barRedInk, 21, 58);
 
     //Write style for scrHome_barRedInk, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.

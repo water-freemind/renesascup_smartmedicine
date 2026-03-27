@@ -109,9 +109,13 @@ void ZDT_Gozero(uint32_t id, bool sync)
     data[0] = ZDT_CMD_GOZERO; 
     data[1] = 0x02;           
     data[2] = sync ? 0x01 : 0x00; 
-    data[3] = 0x6B;           
-    
+    data[3] = 0x6B;            
     ZDT_Send_Raw(id, data, 4); 
+    /*修改实时状态*/
+    x_position = 0;
+    y_position = 0;
+    z_position = 0;
+    catch_position = 0;
 }
 
 
@@ -121,18 +125,10 @@ void ZDT_Gozero(uint32_t id, bool sync)
  */
 void ZDT_MovePosition(uint32_t id, int32_t pos, uint16_t speed, uint8_t acc, bool sync)
 {
-    // 逻辑负载为 12 字节
     uint8_t payload[12] = {0}; 
-
-    // 获取绝对脉冲数
     uint32_t abs_pos = (pos >= 0) ? (uint32_t)pos : (uint32_t)(-pos);
-    
-    // 方向判定 (根据说明书：00为正，01为负)
     uint8_t dir = (pos >= 0) ? 0x00 : 0x01; 
 
-    // ====================================================
-    // 组装完整的 12 字节逻辑指令
-    // ====================================================
     payload[0]  = ZDT_CMD_POS_MOVE;               // 0: 功能码 0xFD
     payload[1]  = dir;                            // 1: 符号(方向)
     
@@ -153,6 +149,14 @@ void ZDT_MovePosition(uint32_t id, int32_t pos, uint16_t speed, uint8_t acc, boo
     payload[11] = 0x6B;                           // 11: 校验字节 0x6B
 
     ZDT_Send_Raw(id, payload, 12);
+    /*修改实时位置*/
+    switch (id) {
+        case ZDT_ID_X:x_position+=pos;break;
+        case ZDT_ID_Y:y_position+=pos;break;
+        case ZDT_ID_Z:z_position+=pos;break;
+        case ZDT_ID_CATCH:catch_position+=pos;break;
+        default:break;
+    }
 }
 
 void ZDT_SyncTrigger(void)

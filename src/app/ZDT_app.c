@@ -13,6 +13,8 @@ extern volatile bool g_is_x_done;
 extern volatile bool g_is_y_done;
 extern volatile bool g_is_z_done;
 extern volatile bool g_is_catch_done;
+extern volatile uint8_t is_cd;
+extern  volatile uint8_t is_receving;
 
 /*
     * 这里是张大头 57 电机的应用层代码，负责调用驱动层函数实现具体功能。
@@ -120,6 +122,8 @@ void getMedicine(float x,float floor,uint16_t width,uint8_t catch_strength){
                 
         }
     }
+    is_cd=0;
+    is_receving=2;
     g_is_x_done = false;
     g_is_y_done = false;    
     g_is_z_done = false;

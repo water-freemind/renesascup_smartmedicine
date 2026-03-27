@@ -19,11 +19,11 @@ extern "C" {
 void events_init(lv_ui *ui);
 
 void events_init_scrHome(lv_ui *ui);
-void events_init_scrCopy(lv_ui *ui);
-void events_init_scrCopy2(lv_ui *ui);
-void events_init_scrScan(lv_ui *ui);
-void events_init_scrPrintMenu(lv_ui *ui);
-void events_init_scrSetup(lv_ui *ui);
+void events_init_scrsecurity(lv_ui *ui);
+void events_init_scrscan(lv_ui *ui);
+void events_init_scrstore(lv_ui *ui);
+void events_init_scrcontrol(lv_ui *ui);
+void events_init_scrSetting(lv_ui *ui);
 
 #ifdef __cplusplus
 }
