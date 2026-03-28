@@ -13,7 +13,7 @@
 
 #define cabinet_height 420 //药柜高度，单位mm
 #define cabinet_width 420 //药柜宽度，单位mm
-#define cabinet_first_floor 10//药柜第一层高度，单位mm,第三层高320mm，第二层
+#define cabinet_first_floor 5//药柜第一层高度，单位mm,第三层高320mm，第二层
 #define cabinet_second_floor 150
 #define cabinet_third_floor 299
 #define cabinet_per_floor 0//药柜每层高度，单位mm

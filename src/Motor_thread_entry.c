@@ -92,32 +92,38 @@ void Motor_thread_entry(void * pvParameters)
     vTaskDelay(4000);
     
     /* 创建信箱实体 (容量为10，每封信容量MotorMsg_t ) */
-    // g_motor_queue = xQueueCreate(10, sizeof(MotorMsg_t));
-    // if (g_motor_queue == NULL) {
-    //     while(1); // 内存不足创建失败，卡死
-    // }
+    g_motor_queue = xQueueCreate(10, sizeof(MotorMsg_t));
+    if (g_motor_queue == NULL) {
+        while(1); // 内存不足创建失败，卡死
+    }
     //第一格 50 第二格250 第三格420
     //storeMedicine(420,0,85,4);
-    getMedicine(250, cabinet_first_floor, 96, 3);
-    // MotorMsg_t rx_msg;
+    //getMedicine(250, cabinet_second_floor, 90, 4);
+    MotorMsg_t rx_msg;
     while(1)
     { 
-        // 处理GUI界面返回的信件队列
-        // if (xQueueReceive(g_motor_queue, &rx_msg,pdMS_TO_TICKS(50)) == pdTRUE)
-        // {
-        //     if (rx_msg.cmd == CMD_ZERO_ALL) {
-        //         ZDT_Gozero_ALL();
-        //     }
-        //     else if (rx_msg.cmd == CMD_MOVE_XY_MM) {
-        //         Move_XY_To_mm(rx_msg.target_x, rx_msg.target_y, 2000, 100, true);
-        //     }
-        //     else if (rx_msg.cmd == CMD_SCAN) {
-        //         scan_flag = 1;   
-        //     }
-        // }
-        // if(is_cd==1){
-        //     getMedicine(medata[2], medata[3], medata[0], 2);
-        // }
+        //处理GUI界面返回的信件队列
+        if (xQueueReceive(g_motor_queue, &rx_msg,pdMS_TO_TICKS(50)) == pdTRUE)
+        {
+            if (rx_msg.cmd == CMD_ZERO_ALL) {
+                ZDT_Gozero_ALL();
+            }
+            else if (rx_msg.cmd == CMD_MOVE_XY_MM) {
+                Move_XY_To_mm(rx_msg.target_x, rx_msg.target_y, 2000, 100, true);
+            }
+            else if (rx_msg.cmd == CMD_SCAN) {
+                scan_flag = 1;   
+            }
+        }
+        if(is_cd==1){
+            if(medata[1]==1){
+                getMedicine(medata[2], medata[3], medata[0], 4);
+            }
+            if(medata[1]==2){
+                storeMedicine(medata[2], medata[3], medata[0], 4);
+            }
+            
+        }
         vTaskDelay(pdMS_TO_TICKS(10));
     }
 }

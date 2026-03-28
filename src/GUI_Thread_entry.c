@@ -8,7 +8,7 @@
 void GUI_Thread_entry(void * pvParameters)
 {
     FSP_PARAMETER_NOT_USED(pvParameters);
-    //app_lvgl();
+    app_lvgl();
     while (1) {
         vTaskDelay(pdMS_TO_TICKS(10));
     }

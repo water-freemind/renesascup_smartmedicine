@@ -133,7 +133,7 @@ void getMedicine(float x,float y,uint16_t width,uint8_t catch_strength){
             case 4:
                 if(g_is_z_done==1){
                     g_is_z_done=0;
-                    Move_XY_To_mm(store_area_x,store_area_y+40,300,60,0);
+                    Move_XY_To_mm(store_area_x,store_area_y+30,300,60,0);
                     status=5;
                 }
                 
@@ -245,4 +245,6 @@ void storeMedicine(float store_x,float store_y,uint16_t width,uint8_t catch_stre
                 break;
         }
     }
+    is_cd=0;
+    is_receving=2;
 }
