@@ -114,7 +114,7 @@ void getMedicine(float x,float y,uint16_t width,uint8_t catch_strength){
             case 2:
                 //判断夹爪是否到位，到位后XY往上抬
                 if(g_is_catch_done==1){
-                    Move_XY_To_mm(x, y+50, 300, 60, 0);
+                    Move_XY_To_mm(x, y+30, 300, 60, 0);
                     g_is_catch_done=0;
                     status=3;
                 }
